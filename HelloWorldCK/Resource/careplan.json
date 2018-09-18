@@ -1,0 +1,130 @@
+{
+    "planID": 1,
+    "title": "ZombiCare Plan",
+    "lastUpdated": "20160709T073000+0000",
+    "intervention_activities": [
+                                {
+                                "identifier": "001",
+                                "group_identifier": "Regular",
+                                "title": "Golden Apple",
+                                "text": "An Apple a day keeps the doctor away",
+                                "startdate": "20161031T120000+0000",
+                                "scheduletype": "Daily",
+                                "schedule": "1",
+                                "imageURL": "",
+                                "instructions": "Eat one golden apple a day."
+                                },
+                                {
+                                "identifier": "002",
+                                "group_identifier": "Regular",
+                                "title": "Potion of Weakness",
+                                "text": "25ml",
+                                "startdate": "20161031T120000+0000",
+                                "scheduletype": "Weekly",
+                                "schedule": "2,1,1,1,1,1,2",
+                                "imageURL": "",
+                                "instructions": "Take with food."
+                                },
+                                {
+                                "identifier": "003",
+                                "group_identifier": "Regular",
+                                "title": "Outdoor Walk",
+                                "text": "15 mins",
+                                "startdate": "20161031T120000+0000",
+                                "scheduletype": "Weekly",
+                                "schedule": "3,3,3,3,3,3,3",
+                                "imageURL": "",
+                                "instructions": "Take a fast paced walk."
+                                }
+                                ],
+    "assessment_activities": [
+                              {
+                              "identifier": "004",
+                              "group_identifier": "",
+                              "title": "Weight",
+                              "text": "Early morning",
+                              "startdate": "20161031T120000+0000",
+                              "scheduletype": "Daily",
+                              "schedule": "1",
+                              "imageURL": "",
+                              "task": {
+                              "identifer": "Task1",
+                              "steps": [
+                                        {
+                                        "question": "Input your weight",
+                                        }
+                                        ]
+                              }
+                              },
+                              {
+                              "identifier": "005",
+                              "group_identifier": "",
+                              "title": "Pain",
+                              "text": "In the Head",
+                              "startdate": "20161031T120000+0000",
+                              "scheduletype": "Weekly",
+                              "schedule": "3,3,3,3,3,3,3",
+                              "imageURL": "",
+                              "task": {
+                              "identifer": "Task1",
+                              "steps": [
+                                        {
+                                        "question": "How was your pain today?",
+                                        "maxvaledescription": "Very high",
+                                        "minvaledescription": "Very low",
+                                        "maxvalue": 10,
+                                        "minvalue": 1,
+                                        "defaultvalue": -1,
+                                        "stepvalue": 1,
+                                        "vertical": false
+                                        }
+                                        ]
+                              }
+                              },
+                              {
+                              "identifier": "006",
+                              "group_identifier": "",
+                              "title": "Rage",
+                              "text": "",
+                              "startdate": "20161031T120000+0000",
+                              "scheduletype": "Weekly",
+                              "schedule": "3,3,3,3,3,3,3",
+                              "imageURL": "",
+                              "task": {
+                              "identifer": "Task1",
+                              "steps": [
+                                        {
+                                        "question": "On a sale of 1 to 10, how do you rate your temper?",
+                                        "maxvaledescription": "Calm",
+                                        "minvaledescription": "Very Angry",
+                                        "maxvalue": 10,
+                                        "minvalue": 1,
+                                        "defaultvalue": -1,
+                                        "stepvalue": 1,
+                                        "vertical": false
+                                        }
+                                        ]
+                              }
+                              }
+                              ],
+    "careteam": [
+                 {
+                 "name": "Dr Colin Candid",
+                 "relation": "Physician",
+                 "emailAddress": "doea@zombiecare.com",
+                 "phoneNumber:": "888-555-5512",
+                 "messageNumber:": "888-555-5512",
+                 "monogram": "CC",
+                 "imageURL": null
+                 },
+                 {
+                 "name": "Holly Helpful",
+                 "relation": "Nurse",
+                 "emailAddress": "helpful@zombiecare.com",
+                 "phoneNumber:": "888-555-5512",
+                 "messageNumber:": "888-555-5512",
+                 "monogram": "HH",
+                 "imageURL": null
+                 }
+                 ]
+}
