@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="M1d-HY-Zk6">
-                                <rect key="frame" x="16" y="400" width="343" height="208"/>
+                                <rect key="frame" x="16" y="452" width="343" height="208"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAQ-Sd-vWE">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="56"/>
@@ -67,13 +68,13 @@
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="braceletOneLogo" translatesAutoresizingMaskIntoConstraints="NO" id="uBg-5W-Inw">
-                                <rect key="frame" x="67" y="97" width="240" height="194"/>
+                                <rect key="frame" x="67" y="149" width="240" height="194"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="194" id="iCC-cG-8aX"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bracelet One" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWK-FU-XxJ">
-                                <rect key="frame" x="16" y="323" width="343" height="52"/>
+                                <rect key="frame" x="16" y="375" width="343" height="52"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="44"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -98,6 +99,7 @@
                         <outlet property="careKitExampleButton" destination="CM3-Gf-pzg" id="COe-cO-aLb"/>
                         <outlet property="reserachKitExampleButton" destination="QAQ-Sd-vWE" id="Chg-NS-mYf"/>
                         <outlet property="zombieHealthCareButton" destination="QYK-QC-jeJ" id="B1Q-An-k9e"/>
+                        <segue destination="35t-5L-XCX" kind="presentation" identifier="loginView" id="l30-Zw-lLG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -113,7 +115,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQm-Oj-ilK">
-                                <rect key="frame" x="16" y="318" width="343" height="56"/>
+                                <rect key="frame" x="16" y="370" width="343" height="56"/>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="oFn-w6-LoW"/>
@@ -159,8 +161,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O5F-ZN-vg5" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="keG-P3-BaP">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="keG-P3-BaP">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -172,8 +174,121 @@
             </objects>
             <point key="canvasLocation" x="157.59999999999999" y="-582.45877061469275"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="5Tc-lb-JJa">
+            <objects>
+                <viewController id="35t-5L-XCX" customClass="LoginViewController" customModule="TouchMeIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Sw-r2-cuM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="kVe-gi-7vC">
+                                <rect key="frame" x="0.0" y="60" width="375" height="440"/>
+                                <subviews>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bracelet One" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kc9-WI-9iQ">
+                                        <rect key="frame" x="24.5" y="0.0" width="326" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="60"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4X3-BL-EYa">
+                                        <rect key="frame" x="131.5" y="0.0" width="112" height="68.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="58"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z4T-KQ-2Ay">
+                                        <rect key="frame" x="10" y="77.5" width="355" height="30"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="7z2-yS-5gj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTE-C5-ukW">
+                                        <rect key="frame" x="10" y="116.5" width="355" height="32"/>
+                                        <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5f-oU-wmd">
+                                        <rect key="frame" x="68.5" y="157.5" width="238" height="53"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Login with Credentials" backgroundImage="Button"/>
+                                        <connections>
+                                            <action selector="loginActionWithSender:" destination="35t-5L-XCX" eventType="touchUpInside" id="7s4-DX-vfg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uqu-pn-aNM">
+                                        <rect key="frame" x="75" y="219.5" width="225" height="53"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Login with Facebook" backgroundImage="Button"/>
+                                        <connections>
+                                            <action selector="loginActionWithSender:" destination="35t-5L-XCX" eventType="touchUpInside" id="D3a-pH-QmO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFU-f7-cHD">
+                                        <rect key="frame" x="90" y="281.5" width="195" height="53"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Login with Google" backgroundImage="Button"/>
+                                        <connections>
+                                            <action selector="loginActionWithSender:" destination="35t-5L-XCX" eventType="touchUpInside" id="6qa-9v-GOy"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start by creating a username and password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Zxq-a7-7Vg">
+                                        <rect key="frame" x="10.5" y="343.5" width="354" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46E-Pj-DXA">
+                                        <rect key="frame" x="154.5" y="373" width="66" height="67"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="67" id="H6r-yB-XQD"/>
+                                            <constraint firstAttribute="width" constant="66" id="w4b-8B-C5D"/>
+                                        </constraints>
+                                        <state key="normal" image="Touch-icon-lg"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XTE-C5-ukW" secondAttribute="trailing" constant="10" id="Ejk-jS-f8U"/>
+                                    <constraint firstAttribute="trailing" secondItem="z4T-KQ-2Ay" secondAttribute="trailing" constant="10" id="tsI-Cf-sQo"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.7867623730964467" green="0.057445696184138563" blue="0.005844536357654603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kVe-gi-7vC" firstAttribute="centerX" secondItem="5Sw-r2-cuM" secondAttribute="centerX" id="GFK-W9-5PF" userLabel="Stack View.centerX = View.centerX"/>
+                            <constraint firstItem="jBp-Lx-eIG" firstAttribute="trailing" secondItem="kVe-gi-7vC" secondAttribute="trailing" id="XSV-1J-feH"/>
+                            <constraint firstItem="kVe-gi-7vC" firstAttribute="top" secondItem="5Sw-r2-cuM" secondAttribute="topMargin" constant="40" id="gc8-XO-ocp"/>
+                            <constraint firstItem="kVe-gi-7vC" firstAttribute="leading" secondItem="jBp-Lx-eIG" secondAttribute="leading" id="gqq-37-zCT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jBp-Lx-eIG"/>
+                    </view>
+                    <connections>
+                        <outlet property="createInfoLabel" destination="Zxq-a7-7Vg" id="bZH-GV-LcU"/>
+                        <outlet property="loginButton" destination="W5f-oU-wmd" id="0ph-QJ-Vka"/>
+                        <outlet property="loginButtonFacebook" destination="Uqu-pn-aNM" id="ptj-Gt-HSX"/>
+                        <outlet property="loginButtonGoogle" destination="QFU-f7-cHD" id="Dbr-eC-1Vf"/>
+                        <outlet property="passwordTextField" destination="XTE-C5-ukW" id="fWs-Wj-bhQ"/>
+                        <outlet property="stackView" destination="kVe-gi-7vC" id="44g-1q-PYd"/>
+                        <outlet property="usernameTextField" destination="z4T-KQ-2Ay" id="onT-cq-Mpi"/>
+                        <segue destination="wsd-P3-BZa" kind="unwind" identifier="dismissLogin" unwindAction="unwindSegue:" id="wId-vT-weA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KUd-Hc-iLe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="wsd-P3-BZa" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1509.5999999999999" y="-630.13493253373315"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Button" width="131" height="53"/>
+        <image name="Touch-icon-lg" width="138" height="137"/>
         <image name="braceletOneLogo" width="1024" height="1024"/>
     </resources>
 </document>

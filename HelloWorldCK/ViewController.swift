@@ -9,6 +9,7 @@
 import UIKit
 import ResearchKit
 import CareKit
+import Shimmer
 
 class ViewController: UIViewController, ORKTaskViewControllerDelegate {
     
@@ -17,6 +18,10 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate {
     @IBOutlet var careKitExampleButton: UIButton!
     
     @IBOutlet var zombieHealthCareButton: UIButton!
+    
+    var isAuthenticated = false
+    var didReturnFromBackground = false
+    
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         dismiss(animated: true, completion: nil)
     }
@@ -53,13 +58,51 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate {
         reserachKitExampleButton.layer.cornerRadius = 10
         careKitExampleButton.layer.cornerRadius = 10
         zombieHealthCareButton.layer.cornerRadius = 10
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.appWillResignActive(_:)),
+                                               name: .UIApplicationWillResignActive,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.appDidBecomeActive(_:)),
+                                               name: .UIApplicationDidBecomeActive,
+                                               object: nil)
+
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        showLoginView()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func appWillResignActive(_ notification : Notification) {
+        view.alpha = 0
+        isAuthenticated = false
+        didReturnFromBackground = true
+    }
+    
+    @objc func appDidBecomeActive(_ notification : Notification) {
+        if didReturnFromBackground {
+            showLoginView()
+            view.alpha = 1
+        }
+    }
+    
+    @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
+        
+        isAuthenticated = true
+        view.alpha = 1.0
+    }
+    
+    func showLoginView() {
+        if !isAuthenticated {
+            performSegue(withIdentifier: "loginView", sender: self)
+        }
     }
 
 
