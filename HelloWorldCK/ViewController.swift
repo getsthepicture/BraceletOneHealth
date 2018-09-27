@@ -9,7 +9,6 @@
 import UIKit
 import ResearchKit
 import CareKit
-import Shimmer
 
 class ViewController: UIViewController, ORKTaskViewControllerDelegate {
     
@@ -33,6 +32,11 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate {
     
     @IBAction func assesmentOneButtonPressed(_ sender: UIButton) {
         showHelloWorld()
+    }
+    
+    @IBAction func logoutTapped(_ sender: UIBarButtonItem) {
+        isAuthenticated = false
+        performSegue(withIdentifier: "loginView", sender: self)
     }
     
     func showHelloWorld(){

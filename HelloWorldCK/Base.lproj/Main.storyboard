@@ -94,7 +94,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xmG-yf-q2P"/>
+                    <navigationItem key="navigationItem" id="xmG-yf-q2P">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="fqQ-72-Nve">
+                            <connections>
+                                <action selector="logoutTapped:" destination="BYZ-38-t0r" id="2Py-Qn-FMh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="careKitExampleButton" destination="CM3-Gf-pzg" id="COe-cO-aLb"/>
                         <outlet property="reserachKitExampleButton" destination="QAQ-Sd-vWE" id="Chg-NS-mYf"/>
@@ -177,7 +183,7 @@
         <!--Login View Controller-->
         <scene sceneID="5Tc-lb-JJa">
             <objects>
-                <viewController id="35t-5L-XCX" customClass="LoginViewController" customModule="TouchMeIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="35t-5L-XCX" customClass="LoginViewController" customModule="HelloWorldCK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Sw-r2-cuM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

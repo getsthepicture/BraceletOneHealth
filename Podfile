@@ -8,5 +8,6 @@ target 'HelloWorldCK' do
   # Pods for HelloWorldCK
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Shimmer', '~> 1.0'
+  pod 'JVFloatLabeledTextField'
 
 end

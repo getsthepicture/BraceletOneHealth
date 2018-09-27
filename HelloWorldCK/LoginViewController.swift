@@ -29,6 +29,7 @@
 import UIKit
 import CoreData
 import Shimmer
+import JVFloatLabeledTextField
 
 class LoginViewController: UIViewController {
     
@@ -48,6 +49,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        
+        
     }
     
     func configureUI(){
