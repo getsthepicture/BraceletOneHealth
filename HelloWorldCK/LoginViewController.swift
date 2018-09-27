@@ -35,6 +35,8 @@ class LoginViewController: UIViewController {
     
     // MARK: Properties
     var managedObjectContext: NSManagedObjectContext?
+    let usernameKey = "Secure"
+    let passwordKey = "Wellington"
     
     @IBOutlet var stackView: UIStackView!
     // MARK: - IBOutlets
@@ -83,6 +85,15 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     @IBAction func loginAction(sender: Any) {
-        performSegue(withIdentifier: "dismissLogin", sender: self)
+        //performSegue(withIdentifier: "dismissLogin", sender: self)
+        if checkLogin(username: usernameTextField.text!, password: passwordTextField.text!){
+            performSegue(withIdentifier: "dismissLogin", sender: self)
+        }
     }
+    
+    func checkLogin(username: String, password: String) -> Bool {
+        return username == usernameKey && password == passwordKey
+    }
+    
+    
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		48999B8F2457FF03B5351426 /* Pods_HelloWorldCK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57618376E9BD1762A507E06B /* Pods_HelloWorldCK.framework */; };
+		E90A999D215D442D00682DAE /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A9998215D442C00682DAE /* KeychainPasswordItem.swift */; };
 		E937502A215C4104006FE577 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9375025215C4104006FE577 /* LoginViewController.swift */; };
 		E9EEAE29214A950600CCE95B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEAE28214A950600CCE95B /* AppDelegate.swift */; };
 		E9EEAE2B214A950600CCE95B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEAE2A214A950600CCE95B /* ViewController.swift */; };
@@ -94,6 +95,7 @@
 		326E1ABC1684EA1A554305C6 /* Pods-HelloWorldCK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorldCK.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorldCK/Pods-HelloWorldCK.release.xcconfig"; sourceTree = "<group>"; };
 		57618376E9BD1762A507E06B /* Pods_HelloWorldCK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorldCK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DDF0DA6149C508A39165563 /* Pods-HelloWorldCK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorldCK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorldCK/Pods-HelloWorldCK.debug.xcconfig"; sourceTree = "<group>"; };
+		E90A9998215D442C00682DAE /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		E9375025215C4104006FE577 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E9EEAE25214A950600CCE95B /* HelloWorldCK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorldCK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EEAE28214A950600CCE95B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				E9EEAE62214ACD4400CCE95B /* CareKitViewController.swift */,
 				E9EEAEC5214B552000CCE95B /* EmoryHealthViewController.swift */,
 				E9375025215C4104006FE577 /* LoginViewController.swift */,
+				E90A9998215D442C00682DAE /* KeychainPasswordItem.swift */,
 				E9EEAE2C214A950600CCE95B /* Main.storyboard */,
 				E9EEAE2F214A950900CCE95B /* Assets.xcassets */,
 				E9EEAE31214A950900CCE95B /* LaunchScreen.storyboard */,
@@ -421,6 +424,7 @@
 				E9EEAEB2214B452300CCE95B /* MockResource.swift in Sources */,
 				E9EEAEB7214B464300CCE95B /* CarePlan.swift in Sources */,
 				E937502A215C4104006FE577 /* LoginViewController.swift in Sources */,
+				E90A999D215D442D00682DAE /* KeychainPasswordItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
