@@ -29,12 +29,15 @@
 import UIKit
 import CoreData
 import Shimmer
-import JVFloatLabeledTextField
+import SCLAlertView
 
 class LoginViewController: UIViewController {
     
     // MARK: Properties
     var managedObjectContext: NSManagedObjectContext?
+    var passwordItems: [KeychainPasswordItem] = [] //am array of keychain password items to put into the keychain maybe...why an array and not just one though as in a just a string, why an array?
+    let createLoginButtonTag = 0
+    let loginButtonTag = 1
     let usernameKey = "Secure"
     let passwordKey = "Wellington"
     
@@ -51,7 +54,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        
         
     }
     
@@ -85,14 +87,35 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     @IBAction func loginAction(sender: Any) {
-        //performSegue(withIdentifier: "dismissLogin", sender: self)
+        guard let newAccountName = usernameTextField.text,
+        let newPassword = passwordTextField.text,
+        !newAccountName.isEmpty,
+            !newPassword.isEmpty else {
+                showLoginFailAlert()
+                return
+        }
+       /*
         if checkLogin(username: usernameTextField.text!, password: passwordTextField.text!){
             performSegue(withIdentifier: "dismissLogin", sender: self)
+        }else{
+            showLoginFailAlert()
         }
+ */
     }
     
     func checkLogin(username: String, password: String) -> Bool {
         return username == usernameKey && password == passwordKey
+    }
+    
+    func showLoginFailAlert(){
+        let appearance = SCLAlertView.SCLAppearance(
+            kTitleFont: UIFont(name: "HelveticaNeue", size: 20)!,
+            kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
+            kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
+            showCloseButton: true
+        )
+        let alert = SCLAlertView.init(appearance: appearance)
+        alert.showError("Login Problem", subTitle: "Wrong username or password.")
     }
     
     

@@ -9,5 +9,6 @@ target 'HelloWorldCK' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Shimmer', '~> 1.0'
   pod 'JVFloatLabeledTextField'
+  pod 'SCLAlertView'
 
 end

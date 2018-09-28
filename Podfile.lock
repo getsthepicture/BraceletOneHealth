@@ -1,24 +1,28 @@
 PODS:
   - JVFloatLabeledTextField (1.2.1)
+  - SCLAlertView (0.8)
   - Shimmer (1.0.2)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
   - JVFloatLabeledTextField
+  - SCLAlertView
   - Shimmer (~> 1.0)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - JVFloatLabeledTextField
+    - SCLAlertView
     - Shimmer
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   JVFloatLabeledTextField: cfc44e3c4d493b2ed92ede8035e8e89c2912ba64
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: e4d7d440a750f9f59b84cb495b5317e590350e03
+PODFILE CHECKSUM: 3ba0db73c3f5b0b0b388a81183c71c1084709dbc
 
 COCOAPODS: 1.5.3

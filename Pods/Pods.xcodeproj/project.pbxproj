@@ -7,113 +7,134 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FB4EC3DC8370153FA8F6FC57311DAA3 /* FBShimmering.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F3ADD41E75241BC750C37562043EED5 /* FBShimmering.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		224A85932487353D4FEB41D97AAA1273 /* JVFloatLabeledTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7F683E2E05057600DDD3C0220CF061 /* JVFloatLabeledTextField-dummy.m */; };
-		26779EBBDFB6A13671E978530EFFCE56 /* Shimmer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2A93A40B6FFABBABEECF78C2F95CDD /* Shimmer-dummy.m */; };
-		2A0425F5FB823A70A4AE49F3CE954261 /* Pods-HelloWorldCK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC5162C7C67D1BA927A909F268E6265 /* Pods-HelloWorldCK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2CF987D2DC59DA41EB62817A07B6712B /* JVFloatLabeledTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EE924818D791D89B0DAD9F68737F491 /* JVFloatLabeledTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		31C424BEE9F2097919D5985685D0563E /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F50F0903C0A104EA7FFE45CD7FAF724D /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		36A8635ACD8A411AA01830728549B534 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6802FCEAF2E8C0B6BB1648E79AFFCF /* JVFloatLabeledTextView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		001A61B36E162BD7E00AE5ABF62DD2D7 /* Shimmer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4466E2C53ABA612823AA3BD479798E26 /* Shimmer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		019C909127F8C925DD9F9159EED45CF1 /* Pods-HelloWorldCK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F18FF6629F9DCE2CCDEDD5F18E0B5 /* Pods-HelloWorldCK-dummy.m */; };
+		03F4C5C098E6CE1358992229B95E2462 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75EC7CA41EE6A43BE8CEF7FA80BAE6A /* SCLAlertView.swift */; };
+		17A81FEB3304AD738EB237B4AD82C906 /* FBShimmeringLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 916CFAF447DDAE6581635711EA226CCC /* FBShimmeringLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FD9AC8A143448EE308A862C6E62535B /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0663A55806D0D07740284AF36823DDF2 /* FBShimmeringLayer.m */; };
+		224A85932487353D4FEB41D97AAA1273 /* JVFloatLabeledTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E3FCBD40A66987B8436CFE873C3A07 /* JVFloatLabeledTextField-dummy.m */; };
+		22A8B13895180E801693F7652A0851B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		243A9DBF0EAAE2CC5617C52646181BB2 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEFB1155F8D9CC1E6C19F5D01F118812 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CF987D2DC59DA41EB62817A07B6712B /* JVFloatLabeledTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C47A99CD9E31DFB0D14BA6E65E30E035 /* JVFloatLabeledTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36A8635ACD8A411AA01830728549B534 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A127AE8C75F17BFF5C9996A7BF35EFD /* JVFloatLabeledTextView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		39E75434C597D3D9F29662905CD646F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
 		5425C4B84CA641425E90B13AC38FA965 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
-		5EFE5470547E03989460835BE5D627D9 /* FBShimmeringLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F91FDBD421A76F3581F0891A6AC679F /* FBShimmeringLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		68B544E41A8477AA16E44E9C0D5F232C /* JVFloatLabeledTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = A5E8F50171E18C219877DC44C3FCE96B /* JVFloatLabeledTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6D7B8C5BCEF514CCE43E44891B3126C3 /* NSString+TextDirectionality.h in Headers */ = {isa = PBXBuildFile; fileRef = CEF990C9838433F02CDD1FCEDD5D8352 /* NSString+TextDirectionality.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70B60EAAEC3BDF0F7CC345101E9A0030 /* FBShimmeringView.h in Headers */ = {isa = PBXBuildFile; fileRef = BFE87B192395AF3D10CF69980D412C61 /* FBShimmeringView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9A0FB2C71A306631C00AF04BE4DA3A76 /* NSString+TextDirectionality.m in Sources */ = {isa = PBXBuildFile; fileRef = 097345910ADD06BEE651572908DE33B9 /* NSString+TextDirectionality.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9C8E1AB7546C5AD48B8D56AAA2B8F193 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 429F781DA740D94EFA397FDDA8AC150C /* FBShimmeringView.m */; };
-		A7E1EAFD27017909A5451D7856737C33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
-		AC95AB9FFBD9F1B6B95D7FE15D1B88F7 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C586FFBD59EBFAF6B6E277151E98DBB8 /* SwiftyJSON-dummy.m */; };
-		B04ADA0571DCBCC9CD181458F272A847 /* Shimmer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 692D100D289E8A2BA1637A74C331BD03 /* Shimmer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		570DE909B79AEA60ABD7DFCA9D9CC09D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBE13FC92D2C33F4C8C779F9342560D /* SwiftyJSON.swift */; };
+		574B025D3D442AE007A1D8D0312CF54A /* Pods-HelloWorldCK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC5162C7C67D1BA927A909F268E6265 /* Pods-HelloWorldCK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B610188DB741DE3E9C20BFC26EC82C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		600E0945473A4DD20078162AA6177C18 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6017B1319645652A88866DF8449826 /* SwiftyJSON-dummy.m */; };
+		68B544E41A8477AA16E44E9C0D5F232C /* JVFloatLabeledTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = E11709FEB86D3B4B2C355023C35E27BF /* JVFloatLabeledTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D7B8C5BCEF514CCE43E44891B3126C3 /* NSString+TextDirectionality.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A421B58B4DA7FE820CD73B512C37B76 /* NSString+TextDirectionality.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8292AFA6CBE0195766F034A0B6B85451 /* SCLAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FD9269ED1EF4585F3D22FC4CD0145F /* SCLAlertView-dummy.m */; };
+		9A0FB2C71A306631C00AF04BE4DA3A76 /* NSString+TextDirectionality.m in Sources */ = {isa = PBXBuildFile; fileRef = A7799C14AD6BA091BA7D3C194E5BE582 /* NSString+TextDirectionality.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A94D661DE7F738193D5B06C1004B9EA9 /* FBShimmering.h in Headers */ = {isa = PBXBuildFile; fileRef = FC4C0D21537CF7EDCCCC145CD47FB39F /* FBShimmering.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B452F4462446AE216D076AC181DE83A3 /* FBShimmeringView.h in Headers */ = {isa = PBXBuildFile; fileRef = 35CE68E4B465721C51A135EB5962CD4D /* FBShimmeringView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B71923AAC699ACC7F83B8CE326F4A8B4 /* SCLAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88B6D257EFF8F54F7F05A0FB6A27DE11 /* SCLAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCA93A9874588267E1E89B9886D172FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
 		C61480FC417FF7A632340001AC5C9BEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
-		CA4D3F05CF4258CF7FA67F13AC655564 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
-		DDDDDBA41ACEC42CBAC3B6A0E0CDEF27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
-		E185A4E2B76ECD9738045C029741DC27 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F3F6CBC6AE21295207BF58F38F4A24 /* FBShimmeringLayer.m */; };
-		EF46FE3501050F4B975DE4DD5AD8DC4C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0E9E9BE9BA1A9409221AF104A62CFC /* SwiftyJSON.swift */; };
-		F4EBD72886837777AA1E6DF34E9610C9 /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A567D3E8682A18FF11C5144E6681938C /* JVFloatLabeledTextField.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F9115057BD0EF647E0EAF0E014F84635 /* JVFloatLabeledTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = E734DCA1A448298DF8770850C43C807F /* JVFloatLabeledTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FE7D4CB939DFF7ED5352A15C4740F1E4 /* Pods-HelloWorldCK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F18FF6629F9DCE2CCDEDD5F18E0B5 /* Pods-HelloWorldCK-dummy.m */; };
+		D03483B8D665812982737DBFA35B55A8 /* Shimmer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB2F9CEBF88D0412CB020A9F2974257 /* Shimmer-dummy.m */; };
+		DA3FF086CCC6F104303DDAEFFEE267F6 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A08708A29B02FBF12F593FF7E869711 /* SCLExtensions.swift */; };
+		F07E6A41224900E5AACF408F2BF37634 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7545D05CA8F64C6A1CC059533CFA8D /* FBShimmeringView.m */; };
+		F4EBD72886837777AA1E6DF34E9610C9 /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C87F21D6DDB4D3935F360B282E0BAB62 /* JVFloatLabeledTextField.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F9115057BD0EF647E0EAF0E014F84635 /* JVFloatLabeledTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 913F3E960DF1D5D480D6713994F3CC91 /* JVFloatLabeledTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		10D37320227CBF8042C801C17769433D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6488D639C0944669B7B883A265298A3B;
-			remoteInfo = Shimmer;
-		};
-		1C92F76CA7DC2BF8ED03822850286377 /* PBXContainerItemProxy */ = {
+		18469047143E3F0F32E54B87132A42EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2A4448146C785C426971111F117D773C;
 			remoteInfo = JVFloatLabeledTextField;
 		};
-		3B0130D5F335D1B6DCC4D8E5585FE043 /* PBXContainerItemProxy */ = {
+		2D5E599A5614A32F2B545C18DB28B7CF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 206C5E03CCC58A966D3284A563B9A9C0;
+			remoteGlobalIDString = 5DCA4E403074CA751D26AE0566D3F249;
+			remoteInfo = SCLAlertView;
+		};
+		99A5EFAA14A989D1BD0ABDB5C76A02A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CAE1DC0234795F1DE2C3687BCE21CE0;
+			remoteInfo = Shimmer;
+		};
+		9DC4F6E6E62AB775F5D0A47BC52BEE76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F914E207B31A0EC80AC838AC5F9885A0;
 			remoteInfo = SwiftyJSON;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07FA845428F676BD9DCA9C03B3C996E0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		097345910ADD06BEE651572908DE33B9 /* NSString+TextDirectionality.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+TextDirectionality.m"; path = "JVFloatLabeledTextField/JVFloatLabeledTextField/NSString+TextDirectionality.m"; sourceTree = "<group>"; };
+		004938DF0EE82B16826CCC31CE01789A /* Shimmer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Shimmer.xcconfig; sourceTree = "<group>"; };
+		031496A89C07921B863762383719158B /* Shimmer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Shimmer.framework; path = Shimmer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0663A55806D0D07740284AF36823DDF2 /* FBShimmeringLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBShimmeringLayer.m; path = FBShimmering/FBShimmeringLayer.m; sourceTree = "<group>"; };
+		0A12899EA0725D876C8C602FE45F5E59 /* Shimmer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Shimmer-prefix.pch"; sourceTree = "<group>"; };
 		0C3F18FF6629F9DCE2CCDEDD5F18E0B5 /* Pods-HelloWorldCK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HelloWorldCK-dummy.m"; sourceTree = "<group>"; };
-		0F3ADD41E75241BC750C37562043EED5 /* FBShimmering.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBShimmering.h; path = FBShimmering/FBShimmering.h; sourceTree = "<group>"; };
-		156C1BB7F18484298FD09DDC4ED3AFF0 /* JVFloatLabeledTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVFloatLabeledTextField.framework; path = JVFloatLabeledTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F2A93A40B6FFABBABEECF78C2F95CDD /* Shimmer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Shimmer-dummy.m"; sourceTree = "<group>"; };
-		296629443DAE57BE167BF2763B812CC0 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		2B6802FCEAF2E8C0B6BB1648E79AFFCF /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JVFloatLabeledTextView.m; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextView.m; sourceTree = "<group>"; };
-		2EE924818D791D89B0DAD9F68737F491 /* JVFloatLabeledTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVFloatLabeledTextField-umbrella.h"; sourceTree = "<group>"; };
-		2F91FDBD421A76F3581F0891A6AC679F /* FBShimmeringLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBShimmeringLayer.h; path = FBShimmering/FBShimmeringLayer.h; sourceTree = "<group>"; };
-		2FB238FBB55D37921BBB48C55B8FF75E /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11EFEF0469C681277DC338FE71912EBE /* JVFloatLabeledTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVFloatLabeledTextField.framework; path = JVFloatLabeledTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15251AAB4149075758CF37818602D688 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E92D68DB9D6F2640D5154CB5012A489 /* SCLAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCLAlertView.xcconfig; sourceTree = "<group>"; };
+		28EAF4E2F11E4B8EACF3CB224EBB53CC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D755D8127EF7246E018F18ACD5DAA7E /* Pods_HelloWorldCK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HelloWorldCK.framework; path = "Pods-HelloWorldCK.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C458CCDA2AFBE1486E931201FB38FD /* Pods-HelloWorldCK-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HelloWorldCK-resources.sh"; sourceTree = "<group>"; };
-		429F781DA740D94EFA397FDDA8AC150C /* FBShimmeringView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBShimmeringView.m; path = FBShimmering/FBShimmeringView.m; sourceTree = "<group>"; };
-		45EAA50EDBAA39844DA511E26DE48716 /* JVFloatLabeledTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVFloatLabeledTextField.modulemap; sourceTree = "<group>"; };
+		33A109B1B83B6972AAFD7645B36EE74B /* JVFloatLabeledTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVFloatLabeledTextField.modulemap; sourceTree = "<group>"; };
+		35CE68E4B465721C51A135EB5962CD4D /* FBShimmeringView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBShimmeringView.h; path = FBShimmering/FBShimmeringView.h; sourceTree = "<group>"; };
+		3A127AE8C75F17BFF5C9996A7BF35EFD /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JVFloatLabeledTextView.m; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextView.m; sourceTree = "<group>"; };
+		4466E2C53ABA612823AA3BD479798E26 /* Shimmer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Shimmer-umbrella.h"; sourceTree = "<group>"; };
+		49FD9269ED1EF4585F3D22FC4CD0145F /* SCLAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCLAlertView-dummy.m"; sourceTree = "<group>"; };
 		4D5F2AC78249EA11B9B45B85ACB15797 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		692D100D289E8A2BA1637A74C331BD03 /* Shimmer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Shimmer-umbrella.h"; sourceTree = "<group>"; };
-		76F3F6CBC6AE21295207BF58F38F4A24 /* FBShimmeringLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBShimmeringLayer.m; path = FBShimmering/FBShimmeringLayer.m; sourceTree = "<group>"; };
-		7C0E9E9BE9BA1A9409221AF104A62CFC /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
-		88F65150BD2FAD7202C817A60B038017 /* Shimmer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Shimmer.framework; path = Shimmer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A08708A29B02FBF12F593FF7E869711 /* SCLExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLExtensions.swift; path = SCLAlertView/SCLExtensions.swift; sourceTree = "<group>"; };
+		5A421B58B4DA7FE820CD73B512C37B76 /* NSString+TextDirectionality.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+TextDirectionality.h"; path = "JVFloatLabeledTextField/JVFloatLabeledTextField/NSString+TextDirectionality.h"; sourceTree = "<group>"; };
+		615A26F5FAD06E18CA5BA744901633ED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		648C34E101553C0611CF06A2BDCF73C0 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		6AD97A1ACB9709891CE979A65AB7C3F6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B3D5CB1BF5A9002E4ADDB8204C2D76E /* JVFloatLabeledTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVFloatLabeledTextField-prefix.pch"; sourceTree = "<group>"; };
+		7C87F63F0E73DFFEFADD8EBE5CAB4F8B /* SCLAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-prefix.pch"; sourceTree = "<group>"; };
+		7CBE13FC92D2C33F4C8C779F9342560D /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		81B6DD6AB74D3A69C5B8A049B1734D05 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8727B3FDCB86C15BB07DF9EFA14EE11B /* SCLAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCLAlertView.framework; path = SCLAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88B6D257EFF8F54F7F05A0FB6A27DE11 /* SCLAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-umbrella.h"; sourceTree = "<group>"; };
 		8DF0152E411418024AD88B6B81C80E00 /* Pods-HelloWorldCK-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HelloWorldCK-acknowledgements.markdown"; sourceTree = "<group>"; };
 		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		913F3E960DF1D5D480D6713994F3CC91 /* JVFloatLabeledTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JVFloatLabeledTextField.h; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextField.h; sourceTree = "<group>"; };
+		916CFAF447DDAE6581635711EA226CCC /* FBShimmeringLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBShimmeringLayer.h; path = FBShimmering/FBShimmeringLayer.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		992578BC2DA60723A88FC9FDA5994E4D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A567D3E8682A18FF11C5144E6681938C /* JVFloatLabeledTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JVFloatLabeledTextField.m; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextField.m; sourceTree = "<group>"; };
-		A5E8F50171E18C219877DC44C3FCE96B /* JVFloatLabeledTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JVFloatLabeledTextView.h; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextView.h; sourceTree = "<group>"; };
+		A75EC7CA41EE6A43BE8CEF7FA80BAE6A /* SCLAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = SCLAlertView/SCLAlertView.swift; sourceTree = "<group>"; };
+		A7799C14AD6BA091BA7D3C194E5BE582 /* NSString+TextDirectionality.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+TextDirectionality.m"; path = "JVFloatLabeledTextField/JVFloatLabeledTextField/NSString+TextDirectionality.m"; sourceTree = "<group>"; };
 		AD66C2227B846B2C9683BD54DDC21900 /* Pods-HelloWorldCK-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HelloWorldCK-frameworks.sh"; sourceTree = "<group>"; };
-		AF460A4724DA94CD05439BAAB28E6DF0 /* JVFloatLabeledTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVFloatLabeledTextField.xcconfig; sourceTree = "<group>"; };
-		B06ABF3EFF5D16B343EB824C7212E60D /* Shimmer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Shimmer.xcconfig; sourceTree = "<group>"; };
+		AEFB1155F8D9CC1E6C19F5D01F118812 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		B3DB9D02A1FC0FC54C34AAF98CE0EECF /* JVFloatLabeledTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVFloatLabeledTextField.xcconfig; sourceTree = "<group>"; };
 		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		BDC5162C7C67D1BA927A909F268E6265 /* Pods-HelloWorldCK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HelloWorldCK-umbrella.h"; sourceTree = "<group>"; };
-		BE058897BC6E66460C756C07EEB350CC /* Pods_HelloWorldCK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HelloWorldCK.framework; path = "Pods-HelloWorldCK.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFE87B192395AF3D10CF69980D412C61 /* FBShimmeringView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBShimmeringView.h; path = FBShimmering/FBShimmeringView.h; sourceTree = "<group>"; };
 		C27E525A532F25C7443B0955B198DD29 /* Pods-HelloWorldCK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HelloWorldCK.debug.xcconfig"; sourceTree = "<group>"; };
-		C586FFBD59EBFAF6B6E277151E98DBB8 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		C47A99CD9E31DFB0D14BA6E65E30E035 /* JVFloatLabeledTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVFloatLabeledTextField-umbrella.h"; sourceTree = "<group>"; };
+		C75942770897BE547B3720363B2A1498 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		C87F21D6DDB4D3935F360B282E0BAB62 /* JVFloatLabeledTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JVFloatLabeledTextField.m; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextField.m; sourceTree = "<group>"; };
 		C8CFDBFE4F56E25CA6CBA0A021C3DCB3 /* Pods-HelloWorldCK-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HelloWorldCK-acknowledgements.plist"; sourceTree = "<group>"; };
-		CD7F683E2E05057600DDD3C0220CF061 /* JVFloatLabeledTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVFloatLabeledTextField-dummy.m"; sourceTree = "<group>"; };
-		CEF990C9838433F02CDD1FCEDD5D8352 /* NSString+TextDirectionality.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+TextDirectionality.h"; path = "JVFloatLabeledTextField/JVFloatLabeledTextField/NSString+TextDirectionality.h"; sourceTree = "<group>"; };
-		D711B8B53495C17342CA2F8A33DA2B9C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8E3FCBD40A66987B8436CFE873C3A07 /* JVFloatLabeledTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVFloatLabeledTextField-dummy.m"; sourceTree = "<group>"; };
+		D6BA1227035FDCA490E5C380A439B090 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
 		DA9D1B3C55BFD17115FA861BD48EB65F /* Pods-HelloWorldCK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HelloWorldCK.release.xcconfig"; sourceTree = "<group>"; };
-		DD60E3BEAA6EE6E0B5B42C7809838C39 /* JVFloatLabeledTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVFloatLabeledTextField-prefix.pch"; sourceTree = "<group>"; };
-		E5C1F912B4EA3CFBD8029BCB1DC9100E /* Shimmer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Shimmer.modulemap; sourceTree = "<group>"; };
+		DFB2F9CEBF88D0412CB020A9F2974257 /* Shimmer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Shimmer-dummy.m"; sourceTree = "<group>"; };
+		E11709FEB86D3B4B2C355023C35E27BF /* JVFloatLabeledTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JVFloatLabeledTextView.h; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextView.h; sourceTree = "<group>"; };
 		E7179821A6EFE402080DA4A351266C3B /* Pods-HelloWorldCK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HelloWorldCK.modulemap"; sourceTree = "<group>"; };
-		E734DCA1A448298DF8770850C43C807F /* JVFloatLabeledTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JVFloatLabeledTextField.h; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextField.h; sourceTree = "<group>"; };
-		EA694A5C463E6B042187E64D64676360 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
-		F149D458926ECCE3DAD2D8A8C5B48609 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
-		F50F0903C0A104EA7FFE45CD7FAF724D /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
-		FF84EA76E3E30E622C3AB6374D5E8860 /* Shimmer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Shimmer-prefix.pch"; sourceTree = "<group>"; };
+		EA6017B1319645652A88866DF8449826 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		EDFADC61B47065FAC8DBEC89D3120E48 /* SCLAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SCLAlertView.modulemap; sourceTree = "<group>"; };
+		FC4C0D21537CF7EDCCCC145CD47FB39F /* FBShimmering.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBShimmering.h; path = FBShimmering/FBShimmering.h; sourceTree = "<group>"; };
+		FCC27DBE3D22DF60060A629E34DF7F28 /* Shimmer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Shimmer.modulemap; sourceTree = "<group>"; };
+		FF7545D05CA8F64C6A1CC059533CFA8D /* FBShimmeringView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBShimmeringView.m; path = FBShimmering/FBShimmeringView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		52C753916ADBC6D24CFADF6D334E0EE9 /* Frameworks */ = {
+		0F0C8FB509F32576490DD15274C05943 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDDDDBA41ACEC42CBAC3B6A0E0CDEF27 /* Foundation.framework in Frameworks */,
+				39E75434C597D3D9F29662905CD646F1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,35 +147,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5FFFE7FAE18530C2DED0372170DC850 /* Frameworks */ = {
+		CD5F9EECB2135E0EE2CB26D5B6CA89C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7E1EAFD27017909A5451D7856737C33 /* Foundation.framework in Frameworks */,
+				BCA93A9874588267E1E89B9886D172FF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DCC4F3522E413881793AE2C3DBE4755D /* Frameworks */ = {
+		D531608A5E15B349D23BF18249876B38 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA4D3F05CF4258CF7FA67F13AC655564 /* Foundation.framework in Frameworks */,
+				5B610188DB741DE3E9C20BFC26EC82C5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D57F3181838D046A66E446B8C0E16C0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22A8B13895180E801693F7652A0851B6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B4782E4507D8B910C962638CD414839 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DE86ECD09C68C3DB44CE2812A13CD58D /* JVFloatLabeledTextField */,
-				CB1DE5E715B105750147F4496F47CA77 /* Shimmer */,
-				89C566DDB3F175D8AF2447971FEBFB77 /* SwiftyJSON */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +181,18 @@
 				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		226914E4E08EC451F75311A3BBE6375D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11EFEF0469C681277DC338FE71912EBE /* JVFloatLabeledTextField.framework */,
+				2D755D8127EF7246E018F18ACD5DAA7E /* Pods_HelloWorldCK.framework */,
+				8727B3FDCB86C15BB07DF9EFA14EE11B /* SCLAlertView.framework */,
+				031496A89C07921B863762383719158B /* Shimmer.framework */,
+				81B6DD6AB74D3A69C5B8A049B1734D05 /* SwiftyJSON.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		30190030643BC91D2E493851EF164182 /* Pods-HelloWorldCK */ = {
@@ -190,29 +221,57 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4888E02F4037E94AF97932ECBB3A1C89 /* Products */ = {
+		4A008478FC83C2E3C82269DDE390281B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				156C1BB7F18484298FD09DDC4ED3AFF0 /* JVFloatLabeledTextField.framework */,
-				BE058897BC6E66460C756C07EEB350CC /* Pods_HelloWorldCK.framework */,
-				88F65150BD2FAD7202C817A60B038017 /* Shimmer.framework */,
-				2FB238FBB55D37921BBB48C55B8FF75E /* SwiftyJSON.framework */,
+				AC11633EF657256795D1DB84137DD15E /* JVFloatLabeledTextField */,
+				DABFCBB7343B5572CE8D8F8B99346D78 /* SCLAlertView */,
+				4F80A7B6AE43C957860BF539978165CD /* Shimmer */,
+				E54EF93DC219E00051129944F24FF08A /* SwiftyJSON */,
 			);
-			name = Products;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		5DB54E37563804161F36736AFC7DF881 /* Support Files */ = {
+		4F80A7B6AE43C957860BF539978165CD /* Shimmer */ = {
 			isa = PBXGroup;
 			children = (
-				07FA845428F676BD9DCA9C03B3C996E0 /* Info.plist */,
-				E5C1F912B4EA3CFBD8029BCB1DC9100E /* Shimmer.modulemap */,
-				B06ABF3EFF5D16B343EB824C7212E60D /* Shimmer.xcconfig */,
-				1F2A93A40B6FFABBABEECF78C2F95CDD /* Shimmer-dummy.m */,
-				FF84EA76E3E30E622C3AB6374D5E8860 /* Shimmer-prefix.pch */,
-				692D100D289E8A2BA1637A74C331BD03 /* Shimmer-umbrella.h */,
+				FC4C0D21537CF7EDCCCC145CD47FB39F /* FBShimmering.h */,
+				916CFAF447DDAE6581635711EA226CCC /* FBShimmeringLayer.h */,
+				0663A55806D0D07740284AF36823DDF2 /* FBShimmeringLayer.m */,
+				35CE68E4B465721C51A135EB5962CD4D /* FBShimmeringView.h */,
+				FF7545D05CA8F64C6A1CC059533CFA8D /* FBShimmeringView.m */,
+				88DDDF6D6AFC35B11AF43201EAAB5C2B /* Support Files */,
+			);
+			name = Shimmer;
+			path = Shimmer;
+			sourceTree = "<group>";
+		};
+		731419B17DDAD4CA8F6371680D797E22 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				615A26F5FAD06E18CA5BA744901633ED /* Info.plist */,
+				EDFADC61B47065FAC8DBEC89D3120E48 /* SCLAlertView.modulemap */,
+				1E92D68DB9D6F2640D5154CB5012A489 /* SCLAlertView.xcconfig */,
+				49FD9269ED1EF4585F3D22FC4CD0145F /* SCLAlertView-dummy.m */,
+				7C87F63F0E73DFFEFADD8EBE5CAB4F8B /* SCLAlertView-prefix.pch */,
+				88B6D257EFF8F54F7F05A0FB6A27DE11 /* SCLAlertView-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Shimmer";
+			path = "../Target Support Files/SCLAlertView";
+			sourceTree = "<group>";
+		};
+		778E90386A0A8858C7FC212BA39765FA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				28EAF4E2F11E4B8EACF3CB224EBB53CC /* Info.plist */,
+				33A109B1B83B6972AAFD7645B36EE74B /* JVFloatLabeledTextField.modulemap */,
+				B3DB9D02A1FC0FC54C34AAF98CE0EECF /* JVFloatLabeledTextField.xcconfig */,
+				C8E3FCBD40A66987B8436CFE873C3A07 /* JVFloatLabeledTextField-dummy.m */,
+				7B3D5CB1BF5A9002E4ADDB8204C2D76E /* JVFloatLabeledTextField-prefix.pch */,
+				C47A99CD9E31DFB0D14BA6E65E30E035 /* JVFloatLabeledTextField-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JVFloatLabeledTextField";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -220,20 +279,24 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				0B4782E4507D8B910C962638CD414839 /* Pods */,
-				4888E02F4037E94AF97932ECBB3A1C89 /* Products */,
+				4A008478FC83C2E3C82269DDE390281B /* Pods */,
+				226914E4E08EC451F75311A3BBE6375D /* Products */,
 				950433875AD12377ABE2DC605557B34A /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		89C566DDB3F175D8AF2447971FEBFB77 /* SwiftyJSON */ = {
+		88DDDF6D6AFC35B11AF43201EAAB5C2B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7C0E9E9BE9BA1A9409221AF104A62CFC /* SwiftyJSON.swift */,
-				A42D62F631EA6F3D5BC9A14E91547225 /* Support Files */,
+				6AD97A1ACB9709891CE979A65AB7C3F6 /* Info.plist */,
+				FCC27DBE3D22DF60060A629E34DF7F28 /* Shimmer.modulemap */,
+				004938DF0EE82B16826CCC31CE01789A /* Shimmer.xcconfig */,
+				DFB2F9CEBF88D0412CB020A9F2974257 /* Shimmer-dummy.m */,
+				0A12899EA0725D876C8C602FE45F5E59 /* Shimmer-prefix.pch */,
+				4466E2C53ABA612823AA3BD479798E26 /* Shimmer-umbrella.h */,
 			);
-			name = SwiftyJSON;
-			path = SwiftyJSON;
+			name = "Support Files";
+			path = "../Target Support Files/Shimmer";
 			sourceTree = "<group>";
 		};
 		950433875AD12377ABE2DC605557B34A /* Targets Support Files */ = {
@@ -244,90 +307,83 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A42D62F631EA6F3D5BC9A14E91547225 /* Support Files */ = {
+		9AC6134D5E0712B5C4BCF6182F0AD0CC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				992578BC2DA60723A88FC9FDA5994E4D /* Info.plist */,
-				F149D458926ECCE3DAD2D8A8C5B48609 /* SwiftyJSON.modulemap */,
-				EA694A5C463E6B042187E64D64676360 /* SwiftyJSON.xcconfig */,
-				C586FFBD59EBFAF6B6E277151E98DBB8 /* SwiftyJSON-dummy.m */,
-				296629443DAE57BE167BF2763B812CC0 /* SwiftyJSON-prefix.pch */,
-				F50F0903C0A104EA7FFE45CD7FAF724D /* SwiftyJSON-umbrella.h */,
+				15251AAB4149075758CF37818602D688 /* Info.plist */,
+				C75942770897BE547B3720363B2A1498 /* SwiftyJSON.modulemap */,
+				D6BA1227035FDCA490E5C380A439B090 /* SwiftyJSON.xcconfig */,
+				EA6017B1319645652A88866DF8449826 /* SwiftyJSON-dummy.m */,
+				648C34E101553C0611CF06A2BDCF73C0 /* SwiftyJSON-prefix.pch */,
+				AEFB1155F8D9CC1E6C19F5D01F118812 /* SwiftyJSON-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftyJSON";
 			sourceTree = "<group>";
 		};
-		CB1DE5E715B105750147F4496F47CA77 /* Shimmer */ = {
+		AC11633EF657256795D1DB84137DD15E /* JVFloatLabeledTextField */ = {
 			isa = PBXGroup;
 			children = (
-				0F3ADD41E75241BC750C37562043EED5 /* FBShimmering.h */,
-				2F91FDBD421A76F3581F0891A6AC679F /* FBShimmeringLayer.h */,
-				76F3F6CBC6AE21295207BF58F38F4A24 /* FBShimmeringLayer.m */,
-				BFE87B192395AF3D10CF69980D412C61 /* FBShimmeringView.h */,
-				429F781DA740D94EFA397FDDA8AC150C /* FBShimmeringView.m */,
-				5DB54E37563804161F36736AFC7DF881 /* Support Files */,
-			);
-			name = Shimmer;
-			path = Shimmer;
-			sourceTree = "<group>";
-		};
-		DE86ECD09C68C3DB44CE2812A13CD58D /* JVFloatLabeledTextField */ = {
-			isa = PBXGroup;
-			children = (
-				E734DCA1A448298DF8770850C43C807F /* JVFloatLabeledTextField.h */,
-				A567D3E8682A18FF11C5144E6681938C /* JVFloatLabeledTextField.m */,
-				A5E8F50171E18C219877DC44C3FCE96B /* JVFloatLabeledTextView.h */,
-				2B6802FCEAF2E8C0B6BB1648E79AFFCF /* JVFloatLabeledTextView.m */,
-				CEF990C9838433F02CDD1FCEDD5D8352 /* NSString+TextDirectionality.h */,
-				097345910ADD06BEE651572908DE33B9 /* NSString+TextDirectionality.m */,
-				DFF857AE1C79524BFAAC968527CD3294 /* Support Files */,
+				913F3E960DF1D5D480D6713994F3CC91 /* JVFloatLabeledTextField.h */,
+				C87F21D6DDB4D3935F360B282E0BAB62 /* JVFloatLabeledTextField.m */,
+				E11709FEB86D3B4B2C355023C35E27BF /* JVFloatLabeledTextView.h */,
+				3A127AE8C75F17BFF5C9996A7BF35EFD /* JVFloatLabeledTextView.m */,
+				5A421B58B4DA7FE820CD73B512C37B76 /* NSString+TextDirectionality.h */,
+				A7799C14AD6BA091BA7D3C194E5BE582 /* NSString+TextDirectionality.m */,
+				778E90386A0A8858C7FC212BA39765FA /* Support Files */,
 			);
 			name = JVFloatLabeledTextField;
 			path = JVFloatLabeledTextField;
 			sourceTree = "<group>";
 		};
-		DFF857AE1C79524BFAAC968527CD3294 /* Support Files */ = {
+		DABFCBB7343B5572CE8D8F8B99346D78 /* SCLAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				D711B8B53495C17342CA2F8A33DA2B9C /* Info.plist */,
-				45EAA50EDBAA39844DA511E26DE48716 /* JVFloatLabeledTextField.modulemap */,
-				AF460A4724DA94CD05439BAAB28E6DF0 /* JVFloatLabeledTextField.xcconfig */,
-				CD7F683E2E05057600DDD3C0220CF061 /* JVFloatLabeledTextField-dummy.m */,
-				DD60E3BEAA6EE6E0B5B42C7809838C39 /* JVFloatLabeledTextField-prefix.pch */,
-				2EE924818D791D89B0DAD9F68737F491 /* JVFloatLabeledTextField-umbrella.h */,
+				A75EC7CA41EE6A43BE8CEF7FA80BAE6A /* SCLAlertView.swift */,
+				5A08708A29B02FBF12F593FF7E869711 /* SCLExtensions.swift */,
+				731419B17DDAD4CA8F6371680D797E22 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/JVFloatLabeledTextField";
+			name = SCLAlertView;
+			path = SCLAlertView;
+			sourceTree = "<group>";
+		};
+		E54EF93DC219E00051129944F24FF08A /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				7CBE13FC92D2C33F4C8C779F9342560D /* SwiftyJSON.swift */,
+				9AC6134D5E0712B5C4BCF6182F0AD0CC /* Support Files */,
+			);
+			name = SwiftyJSON;
+			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4E024826B2290DC9037A41651D11D17B /* Headers */ = {
+		3DA5F995E63DBC3A1CF1DA935BBB2BDB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A0425F5FB823A70A4AE49F3CE954261 /* Pods-HelloWorldCK-umbrella.h in Headers */,
+				574B025D3D442AE007A1D8D0312CF54A /* Pods-HelloWorldCK-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5DD1C922AC1475591A58121649071E04 /* Headers */ = {
+		63E0F402AB4AA9610797904FAEAC1B47 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31C424BEE9F2097919D5985685D0563E /* SwiftyJSON-umbrella.h in Headers */,
+				A94D661DE7F738193D5B06C1004B9EA9 /* FBShimmering.h in Headers */,
+				17A81FEB3304AD738EB237B4AD82C906 /* FBShimmeringLayer.h in Headers */,
+				B452F4462446AE216D076AC181DE83A3 /* FBShimmeringView.h in Headers */,
+				001A61B36E162BD7E00AE5ABF62DD2D7 /* Shimmer-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A97690BB1581218A2D13FECBA58E44F2 /* Headers */ = {
+		70E158038A1074DEEA00C3C021C0AB68 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FB4EC3DC8370153FA8F6FC57311DAA3 /* FBShimmering.h in Headers */,
-				5EFE5470547E03989460835BE5D627D9 /* FBShimmeringLayer.h in Headers */,
-				70B60EAAEC3BDF0F7CC345101E9A0030 /* FBShimmeringView.h in Headers */,
-				B04ADA0571DCBCC9CD181458F272A847 /* Shimmer-umbrella.h in Headers */,
+				243A9DBF0EAAE2CC5617C52646181BB2 /* SwiftyJSON-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,24 +398,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FE0BBBC07E14F2251BCF822C807C5FD6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B71923AAC699ACC7F83B8CE326F4A8B4 /* SCLAlertView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		206C5E03CCC58A966D3284A563B9A9C0 /* SwiftyJSON */ = {
+		0CAE1DC0234795F1DE2C3687BCE21CE0 /* Shimmer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92EFE63577A604B481C5E754C7A5A6F7 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildConfigurationList = DE8894B06CA03E12F68B53BF2EAD35F7 /* Build configuration list for PBXNativeTarget "Shimmer" */;
 			buildPhases = (
-				F481945DC186B505382C3DBE62132E69 /* Sources */,
-				52C753916ADBC6D24CFADF6D334E0EE9 /* Frameworks */,
-				5DD1C922AC1475591A58121649071E04 /* Headers */,
+				8327DD25F1735FA6A9E112796B020440 /* Sources */,
+				0F0C8FB509F32576490DD15274C05943 /* Frameworks */,
+				63E0F402AB4AA9610797904FAEAC1B47 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SwiftyJSON;
-			productName = SwiftyJSON;
-			productReference = 2FB238FBB55D37921BBB48C55B8FF75E /* SwiftyJSON.framework */;
+			name = Shimmer;
+			productName = Shimmer;
+			productReference = 031496A89C07921B863762383719158B /* Shimmer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2A4448146C785C426971111F117D773C /* JVFloatLabeledTextField */ = {
@@ -376,44 +440,62 @@
 			);
 			name = JVFloatLabeledTextField;
 			productName = JVFloatLabeledTextField;
-			productReference = 156C1BB7F18484298FD09DDC4ED3AFF0 /* JVFloatLabeledTextField.framework */;
+			productReference = 11EFEF0469C681277DC338FE71912EBE /* JVFloatLabeledTextField.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6488D639C0944669B7B883A265298A3B /* Shimmer */ = {
+		5DCA4E403074CA751D26AE0566D3F249 /* SCLAlertView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5106B4316D15C6CB36CCAD3A0E61B8F3 /* Build configuration list for PBXNativeTarget "Shimmer" */;
+			buildConfigurationList = 435B2D0E805F1D9287948C58B11DA51F /* Build configuration list for PBXNativeTarget "SCLAlertView" */;
 			buildPhases = (
-				77ED3F101E04471A6A512213DB0E2875 /* Sources */,
-				A5FFFE7FAE18530C2DED0372170DC850 /* Frameworks */,
-				A97690BB1581218A2D13FECBA58E44F2 /* Headers */,
+				85FB9742C51B6DE52D254003C2F80072 /* Sources */,
+				CD5F9EECB2135E0EE2CB26D5B6CA89C8 /* Frameworks */,
+				FE0BBBC07E14F2251BCF822C807C5FD6 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Shimmer;
-			productName = Shimmer;
-			productReference = 88F65150BD2FAD7202C817A60B038017 /* Shimmer.framework */;
+			name = SCLAlertView;
+			productName = SCLAlertView;
+			productReference = 8727B3FDCB86C15BB07DF9EFA14EE11B /* SCLAlertView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		857C79300A70DF19944C1831D569DA87 /* Pods-HelloWorldCK */ = {
+		F914E207B31A0EC80AC838AC5F9885A0 /* SwiftyJSON */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CFA558AD1E8440B5D419448B1D8D747F /* Build configuration list for PBXNativeTarget "Pods-HelloWorldCK" */;
+			buildConfigurationList = 30D387667AC5BA017569D7539D0D4188 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
 			buildPhases = (
-				F196E3522F26495F0B838A68A8F62653 /* Sources */,
-				DCC4F3522E413881793AE2C3DBE4755D /* Frameworks */,
-				4E024826B2290DC9037A41651D11D17B /* Headers */,
+				BCDDD8BF531D651F058447D0D2D3E7C2 /* Sources */,
+				D57F3181838D046A66E446B8C0E16C0F /* Frameworks */,
+				70E158038A1074DEEA00C3C021C0AB68 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				51DB17F802F943D26FC3AEFDD7D136C1 /* PBXTargetDependency */,
-				7DA27868F05C1BBF9196858DFEFC4403 /* PBXTargetDependency */,
-				B97CDAF2B3B5126216D061EBEE321F18 /* PBXTargetDependency */,
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = 81B6DD6AB74D3A69C5B8A049B1734D05 /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FF22C1F0E02B520F1E603DE780D9AB61 /* Pods-HelloWorldCK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9A1D6C9BCEA96574846DD0310C41B27 /* Build configuration list for PBXNativeTarget "Pods-HelloWorldCK" */;
+			buildPhases = (
+				0B7EC3C89B5A520E77E5F4DEBCC453EC /* Sources */,
+				D531608A5E15B349D23BF18249876B38 /* Frameworks */,
+				3DA5F995E63DBC3A1CF1DA935BBB2BDB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80D1C0CC6AA47B05A5F3888D74F0A0F5 /* PBXTargetDependency */,
+				A8E9FBD5D71DFEA5FA1AB802B49657DB /* PBXTargetDependency */,
+				6CFAF99A4AF509914F845924F8A9D8FF /* PBXTargetDependency */,
+				B46769F0BCB2FB9D12550C8350A5CFF9 /* PBXTargetDependency */,
 			);
 			name = "Pods-HelloWorldCK";
 			productName = "Pods-HelloWorldCK";
-			productReference = BE058897BC6E66460C756C07EEB350CC /* Pods_HelloWorldCK.framework */;
+			productReference = 2D755D8127EF7246E018F18ACD5DAA7E /* Pods_HelloWorldCK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -433,19 +515,28 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 4888E02F4037E94AF97932ECBB3A1C89 /* Products */;
+			productRefGroup = 226914E4E08EC451F75311A3BBE6375D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				2A4448146C785C426971111F117D773C /* JVFloatLabeledTextField */,
-				857C79300A70DF19944C1831D569DA87 /* Pods-HelloWorldCK */,
-				6488D639C0944669B7B883A265298A3B /* Shimmer */,
-				206C5E03CCC58A966D3284A563B9A9C0 /* SwiftyJSON */,
+				FF22C1F0E02B520F1E603DE780D9AB61 /* Pods-HelloWorldCK */,
+				5DCA4E403074CA751D26AE0566D3F249 /* SCLAlertView */,
+				0CAE1DC0234795F1DE2C3687BCE21CE0 /* Shimmer */,
+				F914E207B31A0EC80AC838AC5F9885A0 /* SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0B7EC3C89B5A520E77E5F4DEBCC453EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019C909127F8C925DD9F9159EED45CF1 /* Pods-HelloWorldCK-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		331CAB23E830D1AA0768D9AC301E22B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -457,63 +548,69 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		77ED3F101E04471A6A512213DB0E2875 /* Sources */ = {
+		8327DD25F1735FA6A9E112796B020440 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E185A4E2B76ECD9738045C029741DC27 /* FBShimmeringLayer.m in Sources */,
-				9C8E1AB7546C5AD48B8D56AAA2B8F193 /* FBShimmeringView.m in Sources */,
-				26779EBBDFB6A13671E978530EFFCE56 /* Shimmer-dummy.m in Sources */,
+				1FD9AC8A143448EE308A862C6E62535B /* FBShimmeringLayer.m in Sources */,
+				F07E6A41224900E5AACF408F2BF37634 /* FBShimmeringView.m in Sources */,
+				D03483B8D665812982737DBFA35B55A8 /* Shimmer-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F196E3522F26495F0B838A68A8F62653 /* Sources */ = {
+		85FB9742C51B6DE52D254003C2F80072 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE7D4CB939DFF7ED5352A15C4740F1E4 /* Pods-HelloWorldCK-dummy.m in Sources */,
+				8292AFA6CBE0195766F034A0B6B85451 /* SCLAlertView-dummy.m in Sources */,
+				03F4C5C098E6CE1358992229B95E2462 /* SCLAlertView.swift in Sources */,
+				DA3FF086CCC6F104303DDAEFFEE267F6 /* SCLExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F481945DC186B505382C3DBE62132E69 /* Sources */ = {
+		BCDDD8BF531D651F058447D0D2D3E7C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC95AB9FFBD9F1B6B95D7FE15D1B88F7 /* SwiftyJSON-dummy.m in Sources */,
-				EF46FE3501050F4B975DE4DD5AD8DC4C /* SwiftyJSON.swift in Sources */,
+				600E0945473A4DD20078162AA6177C18 /* SwiftyJSON-dummy.m in Sources */,
+				570DE909B79AEA60ABD7DFCA9D9CC09D /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		51DB17F802F943D26FC3AEFDD7D136C1 /* PBXTargetDependency */ = {
+		6CFAF99A4AF509914F845924F8A9D8FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Shimmer;
+			target = 0CAE1DC0234795F1DE2C3687BCE21CE0 /* Shimmer */;
+			targetProxy = 99A5EFAA14A989D1BD0ABDB5C76A02A2 /* PBXContainerItemProxy */;
+		};
+		80D1C0CC6AA47B05A5F3888D74F0A0F5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JVFloatLabeledTextField;
 			target = 2A4448146C785C426971111F117D773C /* JVFloatLabeledTextField */;
-			targetProxy = 1C92F76CA7DC2BF8ED03822850286377 /* PBXContainerItemProxy */;
+			targetProxy = 18469047143E3F0F32E54B87132A42EE /* PBXContainerItemProxy */;
 		};
-		7DA27868F05C1BBF9196858DFEFC4403 /* PBXTargetDependency */ = {
+		A8E9FBD5D71DFEA5FA1AB802B49657DB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Shimmer;
-			target = 6488D639C0944669B7B883A265298A3B /* Shimmer */;
-			targetProxy = 10D37320227CBF8042C801C17769433D /* PBXContainerItemProxy */;
+			name = SCLAlertView;
+			target = 5DCA4E403074CA751D26AE0566D3F249 /* SCLAlertView */;
+			targetProxy = 2D5E599A5614A32F2B545C18DB28B7CF /* PBXContainerItemProxy */;
 		};
-		B97CDAF2B3B5126216D061EBEE321F18 /* PBXTargetDependency */ = {
+		B46769F0BCB2FB9D12550C8350A5CFF9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyJSON;
-			target = 206C5E03CCC58A966D3284A563B9A9C0 /* SwiftyJSON */;
-			targetProxy = 3B0130D5F335D1B6DCC4D8E5585FE043 /* PBXContainerItemProxy */;
+			target = F914E207B31A0EC80AC838AC5F9885A0 /* SwiftyJSON */;
+			targetProxy = 9DC4F6E6E62AB775F5D0A47BC52BEE76 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3AED44557DD95D8749EBEFC224731E87 /* Debug */ = {
+		09D887088B67FE7C6BDA17E3EDB9D3DC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C27E525A532F25C7443B0955B198DD29 /* Pods-HelloWorldCK.debug.xcconfig */;
+			baseConfigurationReference = 1E92D68DB9D6F2640D5154CB5012A489 /* SCLAlertView.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -523,37 +620,34 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-HelloWorldCK/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SCLAlertView/SCLAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SCLAlertView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HelloWorldCK/Pods-HelloWorldCK.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/SCLAlertView/SCLAlertView.modulemap";
+				PRODUCT_MODULE_NAME = SCLAlertView;
+				PRODUCT_NAME = SCLAlertView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		525956A5E6C6B70DDCC294BCE2C24EB2 /* Release */ = {
+		36BE0C76C94617CCAD51EBED08B47572 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA9D1B3C55BFD17115FA861BD48EB65F /* Pods-HelloWorldCK.release.xcconfig */;
+			baseConfigurationReference = 004938DF0EE82B16826CCC31CE01789A /* Shimmer.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -563,24 +657,59 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-HelloWorldCK/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Shimmer/Shimmer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Shimmer/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HelloWorldCK/Pods-HelloWorldCK.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/Shimmer/Shimmer.modulemap";
+				PRODUCT_MODULE_NAME = Shimmer;
+				PRODUCT_NAME = Shimmer;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3E31B4E43A07D9B4771C7AF0F62DFD6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6BA1227035FDCA490E5C380A439B090 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -651,9 +780,44 @@
 			};
 			name = Debug;
 		};
-		8DDDEBFE4E13EA58E8DD2364FF1F6427 /* Release */ = {
+		657C6277BC9B07C1F67E1B2AF2339243 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA694A5C463E6B042187E64D64676360 /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = 004938DF0EE82B16826CCC31CE01789A /* Shimmer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Shimmer/Shimmer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Shimmer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Shimmer/Shimmer.modulemap";
+				PRODUCT_MODULE_NAME = Shimmer;
+				PRODUCT_NAME = Shimmer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7CF68878028CD28EFE90562743BCE637 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6BA1227035FDCA490E5C380A439B090 /* SwiftyJSON.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -679,14 +843,49 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
+		};
+		8128B4944756BE50204A3E5ED3AFDCE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E92D68DB9D6F2640D5154CB5012A489 /* SCLAlertView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SCLAlertView/SCLAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SCLAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SCLAlertView/SCLAlertView.modulemap";
+				PRODUCT_MODULE_NAME = SCLAlertView;
+				PRODUCT_NAME = SCLAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -746,10 +945,12 @@
 			};
 			name = Release;
 		};
-		B03DA8F15113D093AE9C3C9A1B1CF97D /* Release */ = {
+		B367D0A7D69B4374A5D9639C94BB3A2A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B06ABF3EFF5D16B343EB824C7212E60D /* Shimmer.xcconfig */;
+			baseConfigurationReference = DA9D1B3C55BFD17115FA861BD48EB65F /* Pods-HelloWorldCK.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -759,22 +960,24 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Shimmer/Shimmer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Shimmer/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-HelloWorldCK/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/Shimmer/Shimmer.modulemap";
-				PRODUCT_MODULE_NAME = Shimmer;
-				PRODUCT_NAME = Shimmer;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HelloWorldCK/Pods-HelloWorldCK.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -782,9 +985,49 @@
 			};
 			name = Release;
 		};
+		B3C005CB41667169D65FAB419B4DC8BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C27E525A532F25C7443B0955B198DD29 /* Pods-HelloWorldCK.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HelloWorldCK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HelloWorldCK/Pods-HelloWorldCK.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		DBBFCE5FA65CF834DD195CCE96435F59 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF460A4724DA94CD05439BAAB28E6DF0 /* JVFloatLabeledTextField.xcconfig */;
+			baseConfigurationReference = B3DB9D02A1FC0FC54C34AAF98CE0EECF /* JVFloatLabeledTextField.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -819,7 +1062,7 @@
 		};
 		DE75AB6EA5C8018A4A8888308AAC1186 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF460A4724DA94CD05439BAAB28E6DF0 /* JVFloatLabeledTextField.xcconfig */;
+			baseConfigurationReference = B3DB9D02A1FC0FC54C34AAF98CE0EECF /* JVFloatLabeledTextField.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -853,77 +1096,6 @@
 			};
 			name = Release;
 		};
-		DF0FB667084C21815CF29D9357BAA409 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B06ABF3EFF5D16B343EB824C7212E60D /* Shimmer.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Shimmer/Shimmer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Shimmer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Shimmer/Shimmer.modulemap";
-				PRODUCT_MODULE_NAME = Shimmer;
-				PRODUCT_NAME = Shimmer;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FFB715B04CC5D6A148E0CB8A052F017D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA694A5C463E6B042187E64D64676360 /* SwiftyJSON.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyJSON;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -936,11 +1108,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5106B4316D15C6CB36CCAD3A0E61B8F3 /* Build configuration list for PBXNativeTarget "Shimmer" */ = {
+		30D387667AC5BA017569D7539D0D4188 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DF0FB667084C21815CF29D9357BAA409 /* Debug */,
-				B03DA8F15113D093AE9C3C9A1B1CF97D /* Release */,
+				7CF68878028CD28EFE90562743BCE637 /* Debug */,
+				3E31B4E43A07D9B4771C7AF0F62DFD6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		435B2D0E805F1D9287948C58B11DA51F /* Build configuration list for PBXNativeTarget "SCLAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8128B4944756BE50204A3E5ED3AFDCE4 /* Debug */,
+				09D887088B67FE7C6BDA17E3EDB9D3DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -954,20 +1135,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92EFE63577A604B481C5E754C7A5A6F7 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+		B9A1D6C9BCEA96574846DD0310C41B27 /* Build configuration list for PBXNativeTarget "Pods-HelloWorldCK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FFB715B04CC5D6A148E0CB8A052F017D /* Debug */,
-				8DDDEBFE4E13EA58E8DD2364FF1F6427 /* Release */,
+				B3C005CB41667169D65FAB419B4DC8BC /* Debug */,
+				B367D0A7D69B4374A5D9639C94BB3A2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CFA558AD1E8440B5D419448B1D8D747F /* Build configuration list for PBXNativeTarget "Pods-HelloWorldCK" */ = {
+		DE8894B06CA03E12F68B53BF2EAD35F7 /* Build configuration list for PBXNativeTarget "Shimmer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3AED44557DD95D8749EBEFC224731E87 /* Debug */,
-				525956A5E6C6B70DDCC294BCE2C24EB2 /* Release */,
+				657C6277BC9B07C1F67E1B2AF2339243 /* Debug */,
+				36BE0C76C94617CCAD51EBED08B47572 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
