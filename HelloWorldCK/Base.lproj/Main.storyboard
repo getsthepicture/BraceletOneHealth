@@ -225,7 +225,9 @@
                                         <rect key="frame" x="68.5" y="294" width="238" height="53"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Login" backgroundImage="Button"/>
+                                        <state key="normal" title="Login" backgroundImage="Button-1">
+                                            <color key="titleColor" red="0.78676237309999997" green="0.057445696179999998" blue="0.0058445363580000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="loginActionWithSender:" destination="35t-5L-XCX" eventType="touchUpInside" id="7s4-DX-vfg"/>
                                         </connections>
@@ -309,6 +311,7 @@
     </scenes>
     <resources>
         <image name="Button" width="131" height="53"/>
+        <image name="Button-1" width="131" height="53"/>
         <image name="Touch-icon-lg" width="138" height="137"/>
         <image name="braceletOneLogo-1" width="993" height="936"/>
         <image name="braceletOneLogo-2" width="993" height="936"/>

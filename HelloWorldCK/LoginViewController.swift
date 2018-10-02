@@ -6,7 +6,6 @@ import Shimmer
 import SCLAlertView
 
 class LoginViewController: UIViewController {
-    
     // MARK: Properties
     var managedObjectContext: NSManagedObjectContext?
     var passwordItems: [KeychainPasswordItem] = []
@@ -24,6 +23,10 @@ class LoginViewController: UIViewController {
     @IBOutlet var loginButtonFacebook: UIButton!
     @IBOutlet var loginButtonGoogle: UIButton!
     @IBOutlet var touchIDButton: UIButton!
+    
+    //MARK: - BiometricIDAuth
+    let touchMe = BiometricIDAuth()
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +48,23 @@ class LoginViewController: UIViewController {
             usernameTextField.text = storedUsername
         }
         
+        touchIDButton.isHidden = !touchMe.canEvaluatePolicy()
+        
+        switch touchMe.biometricType() {
+        case .faceID:
+            touchIDButton.setImage(UIImage.init(named: "FaceIcon"), for: .normal)
+        default:
+            touchIDButton.setImage(UIImage.init(named: "Touch-icon-lg"), for: .normal)
+        }
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let touchBool = touchMe.canEvaluatePolicy()
+        if touchBool {
+            touchIDLoginAction((Any).self)
+        }
     }
     
     func configureUI(){
@@ -72,7 +92,21 @@ class LoginViewController: UIViewController {
         return .lightContent
     }
     @IBAction func touchIDLoginAction(_ sender: Any) {
-        print("TouchID tapped...")
+        touchMe.authenticateUser { [weak self] message in
+            if let message = message{
+                //if the completion is not nil show an alert
+                let appearance = SCLAlertView.SCLAppearance(
+                    kTitleFont: UIFont(name: "HelveticaNeue", size: 20)!,
+                    kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
+                    kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
+                    showCloseButton: true
+                )
+                let alert = SCLAlertView.init(appearance: appearance)
+                alert.showError("Darn!", subTitle: message)
+            } else {
+                self?.performSegue(withIdentifier: "dismissLogin", sender: self)
+            }
+        }
     }
 }
 
