@@ -263,7 +263,12 @@
                                             <constraint firstAttribute="height" constant="67" id="H6r-yB-XQD"/>
                                             <constraint firstAttribute="width" constant="66" id="w4b-8B-C5D"/>
                                         </constraints>
-                                        <state key="normal" image="Touch-icon-lg"/>
+                                        <state key="normal" image="Touch-icon-lg">
+                                            <color key="titleShadowColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="touchIDLoginAction:" destination="35t-5L-XCX" eventType="touchUpInside" id="Gxj-Ts-FXl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -291,6 +296,7 @@
                         <outlet property="loginButtonGoogle" destination="QFU-f7-cHD" id="Dbr-eC-1Vf"/>
                         <outlet property="passwordTextField" destination="XTE-C5-ukW" id="fWs-Wj-bhQ"/>
                         <outlet property="stackView" destination="kVe-gi-7vC" id="44g-1q-PYd"/>
+                        <outlet property="touchIDButton" destination="46E-Pj-DXA" id="i4v-vt-RAP"/>
                         <outlet property="usernameTextField" destination="z4T-KQ-2Ay" id="onT-cq-Mpi"/>
                         <segue destination="wsd-P3-BZa" kind="unwind" identifier="dismissLogin" unwindAction="unwindSegue:" id="wId-vT-weA"/>
                     </connections>

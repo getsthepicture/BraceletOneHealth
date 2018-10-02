@@ -9,6 +9,6 @@
 import Foundation
 
 struct KeychainConfiguration {
-    static let serviceName = "BraceletOneService"
+    static let serviceName = "BraceletOne"
     static let accessGroup: String? = nil
 }

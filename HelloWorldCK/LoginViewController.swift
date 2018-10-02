@@ -1,30 +1,4 @@
-/// Copyright (c) 2017 Razeware LLC
-///
-/// Permission is hereby granted, free of charge, to any person obtaining a copy
-/// of this software and associated documentation files (the "Software"), to deal
-/// in the Software without restriction, including without limitation the rights
-/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-/// copies of the Software, and to permit persons to whom the Software is
-/// furnished to do so, subject to the following conditions:
-///
-/// The above copyright notice and this permission notice shall be included in
-/// all copies or substantial portions of the Software.
-///
-/// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
-/// distribute, sublicense, create a derivative work, and/or sell copies of the
-/// Software in any work that is designed, intended, or marketed for pedagogical or
-/// instructional purposes related to programming, coding, application development,
-/// or information technology.  Permission for such use, copying, modification,
-/// merger, publication, distribution, sublicensing, creation of derivative works,
-/// or sale is expressly withheld.
-///
-/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-/// THE SOFTWARE.
+
 
 import UIKit
 import CoreData
@@ -35,11 +9,10 @@ class LoginViewController: UIViewController {
     
     // MARK: Properties
     var managedObjectContext: NSManagedObjectContext?
-    var passwordItems: [KeychainPasswordItem] = [] //am array of keychain password items to put into the keychain maybe...why an array and not just one though as in a just a string, why an array?
+    var passwordItems: [KeychainPasswordItem] = []
     let createLoginButtonTag = 0
     let loginButtonTag = 1
-    let usernameKey = "Secure"
-    let passwordKey = "Wellington"
+    
     
     @IBOutlet var stackView: UIStackView!
     // MARK: - IBOutlets
@@ -50,10 +23,27 @@ class LoginViewController: UIViewController {
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var loginButtonFacebook: UIButton!
     @IBOutlet var loginButtonGoogle: UIButton!
+    @IBOutlet var touchIDButton: UIButton!
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        //1 Check the boolean value that corresponds to a NSUserDefaults value for the key 'hasLoginKey'
+        let hasLogin = UserDefaults.standard.bool(forKey: "hasLoginKey")
+        //2 if hasLogin equates to true then change the text of the login button and set its tag...
+        if hasLogin{
+            loginButton.setTitle("Login", for: .normal)
+            loginButton.tag = loginButtonTag
+            createInfoLabel.isHidden = true
+        }else{
+            loginButton.setTitle("Create Account", for: .normal)
+            loginButton.tag = createLoginButtonTag
+            createInfoLabel.isHidden = false
+        }
+        //3 If there is a value within the key 'username' within NSUserdefaults then place it inside the username text field...
+        if let storedUsername = UserDefaults.standard.value(forKey: "username") as? String {
+            usernameTextField.text = storedUsername
+        }
         
     }
     
@@ -81,12 +71,16 @@ class LoginViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    @IBAction func touchIDLoginAction(_ sender: Any) {
+        print("TouchID tapped...")
+    }
 }
 
 // MARK: - IBActions
 extension LoginViewController {
     
-    @IBAction func loginAction(sender: Any) {
+    @IBAction func loginAction(sender: UIButton) {
+        
         guard let newAccountName = usernameTextField.text,
         let newPassword = passwordTextField.text,
         !newAccountName.isEmpty,
@@ -94,17 +88,56 @@ extension LoginViewController {
                 showLoginFailAlert()
                 return
         }
-       /*
-        if checkLogin(username: usernameTextField.text!, password: passwordTextField.text!){
+        
+        usernameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        
+        if sender.tag == createLoginButtonTag {
+            //4
+            let hasLoginKey = UserDefaults.standard.bool(forKey: "hasLoginKey")
+            if !hasLoginKey && usernameTextField.hasText {
+                UserDefaults.standard.setValue(usernameTextField.text, forKey: "username")
+                //this stored the username in nsuserdefaults
+            }
+            //5
+            do {
+                //Since this is a new account, the following creates a new KeychainPasswordItem with the keychainconfiguration struct static service name as the service name and username as the account name to access it again from the keychain.
+                let passwordItem = KeychainPasswordItem.init(service: KeychainConfiguration.serviceName, account: newAccountName, accessGroup: KeychainConfiguration.accessGroup)
+                //Saving the password in keychain...
+                try passwordItem.savePassword(newPassword)
+            } catch {
+                fatalError("Error updating keychain - \(error)")
+            }
+            //6
+            //we're still inside the if statement based on the button's tag...
+            //set the hasLogin variable to true to indicate that a password has beeen saved to the keychain
+            UserDefaults.standard.setValue(true, forKey: "hasLoginKey")
+            //set the login button tag to the loginButtonTag to show the text 'login' instead of 'create account'
+            loginButton.tag = loginButtonTag
+            //and finally dismiss the login view controller
             performSegue(withIdentifier: "dismissLogin", sender: self)
-        }else{
-            showLoginFailAlert()
+        }else if sender.tag == loginButtonTag{
+            //7
+            if checkLogin(username: newAccountName, password: newPassword){
+                performSegue(withIdentifier: "dismissLogin", sender: self)
+            }else{
+                //8
+                showLoginFailAlert()
+            }
         }
- */
     }
     
     func checkLogin(username: String, password: String) -> Bool {
-        return username == usernameKey && password == passwordKey
+        guard username == UserDefaults.standard.value(forKey: "username") as? String else {
+            return false
+        }
+        do {
+            let passwordItem = KeychainPasswordItem.init(service: KeychainConfiguration.serviceName, account: username, accessGroup: KeychainConfiguration.accessGroup)
+            let keychainPassword = try passwordItem.readPassword()
+            return password == keychainPassword
+        } catch {
+            fatalError("Error reading password from keychain - \(error)")
+        }
     }
     
     func showLoginFailAlert(){
