@@ -4,6 +4,7 @@ import UIKit
 import CoreData
 import Shimmer
 import SCLAlertView
+import AVFoundation
 
 class LoginViewController: UIViewController {
     // MARK: Properties
@@ -27,10 +28,17 @@ class LoginViewController: UIViewController {
     //MARK: - BiometricIDAuth
     let touchMe = BiometricIDAuth()
     
+    //MARK: - Video Background
+    var avPlayer: AVPlayer!
+    var avPlayerLayer: AVPlayerLayer!
+    var paused: Bool = false
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        createVideo()
+        //avPlayer.play()
         //1 Check the boolean value that corresponds to a NSUserDefaults value for the key 'hasLoginKey'
         let hasLogin = UserDefaults.standard.bool(forKey: "hasLoginKey")
         //2 if hasLogin equates to true then change the text of the login button and set its tag...
@@ -56,15 +64,49 @@ class LoginViewController: UIViewController {
         default:
             touchIDButton.setImage(UIImage.init(named: "Touch-icon-lg"), for: .normal)
         }
+        //createVideo()
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        //paused = false
         let touchBool = touchMe.canEvaluatePolicy()
         if touchBool {
             touchIDLoginAction((Any).self)
         }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        //avPlayer.pause()
+        //paused = true
+    }
+    
+    func createVideo() {
+        let videoURL =  Bundle.main.url(forResource: "babymoving", withExtension: "mp4")
+        avPlayer = AVPlayer.init(url: videoURL!)
+        avPlayerLayer = AVPlayerLayer.init(player: avPlayer)
+        avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        avPlayer.volume = 0
+        avPlayer.actionAtItemEnd = .none
+        avPlayerLayer.frame = view.layer.bounds
+        //view.backgroundColor = UIColor.clear
+        view.layer.insertSublayer(avPlayerLayer, at: 0)
+        
+        let redOverlayView = UIView.init(frame: CGRect.init(x: view.frame.origin.x, y: view.frame.origin.y, width: view.frame.width, height: view.frame.height))
+        redOverlayView.backgroundColor = UIColor.red
+        redOverlayView.alpha = 0.5
+        view.layer.insertSublayer(redOverlayView.layer, at: 1)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd(notification:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: avPlayer.currentItem)
+        avPlayer.play()
+    }
+    
+    @objc func playerItemDidReachEnd(notification: Notification) {
+        let p: AVPlayerItem = notification.object as! AVPlayerItem
+        p.seek(to: kCMTimeZero, completionHandler: nil)
     }
     
     func configureUI(){
@@ -127,6 +169,9 @@ extension LoginViewController {
         passwordTextField.resignFirstResponder()
         
         if sender.tag == createLoginButtonTag {
+            let name = UIDevice.current.name
+            let user = User.init(name: name, username: newAccountName)
+            
             //4
             let hasLoginKey = UserDefaults.standard.bool(forKey: "hasLoginKey")
             if !hasLoginKey && usernameTextField.hasText {
@@ -183,6 +228,11 @@ extension LoginViewController {
         )
         let alert = SCLAlertView.init(appearance: appearance)
         alert.showError("Login Problem", subTitle: "Wrong username or password.")
+    }
+    
+    func passwordHash(from username: String, password: String) -> String {
+        let salt = "x4vV8bGgqqmQwgCoyXFQj+(o.nUNQhVP7ND"
+        return "\(password).\(username).\(salt)"
     }
     
     

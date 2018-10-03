@@ -10,5 +10,6 @@ target 'HelloWorldCK' do
   pod 'Shimmer', '~> 1.0'
   pod 'JVFloatLabeledTextField'
   pod 'SCLAlertView'
+  pod 'CryptoSwift', :git => "https://github.com/krzyzanowskim/CryptoSwift", :branch => "master"
 
 end

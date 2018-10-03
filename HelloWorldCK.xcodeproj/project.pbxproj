@@ -11,6 +11,8 @@
 		E90A999D215D442D00682DAE /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A9998215D442C00682DAE /* KeychainPasswordItem.swift */; };
 		E90A999F215D456E00682DAE /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A999E215D456E00682DAE /* KeychainConfiguration.swift */; };
 		E90C969921641DCD005D20DC /* TouchIDAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90C969821641DCD005D20DC /* TouchIDAuthentication.swift */; };
+		E90C969B216450EF005D20DC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90C969A216450EF005D20DC /* User.swift */; };
+		E90C96A421645DBD005D20DC /* babymoving.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E90C96A321645DBC005D20DC /* babymoving.mp4 */; };
 		E937502A215C4104006FE577 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9375025215C4104006FE577 /* LoginViewController.swift */; };
 		E9EEAE29214A950600CCE95B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEAE28214A950600CCE95B /* AppDelegate.swift */; };
 		E9EEAE2B214A950600CCE95B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEAE2A214A950600CCE95B /* ViewController.swift */; };
@@ -100,6 +102,8 @@
 		E90A9998215D442C00682DAE /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		E90A999E215D456E00682DAE /* KeychainConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainConfiguration.swift; sourceTree = "<group>"; };
 		E90C969821641DCD005D20DC /* TouchIDAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDAuthentication.swift; sourceTree = "<group>"; };
+		E90C969A216450EF005D20DC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E90C96A321645DBC005D20DC /* babymoving.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = babymoving.mp4; sourceTree = "<group>"; };
 		E9375025215C4104006FE577 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E9EEAE25214A950600CCE95B /* HelloWorldCK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorldCK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EEAE28214A950600CCE95B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -192,8 +196,10 @@
 				E90A999E215D456E00682DAE /* KeychainConfiguration.swift */,
 				E90A9998215D442C00682DAE /* KeychainPasswordItem.swift */,
 				E90C969821641DCD005D20DC /* TouchIDAuthentication.swift */,
+				E90C969A216450EF005D20DC /* User.swift */,
 				E9EEAE2C214A950600CCE95B /* Main.storyboard */,
 				E9EEAE2F214A950900CCE95B /* Assets.xcassets */,
+				E90C96A321645DBC005D20DC /* babymoving.mp4 */,
 				E9EEAE31214A950900CCE95B /* LaunchScreen.storyboard */,
 				E9EEAE34214A950900CCE95B /* Info.plist */,
 			);
@@ -364,6 +370,7 @@
 			files = (
 				E9EEAE33214A950900CCE95B /* LaunchScreen.storyboard in Resources */,
 				E9EEAE30214A950900CCE95B /* Assets.xcassets in Resources */,
+				E90C96A421645DBD005D20DC /* babymoving.mp4 in Resources */,
 				E9EEAE2E214A950600CCE95B /* Main.storyboard in Resources */,
 				E9EEAEC3214B50F000CCE95B /* careplan.json in Resources */,
 			);
@@ -429,6 +436,7 @@
 				E9EEAEAE214B439B00CCE95B /* ZCServiceProvider.swift in Sources */,
 				E90C969921641DCD005D20DC /* TouchIDAuthentication.swift in Sources */,
 				E9EEAE29214A950600CCE95B /* AppDelegate.swift in Sources */,
+				E90C969B216450EF005D20DC /* User.swift in Sources */,
 				E9EEAEB8214B464300CCE95B /* Activity.swift in Sources */,
 				E9EEAEC6214B552000CCE95B /* EmoryHealthViewController.swift in Sources */,
 				E9EEAEB2214B452300CCE95B /* MockResource.swift in Sources */,

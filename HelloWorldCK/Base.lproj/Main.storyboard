@@ -281,7 +281,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.7867623730964467" green="0.057445696184138563" blue="0.005844536357654603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.78676237309999997" green="0.057445696179999998" blue="0.0058445363580000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kVe-gi-7vC" firstAttribute="centerX" secondItem="5Sw-r2-cuM" secondAttribute="centerX" id="GFK-W9-5PF" userLabel="Stack View.centerX = View.centerX"/>
                             <constraint firstItem="jBp-Lx-eIG" firstAttribute="trailing" secondItem="kVe-gi-7vC" secondAttribute="trailing" id="XSV-1J-feH"/>
