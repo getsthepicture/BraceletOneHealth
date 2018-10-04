@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
             loginButton.tag = loginButtonTag
             createInfoLabel.isHidden = true
         }else{
-            loginButton.setTitle("Create Account", for: .normal)
+            loginButton.setTitle("Sign up", for: .normal)
             loginButton.tag = createLoginButtonTag
             createInfoLabel.isHidden = false
         }
@@ -64,7 +64,6 @@ class LoginViewController: UIViewController {
         default:
             touchIDButton.setImage(UIImage.init(named: "Touch-icon-lg"), for: .normal)
         }
-        //createVideo()
         
     }
     
@@ -74,7 +73,7 @@ class LoginViewController: UIViewController {
         //paused = false
         let touchBool = touchMe.canEvaluatePolicy()
         if touchBool {
-            touchIDLoginAction((Any).self)
+            //touchIDLoginAction((Any).self)
         }
     }
     
@@ -85,7 +84,7 @@ class LoginViewController: UIViewController {
     }
     
     func createVideo() {
-        let videoURL =  Bundle.main.url(forResource: "babymoving", withExtension: "mp4")
+        let videoURL =  Bundle.main.url(forResource: "aafamily", withExtension: "mp4")
         avPlayer = AVPlayer.init(url: videoURL!)
         avPlayerLayer = AVPlayerLayer.init(player: avPlayer)
         avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
@@ -97,7 +96,7 @@ class LoginViewController: UIViewController {
         
         let redOverlayView = UIView.init(frame: CGRect.init(x: view.frame.origin.x, y: view.frame.origin.y, width: view.frame.width, height: view.frame.height))
         redOverlayView.backgroundColor = UIColor.red
-        redOverlayView.alpha = 0.5
+        redOverlayView.alpha = 0.3
         view.layer.insertSublayer(redOverlayView.layer, at: 1)
         
         NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd(notification:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: avPlayer.currentItem)
@@ -122,12 +121,23 @@ class LoginViewController: UIViewController {
         braceletOneLabel.adjustsFontSizeToFitWidth = true
         braceletOneLabel.textColor = UIColor.white
         braceletOneLabel.textAlignment = .center
+       
+//        braceletOneLabel.layer.shadowColor = UIColor.black.cgColor
+//        braceletOneLabel.layer.shadowRadius = 1.0
+//        braceletOneLabel.layer.shadowOpacity = 1.0
+//        braceletOneLabel.layer.shadowOffset = CGSize(width: 2, height: 0.2)
+//        braceletOneLabel.layer.masksToBounds = false
+    
+
+        
         view1.contentView = braceletOneLabel
         view1.isShimmering = true
         view1.shimmeringSpeed = 120
         loginButton.contentEdgeInsets = UIEdgeInsets.init(top: 0, left: 20, bottom: 0, right: 20)
         loginButtonFacebook.contentEdgeInsets = UIEdgeInsets.init(top: 0, left: 20, bottom: 0, right: 20)
         loginButtonGoogle.contentEdgeInsets = UIEdgeInsets.init(top: 0, left: 20, bottom: 0, right: 20)
+        usernameTextField.alpha = 0.5
+        passwordTextField.alpha = 0.5
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

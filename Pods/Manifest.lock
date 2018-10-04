@@ -1,10 +1,79 @@
 PODS:
+  - AWSAutoScaling (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSCloudWatch (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSCognito (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSCognitoIdentityProvider (2.6.28):
+    - AWSCognitoIdentityProviderASF (= 1.0.1)
+    - AWSCore (= 2.6.28)
+  - AWSCognitoIdentityProviderASF (1.0.1)
+  - AWSCore (2.6.28)
+  - AWSDynamoDB (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSEC2 (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSElasticLoadBalancing (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSIoT (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSKinesis (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSLambda (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSLex (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSMachineLearning (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSMobileAnalytics (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSPinpoint (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSPolly (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSRekognition (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSS3 (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSSES (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSSimpleDB (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSSNS (2.6.28):
+    - AWSCore (= 2.6.28)
+  - AWSSQS (2.6.28):
+    - AWSCore (= 2.6.28)
+  - CryptoSwift (0.12.0)
   - JVFloatLabeledTextField (1.2.1)
   - SCLAlertView (0.8)
   - Shimmer (1.0.2)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
+  - AWSAutoScaling
+  - AWSCloudWatch
+  - AWSCognito
+  - AWSCognitoIdentityProvider
+  - AWSCore
+  - AWSDynamoDB
+  - AWSEC2
+  - AWSElasticLoadBalancing
+  - AWSIoT
+  - AWSKinesis
+  - AWSLambda
+  - AWSLex
+  - AWSMachineLearning
+  - AWSMobileAnalytics
+  - AWSPinpoint
+  - AWSPolly
+  - AWSRekognition
+  - AWSS3
+  - AWSSES
+  - AWSSimpleDB
+  - AWSSNS
+  - AWSSQS
+  - CryptoSwift (from `https://github.com/krzyzanowskim/CryptoSwift`, branch `master`)
   - JVFloatLabeledTextField
   - SCLAlertView
   - Shimmer (~> 1.0)
@@ -12,17 +81,74 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AWSAutoScaling
+    - AWSCloudWatch
+    - AWSCognito
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSDynamoDB
+    - AWSEC2
+    - AWSElasticLoadBalancing
+    - AWSIoT
+    - AWSKinesis
+    - AWSLambda
+    - AWSLex
+    - AWSMachineLearning
+    - AWSMobileAnalytics
+    - AWSPinpoint
+    - AWSPolly
+    - AWSRekognition
+    - AWSS3
+    - AWSSES
+    - AWSSimpleDB
+    - AWSSNS
+    - AWSSQS
     - JVFloatLabeledTextField
     - SCLAlertView
     - Shimmer
     - SwiftyJSON
 
+EXTERNAL SOURCES:
+  CryptoSwift:
+    :branch: master
+    :git: https://github.com/krzyzanowskim/CryptoSwift
+
+CHECKOUT OPTIONS:
+  CryptoSwift:
+    :commit: 2bcb008fe23d286e5da79311051e19b3345f1cd5
+    :git: https://github.com/krzyzanowskim/CryptoSwift
+
 SPEC CHECKSUMS:
+  AWSAutoScaling: 7a298aadf45b8435844bb0b4b21396fd6e295aa7
+  AWSCloudWatch: b4662684991bae823ab2ca37f204cca4631f7be3
+  AWSCognito: 7e4b529f1e19ce04a00dec4de175509dd5001d5f
+  AWSCognitoIdentityProvider: 9eec83ce5774fc7bf1d9abaa6d74e077acc763ef
+  AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
+  AWSCore: f75fcf5b2f4325da49ae1f7cb5484778d3b0acc6
+  AWSDynamoDB: 18675e3b8794934ae1d6f8081a9a593a41e45e7e
+  AWSEC2: 5aaec1c3df3b91d6844140d1257909e4747dec46
+  AWSElasticLoadBalancing: f606eb0f60065dc2e862a74997a2efc9df25bbc9
+  AWSIoT: b7e4f1bae2e4446d7de14efd87523904c7ac7c39
+  AWSKinesis: f007c9e76c48bed90652fcfa40ae60f4630837b2
+  AWSLambda: c44b70fd8723a19a497ab8ba6bce84dde902c7b4
+  AWSLex: 648b094084b428184c93fc49ecce389e7836ce80
+  AWSMachineLearning: d6df3cdb6ebeb74d3e79f573f7bd673cf45cece2
+  AWSMobileAnalytics: 8e5e59ea00874c92ad0454466e070ec902d1c194
+  AWSPinpoint: e59c331e17a092f28fec768076cbcd32e087360e
+  AWSPolly: 07ee1623aa8fb317a9b324a8ff18eeef10b86a0b
+  AWSRekognition: 9029a3dc1ebb7bc9e58536c4544b799a71723496
+  AWSS3: ca0ba62719281d7a39e50bbd0c6b8ef6e11943c9
+  AWSSES: a30627aecd4101ca8e42353c34c986f8dc73d9ef
+  AWSSimpleDB: 36d15ab56cacee6f895018431fa12aeb23e1be9e
+  AWSSNS: a67710a80c8d380e34248b16e503e0719f02a28d
+  AWSSQS: c0c83f5913acb153a6464e461bcc9bb20f630939
+  CryptoSwift: 1c07ca50843dd48bc54e6ea53d7a4dba3b645716
   JVFloatLabeledTextField: cfc44e3c4d493b2ed92ede8035e8e89c2912ba64
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 3ba0db73c3f5b0b0b388a81183c71c1084709dbc
+PODFILE CHECKSUM: d6b94481540a218554fb9459a293b6ae74e1b145
 
 COCOAPODS: 1.5.3
