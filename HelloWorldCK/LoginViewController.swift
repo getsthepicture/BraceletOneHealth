@@ -5,19 +5,22 @@ import CoreData
 import Shimmer
 import SCLAlertView
 import AVFoundation
+import AWSCognitoIdentityProvider
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: Properties
     var managedObjectContext: NSManagedObjectContext?
     var passwordItems: [KeychainPasswordItem] = []
     let createLoginButtonTag = 0
     let loginButtonTag = 1
     
+    @IBOutlet var keyboardHeightLayoutConstraint: NSLayoutConstraint!
     
     @IBOutlet var stackView: UIStackView!
     // MARK: - IBOutlets
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet var emailTextField: UITextField!
     @IBOutlet weak var createInfoLabel: UILabel!
     
     @IBOutlet var loginButton: UIButton!
@@ -47,9 +50,10 @@ class LoginViewController: UIViewController {
             loginButton.tag = loginButtonTag
             createInfoLabel.isHidden = true
         }else{
-            loginButton.setTitle("Sign up", for: .normal)
+            loginButton.setTitle("Get Started", for: .normal)
+            //emailTextField.isHidden = false
             loginButton.tag = createLoginButtonTag
-            createInfoLabel.isHidden = false
+            createInfoLabel.isHidden = true
         }
         //3 If there is a value within the key 'username' within NSUserdefaults then place it inside the username text field...
         if let storedUsername = UserDefaults.standard.value(forKey: "username") as? String {
@@ -57,6 +61,10 @@ class LoginViewController: UIViewController {
         }
         
         touchIDButton.isHidden = !touchMe.canEvaluatePolicy()
+        if !touchMe.canEvaluatePolicy() {
+            keyboardHeightLayoutConstraint.constant = 0
+            stackView.layoutIfNeeded()
+        }
         
         switch touchMe.biometricType() {
         case .faceID:
@@ -64,7 +72,36 @@ class LoginViewController: UIViewController {
         default:
             touchIDButton.setImage(UIImage.init(named: "Touch-icon-lg"), for: .normal)
         }
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.keyboardNotification(notification:)),
+                                               name: NSNotification.Name.UIKeyboardWillChangeFrame,
+                                               object: nil)
         
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func keyboardNotification(notification: NSNotification) {
+        if let userInfo = notification.userInfo {
+            let endFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+            let endFrameY = endFrame?.origin.y ?? 0
+            let duration:TimeInterval = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
+            let animationCurveRawNSN = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber
+            let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIViewAnimationOptions.curveEaseInOut.rawValue
+            let animationCurve:UIViewAnimationOptions = UIViewAnimationOptions(rawValue: animationCurveRaw)
+            if endFrameY >= UIScreen.main.bounds.size.height {
+                self.keyboardHeightLayoutConstraint?.constant = 0.0
+            } else {
+                self.keyboardHeightLayoutConstraint?.constant = endFrame?.size.height ?? 0.0
+            }
+            UIView.animate(withDuration: duration,
+                           delay: TimeInterval(0),
+                           options: animationCurve,
+                           animations: { self.view.layoutIfNeeded() },
+                           completion: nil)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -113,8 +150,19 @@ class LoginViewController: UIViewController {
         view1.backgroundColor = UIColor.clear
         view1.heightAnchor.constraint(equalToConstant: 60).isActive = true
         view1.widthAnchor.constraint(equalToConstant: 360).isActive = true
+        
+        //view2.widthAnchor.constraint(equalToConstant: stackView.arrangedSubviews[0].frame.width).isActive = true
+        //view2.widthAnchor.constraint(equalToConstant: stackView.frame.width).isActive = true
+        //view2.heightAnchor.constraint(equalToConstant: stackView.arrangedSubviews[0].frame.width).isActive = true
+        //view2.heightAnchor.constraint(equalToConstant: stackView.frame.height).isActive = true
+        //view2.heightAnchor.constraint(equalToConstant: 329).isActive = true
+        //view2.widthAnchor.constraint(equalToConstant: 240).isActive = true
+        
         stackView.insertArrangedSubview(view1, at: 0)
         let braceletOneLabel = UILabel.init(frame: CGRect.init(x: view1.frame.origin.x, y: view1.frame.origin.y, width: 340, height: 71))
+        let braceletOneLogoImage = UIImage.init(named: "braceletOneLogo-2")
+        let braceletOneLogoImageView = UIImageView.init(image: braceletOneLogoImage)
+        braceletOneLogoImageView.contentMode = .scaleAspectFit
         braceletOneLabel.text = "Bracelet One"
         braceletOneLabel.font = UIFont.init(name: "Helvetica Neue", size: 60)
         braceletOneLabel.font = UIFont.systemFont(ofSize: 60, weight: .thin)
@@ -138,6 +186,22 @@ class LoginViewController: UIViewController {
         loginButtonGoogle.contentEdgeInsets = UIEdgeInsets.init(top: 0, left: 20, bottom: 0, right: 20)
         usernameTextField.alpha = 0.5
         passwordTextField.alpha = 0.5
+        emailTextField.alpha = 0.5
+        
+        usernameTextField.isHidden = true
+        passwordTextField.isHidden = true
+        emailTextField.isHidden = true
+        createInfoLabel.isHidden = true
+        
+        
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
+        emailTextField.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -166,15 +230,23 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     @IBAction func loginAction(sender: UIButton) {
-        
+        if usernameTextField.isHidden && passwordTextField.isHidden && emailTextField.isHidden {
+            emailTextField.isHidden = false
+            usernameTextField.isHidden = false
+            passwordTextField.isHidden = false
+            createInfoLabel.isHidden = false
+            loginButton.setTitle("Create Account", for: .normal)
+            return
+        }
         guard let newAccountName = usernameTextField.text,
         let newPassword = passwordTextField.text,
+            let newEmail = emailTextField.text,
+            !newEmail.isEmpty,
         !newAccountName.isEmpty,
             !newPassword.isEmpty else {
                 showLoginFailAlert()
                 return
         }
-        
         usernameTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
         
@@ -204,17 +276,79 @@ extension LoginViewController {
             //set the login button tag to the loginButtonTag to show the text 'login' instead of 'create account'
             loginButton.tag = loginButtonTag
             //and finally dismiss the login view controller
-            performSegue(withIdentifier: "dismissLogin", sender: self)
+            //++++++++++++++++++DO AWS STUFF HERE+++++++++++++++++++++++++
+            let userpoolController = CognitoUserPoolController.sharedInstance
+            userpoolController.signup(username: newAccountName, password: newPassword, emailAddress: newEmail) { (error: Error?, user: AWSCognitoIdentityUser?) in
+                if let error = error {
+                    self.displaySignupError(error: error as NSError, completion: nil)
+                    return
+                }
+                guard let user = user else {
+                    let error = NSError.init(domain: "com.cosmicarrows.Intellect", code: 1021, userInfo: ["_type":"Unknown Error", "message":"Missing User object"])
+                    self.displaySignupError(error: error, completion: nil)
+                    return
+                }
+                if user.confirmedStatus != AWSCognitoIdentityUserStatus.confirmed {
+                    self.requestConfirmationCode(user)
+                } else {
+                    self.displaySuccessMessage()
+                }
+            }
+            
         }else if sender.tag == loginButtonTag{
             //7
             if checkLogin(username: newAccountName, password: newPassword){
-                performSegue(withIdentifier: "dismissLogin", sender: self)
+                let userpoolController = CognitoUserPoolController.sharedInstance
+                userpoolController.login(username: newAccountName, password: newPassword) { (error) in
+                    if let error = error {
+                        self.displayLoginError(error: error as NSError)
+                        return
+                    }
+                    self.displaySuccessMessage()
+                    //performSegue(withIdentifier: "dismissLogin", sender: self)
+                }
+                //performSegue(withIdentifier: "dismissLogin", sender: self)
             }else{
                 //8
                 showLoginFailAlert()
             }
         }
     }
+    
+    fileprivate func displayLoginError(error: NSError) {
+        let alertController = UIAlertController.init(title: error.userInfo["__type"] as? String, message: error.userInfo["message"] as? String, preferredStyle: .alert)
+        let okAction = UIAlertAction.init(title: "Ok", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    fileprivate func displaySuccessMessage() {
+        let alertController = UIAlertController.init(title: "Success", message: "Login successful!", preferredStyle: .alert)
+        let action = UIAlertAction.init(title: "Ok", style: .default) { [unowned self](action) in
+            self.performSegue(withIdentifier: "dismissLogin", sender: self)
+        }
+        alertController.addAction(action)
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    fileprivate func displaySignupError(error: NSError, completion:(() -> Void)?) {
+        let alertController = UIAlertController.init(title: error.userInfo["_type"] as? String, message: error.userInfo["message"] as? String, preferredStyle: .alert)
+        let okAction = UIAlertAction.init(title: "Ok", style: .default) { (action) in
+            if let completion = completion {
+                completion()
+            }
+        }
+        alertController.addAction(okAction)
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    
     
     func checkLogin(username: String, password: String) -> Bool {
         guard username == UserDefaults.standard.value(forKey: "username") as? String else {
@@ -240,10 +374,69 @@ extension LoginViewController {
         alert.showError("Login Problem", subTitle: "Wrong username or password.")
     }
     
+    func showSignUpFailAlert(){
+        let appearance = SCLAlertView.SCLAppearance(
+            kTitleFont: UIFont(name: "HelveticaNeue", size: 20)!,
+            kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
+            kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
+            showCloseButton: true
+        )
+        let alert = SCLAlertView.init(appearance: appearance)
+        alert.showError("Sign Up Problem", subTitle: "Please provide your username, a password, and a valid email address.")
+    }
+    
     func passwordHash(from username: String, password: String) -> String {
         let salt = "x4vV8bGgqqmQwgCoyXFQj+(o.nUNQhVP7ND"
         return "\(password).\(username).\(salt)"
     }
     
+    fileprivate func requestConfirmationCode(_ user: AWSCognitoIdentityUser) {
+        let alertController = UIAlertController.init(title: "Confirmation", message: "Please type the 6-digit confirmation code that has been sent to your email address.", preferredStyle: .alert)
+        alertController.addTextField { (textField) in
+            textField.placeholder = "######"
+        }
+        let okAction = UIAlertAction.init(title: "Ok", style: .default) { (action) in
+            if let firstTextField = alertController.textFields?.first,
+                let confirmationCode = firstTextField.text {
+                let userpoolController = CognitoUserPoolController.sharedInstance
+                userpoolController.confirmSignup(user: user, confirmationCode: confirmationCode, completion: { (error: Error?) in
+                    if let error = error {
+                        self.displaySignupError(error: error as NSError, completion: {
+                            self.requestConfirmationCode(user)
+                        })
+                        return
+                    }
+                    self.displaySuccessMessage()
+                })
+            }
+        }
+        let resendAction = UIAlertAction.init(title: "Resend code", style: .default) { (action) in
+            let userpoolController = CognitoUserPoolController.sharedInstance
+            userpoolController.resendConfirmationCode(user: user, completion: { (error: Error?) in
+                if let error = error {
+                    self.displaySignupError(error: error as NSError, completion: {
+                        self.requestConfirmationCode(user)
+                    })
+                    return
+                }
+                self.displayCodeResentMessage(user)
+            })
+        }
+        alertController.addAction(okAction)
+        alertController.addAction(resendAction)
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
     
+    fileprivate func displayCodeResentMessage(_ user: AWSCognitoIdentityUser) {
+        let alertController = UIAlertController.init(title: "Code Resent.", message: "A 6-digit confirmation code has been sent to your email address.", preferredStyle: .alert)
+        let okAction = UIAlertAction.init(title: "Ok", style: .default) { (action) in
+            self.requestConfirmationCode(user)
+        }
+        alertController.addAction(okAction)
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
 }

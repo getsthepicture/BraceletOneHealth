@@ -9,6 +9,8 @@
 import UIKit
 import ResearchKit
 import CareKit
+import AWSCognitoIdentityProvider
+
 
 class ViewController: UIViewController, ORKTaskViewControllerDelegate {
     
@@ -72,6 +74,19 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate {
                                                selector: #selector(self.appDidBecomeActive(_:)),
                                                name: .UIApplicationDidBecomeActive,
                                                object: nil)
+        
+        //write user's email address to console log
+        let userpoolController = CognitoUserPoolController.sharedInstance
+        
+        userpoolController.getUserDetails(user: userpoolController.currentUser!) { (error: Error?, details: AWSCognitoIdentityUserGetDetailsResponse?) in
+            if let userAttributes = details?.userAttributes {
+                for attribute in userAttributes {
+                    if attribute.name?.compare("email") == .orderedSame {
+                        print("Email address of logged-in user is \(attribute.value!)")
+                    }
+                }
+            }
+        }
 
     }
     
@@ -107,6 +122,20 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate {
         if !isAuthenticated {
             performSegue(withIdentifier: "loginView", sender: self)
         }
+    }
+    
+    func writeUsersEmailToConsole() {
+        let userpoolController = CognitoUserPoolController.sharedInstance
+        userpoolController.getUserDetails(user: userpoolController.currentUser!) {
+            (error: Error?,
+            details) in
+            if let userAttributes = details?.userAttributes {
+                for attribute in userAttributes {
+                    if attribute.name?.compare("email") == .orderedSame {
+                        print ("Email address of logged-in user is \(attribute.value!)")
+                    }
+                }
+            }}
     }
 
 

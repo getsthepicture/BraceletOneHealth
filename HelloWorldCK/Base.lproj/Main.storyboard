@@ -213,13 +213,19 @@
                                             <constraint firstAttribute="height" constant="30" id="7z2-yS-5gj"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTE-C5-ukW">
                                         <rect key="frame" x="10.5" y="377" width="354" height="32"/>
                                         <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gBe-VR-B6b">
+                                        <rect key="frame" x="10" y="413.5" width="355" height="0.0"/>
+                                        <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5f-oU-wmd">
                                         <rect key="frame" x="68.5" y="418" width="238" height="53"/>
@@ -278,12 +284,14 @@
                                     <constraint firstItem="W5f-oU-wmd" firstAttribute="leading" secondItem="kVe-gi-7vC" secondAttribute="leading" constant="69" id="iIp-kw-FUC"/>
                                     <constraint firstItem="Sml-zZ-LHP" firstAttribute="leading" secondItem="kVe-gi-7vC" secondAttribute="leading" constant="68" id="qbl-rp-wvt"/>
                                     <constraint firstAttribute="trailing" secondItem="z4T-KQ-2Ay" secondAttribute="trailing" constant="10" id="tsI-Cf-sQo"/>
+                                    <constraint firstAttribute="trailing" secondItem="gBe-VR-B6b" secondAttribute="trailing" constant="10" id="yak-Qe-gFW"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.78676237309999997" green="0.057445696179999998" blue="0.0058445363580000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kVe-gi-7vC" firstAttribute="centerX" secondItem="5Sw-r2-cuM" secondAttribute="centerX" id="GFK-W9-5PF" userLabel="Stack View.centerX = View.centerX"/>
+                            <constraint firstItem="jBp-Lx-eIG" firstAttribute="bottom" secondItem="Zxq-a7-7Vg" secondAttribute="bottom" constant="106" id="MgA-35-5fj"/>
                             <constraint firstItem="jBp-Lx-eIG" firstAttribute="trailing" secondItem="kVe-gi-7vC" secondAttribute="trailing" id="XSV-1J-feH"/>
                             <constraint firstItem="kVe-gi-7vC" firstAttribute="top" secondItem="5Sw-r2-cuM" secondAttribute="topMargin" constant="40" id="gc8-XO-ocp"/>
                             <constraint firstItem="kVe-gi-7vC" firstAttribute="leading" secondItem="jBp-Lx-eIG" secondAttribute="leading" id="gqq-37-zCT"/>
@@ -293,6 +301,8 @@
                     </view>
                     <connections>
                         <outlet property="createInfoLabel" destination="Zxq-a7-7Vg" id="bZH-GV-LcU"/>
+                        <outlet property="emailTextField" destination="gBe-VR-B6b" id="sal-6G-KGG"/>
+                        <outlet property="keyboardHeightLayoutConstraint" destination="MgA-35-5fj" id="zAh-kp-6mA"/>
                         <outlet property="loginButton" destination="W5f-oU-wmd" id="0ph-QJ-Vka"/>
                         <outlet property="loginButtonFacebook" destination="Uqu-pn-aNM" id="ptj-Gt-HSX"/>
                         <outlet property="loginButtonGoogle" destination="QFU-f7-cHD" id="Dbr-eC-1Vf"/>
