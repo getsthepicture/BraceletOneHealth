@@ -35,5 +35,8 @@ target 'Bracelet One' do
   pod 'AWSCore'
   pod 'AWSCognito'
   pod 'AWSCognitoIdentityProvider'
+  pod ’authorizenet-sdk’
+  pod 'Stripe'
+  pod 'AuthorizeNetAccept'
 
 end

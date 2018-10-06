@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		48999B8F2457FF03B5351426 /* Pods_HelloWorldCK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57618376E9BD1762A507E06B /* Pods_HelloWorldCK.framework */; };
 		B7FBC740FB3270E7615451B3 /* Pods_Bracelet_One.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC021C46A615B81F60036A6 /* Pods_Bracelet_One.framework */; };
 		E90A999D215D442D00682DAE /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A9998215D442C00682DAE /* KeychainPasswordItem.swift */; };
 		E90A999F215D456E00682DAE /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A999E215D456E00682DAE /* KeychainConfiguration.swift */; };
@@ -19,6 +18,9 @@
 		E90C96B02165E434005D20DC /* aafamily.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E90C96AF2165E433005D20DC /* aafamily.mp4 */; };
 		E90D6CDC216696BB00FFD85B /* CognitoUserPoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90D6CDB216696BB00FFD85B /* CognitoUserPoolController.swift */; };
 		E937502A215C4104006FE577 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9375025215C4104006FE577 /* LoginViewController.swift */; };
+		E96C52612168DCF50054E33B /* UILogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C52602168DCF50054E33B /* UILogger.swift */; };
+		E96C52692168F02F0054E33B /* ApplePayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C52642168F02F0054E33B /* ApplePayViewController.swift */; };
+		E96C526B2168F0920054E33B /* AuthorizeNetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C526A2168F0910054E33B /* AuthorizeNetController.swift */; };
 		E9EEAE29214A950600CCE95B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEAE28214A950600CCE95B /* AppDelegate.swift */; };
 		E9EEAE2B214A950600CCE95B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEAE2A214A950600CCE95B /* ViewController.swift */; };
 		E9EEAE2E214A950600CCE95B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EEAE2C214A950600CCE95B /* Main.storyboard */; };
@@ -102,9 +104,7 @@
 
 /* Begin PBXFileReference section */
 		20C20C73EF86C064E0E0C41D /* Pods-Bracelet One.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bracelet One.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bracelet One/Pods-Bracelet One.release.xcconfig"; sourceTree = "<group>"; };
-		326E1ABC1684EA1A554305C6 /* Pods-HelloWorldCK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorldCK.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorldCK/Pods-HelloWorldCK.release.xcconfig"; sourceTree = "<group>"; };
 		57618376E9BD1762A507E06B /* Pods_HelloWorldCK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorldCK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DDF0DA6149C508A39165563 /* Pods-HelloWorldCK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorldCK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorldCK/Pods-HelloWorldCK.debug.xcconfig"; sourceTree = "<group>"; };
 		B1588BDD2D5E9C4B5F373031 /* Pods-Bracelet One.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bracelet One.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bracelet One/Pods-Bracelet One.debug.xcconfig"; sourceTree = "<group>"; };
 		BEC021C46A615B81F60036A6 /* Pods_Bracelet_One.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bracelet_One.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90A9998215D442C00682DAE /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
@@ -116,7 +116,11 @@
 		E90C96A92165E303005D20DC /* familyplaying.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = familyplaying.mp4; sourceTree = "<group>"; };
 		E90C96AF2165E433005D20DC /* aafamily.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = aafamily.mp4; sourceTree = "<group>"; };
 		E90D6CDB216696BB00FFD85B /* CognitoUserPoolController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoUserPoolController.swift; sourceTree = "<group>"; };
+		E90D6D012168D0C500FFD85B /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
 		E9375025215C4104006FE577 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E96C52602168DCF50054E33B /* UILogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILogger.swift; sourceTree = "<group>"; };
+		E96C52642168F02F0054E33B /* ApplePayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplePayViewController.swift; sourceTree = "<group>"; };
+		E96C526A2168F0910054E33B /* AuthorizeNetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeNetController.swift; sourceTree = "<group>"; };
 		E9EEAE25214A950600CCE95B /* Bracelet One.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bracelet One.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EEAE28214A950600CCE95B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9EEAE2A214A950600CCE95B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,7 +151,6 @@
 				E9EEAEBD214B4EE200CCE95B /* SwiftyJSON.framework in Frameworks */,
 				E9EEAE5D214A98E500CCE95B /* CareKit.framework in Frameworks */,
 				E9EEAE58214A98DF00CCE95B /* ResearchKit.framework in Frameworks */,
-				48999B8F2457FF03B5351426 /* Pods_HelloWorldCK.framework in Frameworks */,
 				B7FBC740FB3270E7615451B3 /* Pods_Bracelet_One.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,8 +161,6 @@
 		435EA4B8F96D167B45D37F67 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8DDF0DA6149C508A39165563 /* Pods-HelloWorldCK.debug.xcconfig */,
-				326E1ABC1684EA1A554305C6 /* Pods-HelloWorldCK.release.xcconfig */,
 				B1588BDD2D5E9C4B5F373031 /* Pods-Bracelet One.debug.xcconfig */,
 				20C20C73EF86C064E0E0C41D /* Pods-Bracelet One.release.xcconfig */,
 			);
@@ -214,7 +215,11 @@
 				E90A999E215D456E00682DAE /* KeychainConfiguration.swift */,
 				E90A9998215D442C00682DAE /* KeychainPasswordItem.swift */,
 				E90C969821641DCD005D20DC /* TouchIDAuthentication.swift */,
+				E96C52602168DCF50054E33B /* UILogger.swift */,
+				E90D6D012168D0C500FFD85B /* bridge.h */,
 				E90C969A216450EF005D20DC /* User.swift */,
+				E96C52642168F02F0054E33B /* ApplePayViewController.swift */,
+				E96C526A2168F0910054E33B /* AuthorizeNetController.swift */,
 				E9EEAE2C214A950600CCE95B /* Main.storyboard */,
 				E9EEAE2F214A950900CCE95B /* Assets.xcassets */,
 				E90C96A321645DBC005D20DC /* babymoving.mp4 */,
@@ -317,6 +322,9 @@
 					E9EEAE24214A950600CCE95B = {
 						CreatedOnToolsVersion = 9.4.1;
 						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 1;
+							};
 							com.apple.DataProtection = {
 								enabled = 1;
 							};
@@ -449,11 +457,14 @@
 				"${BUILT_PRODUCTS_DIR}/AWSSNS/AWSSNS.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSSQS/AWSSQS.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSSimpleDB/AWSSimpleDB.framework",
+				"${BUILT_PRODUCTS_DIR}/AuthorizeNetAccept/AuthorizeNetAccept.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/JVFloatLabeledTextField/JVFloatLabeledTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/Shimmer/Shimmer.framework",
+				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/authorizenet-sdk/authorizenet_sdk.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -480,11 +491,14 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSSNS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSSQS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSSimpleDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AuthorizeNetAccept.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVFloatLabeledTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Shimmer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/authorizenet_sdk.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -501,12 +515,15 @@
 				E9EEAEAC214B438E00CCE95B /* ZCService.swift in Sources */,
 				E9EEAE63214ACD4400CCE95B /* CareKitViewController.swift in Sources */,
 				E9EEAEB3214B452300CCE95B /* MockService.swift in Sources */,
+				E96C52692168F02F0054E33B /* ApplePayViewController.swift in Sources */,
 				E9EEAE2B214A950600CCE95B /* ViewController.swift in Sources */,
+				E96C526B2168F0920054E33B /* AuthorizeNetController.swift in Sources */,
 				E90A999F215D456E00682DAE /* KeychainConfiguration.swift in Sources */,
 				E9EEAEAE214B439B00CCE95B /* ZCServiceProvider.swift in Sources */,
 				E90C969921641DCD005D20DC /* TouchIDAuthentication.swift in Sources */,
 				E9EEAE29214A950600CCE95B /* AppDelegate.swift in Sources */,
 				E90C96A621656A37005D20DC /* Dropshadow+Extension.swift in Sources */,
+				E96C52612168DCF50054E33B /* UILogger.swift in Sources */,
 				E90C969B216450EF005D20DC /* User.swift in Sources */,
 				E9EEAEB8214B464300CCE95B /* Activity.swift in Sources */,
 				E9EEAEC6214B552000CCE95B /* EmoryHealthViewController.swift in Sources */,
@@ -676,6 +693,11 @@
 				CODE_SIGN_ENTITLEMENTS = HelloWorldCK/HelloWorldCK.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P7XKP3B2C9;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					STRIPE_ENABLE_APPLEPAY,
+				);
 				INFOPLIST_FILE = HelloWorldCK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -683,6 +705,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cosmicarrows.Intellect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = bridge.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -697,6 +720,11 @@
 				CODE_SIGN_ENTITLEMENTS = HelloWorldCK/HelloWorldCK.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P7XKP3B2C9;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					STRIPE_ENABLE_APPLEPAY,
+				);
 				INFOPLIST_FILE = HelloWorldCK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -704,6 +732,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cosmicarrows.Intellect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = bridge.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

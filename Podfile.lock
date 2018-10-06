@@ -1,4 +1,6 @@
 PODS:
+  - authorizenet-sdk (2.0.7)
+  - AuthorizeNetAccept (0.3.0)
   - AWSAutoScaling (2.6.28):
     - AWSCore (= 2.6.28)
   - AWSCloudWatch (2.6.28):
@@ -48,9 +50,12 @@ PODS:
   - JVFloatLabeledTextField (1.2.1)
   - SCLAlertView (0.8)
   - Shimmer (1.0.2)
+  - Stripe (13.2.0)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
+  - authorizenet-sdk
+  - AuthorizeNetAccept
   - AWSAutoScaling
   - AWSCloudWatch
   - AWSCognito
@@ -77,10 +82,13 @@ DEPENDENCIES:
   - JVFloatLabeledTextField
   - SCLAlertView
   - Shimmer (~> 1.0)
+  - Stripe
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - authorizenet-sdk
+    - AuthorizeNetAccept
     - AWSAutoScaling
     - AWSCloudWatch
     - AWSCognito
@@ -107,6 +115,7 @@ SPEC REPOS:
     - JVFloatLabeledTextField
     - SCLAlertView
     - Shimmer
+    - Stripe
     - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -120,6 +129,8 @@ CHECKOUT OPTIONS:
     :git: https://github.com/krzyzanowskim/CryptoSwift
 
 SPEC CHECKSUMS:
+  authorizenet-sdk: e082ace28cda27ef5a68a6a2bbb86d3681ab02b7
+  AuthorizeNetAccept: 77963526f1e15d2be30b771f1049ca09c6d11524
   AWSAutoScaling: 7a298aadf45b8435844bb0b4b21396fd6e295aa7
   AWSCloudWatch: b4662684991bae823ab2ca37f204cca4631f7be3
   AWSCognito: 7e4b529f1e19ce04a00dec4de175509dd5001d5f
@@ -147,8 +158,9 @@ SPEC CHECKSUMS:
   JVFloatLabeledTextField: cfc44e3c4d493b2ed92ede8035e8e89c2912ba64
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
+  Stripe: 2c69e216061d54d9c538204bb4f58bd597ddfc5b
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: d6b94481540a218554fb9459a293b6ae74e1b145
+PODFILE CHECKSUM: cc4e9207130fa0c93d629f211e9cbb502de78ddc
 
 COCOAPODS: 1.5.3

@@ -118,6 +118,8 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate {
         view.alpha = 1.0
     }
     
+    
+    
     func showLoginView() {
         if !isAuthenticated {
             performSegue(withIdentifier: "loginView", sender: self)
@@ -137,6 +139,8 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate {
                 }
             }}
     }
+    
+    
 
 
 }

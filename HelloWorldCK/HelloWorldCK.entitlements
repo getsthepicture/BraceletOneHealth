@@ -4,5 +4,10 @@
 <dict>
 	<key>com.apple.developer.default-data-protection</key>
 	<string>NSFileProtectionComplete</string>
+	<key>com.apple.developer.in-app-payments</key>
+	<array>
+		<string>merchant.com.Intellect.stripe</string>
+		<string>merchant.com.Intellect.authorize.net</string>
+	</array>
 </dict>
 </plist>

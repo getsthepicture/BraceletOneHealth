@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Stripe
+import authorizenet_sdk
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
