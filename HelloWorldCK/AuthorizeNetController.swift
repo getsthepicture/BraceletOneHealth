@@ -93,12 +93,11 @@ class AuthorizeNetController: UIViewController, UITextFieldDelegate {
             showCloseButton: false
         )
         let alertView = SCLAlertView(appearance: appearance)
-        alertView.addButton("Show Care Card", target:self, selector:#selector(self.dismissAuthDotNet))
+        alertView.addButton("Pair with Devices", target:self, selector:#selector(self.dismissAuthDotNet))
         alertView.showSuccess("Success!", subTitle: "Thank you for your payment.")
     }
     
     @objc func dismissAuthDotNet() {
-        print("I'm inside the dismissAuthoDotNet function...")
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "careKitResearchKitHome")

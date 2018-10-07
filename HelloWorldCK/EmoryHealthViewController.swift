@@ -17,6 +17,7 @@ class EmoryHealthViewController: UIViewController {
         service.request(resource: mockResource) { (response : CarePlan?, error) in
             if error == nil {
                 print("\(response!.title) loaded.")
+                _ = ZCCarePlanStoreManager.init(carePlan: response!)
             }
             return
         }

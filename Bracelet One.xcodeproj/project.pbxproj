@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B7FBC740FB3270E7615451B3 /* Pods_Bracelet_One.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC021C46A615B81F60036A6 /* Pods_Bracelet_One.framework */; };
+		E9068BF32169D9F2009FEE8B /* BLEPairingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9068BF22169D9F2009FEE8B /* BLEPairingViewController.swift */; };
+		E90692DB21699F11007444E2 /* CarePlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90692DA21699F11007444E2 /* CarePlanViewController.swift */; };
 		E90A999D215D442D00682DAE /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A9998215D442C00682DAE /* KeychainPasswordItem.swift */; };
 		E90A999F215D456E00682DAE /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A999E215D456E00682DAE /* KeychainConfiguration.swift */; };
+		E90BACB321697DE8003677E6 /* ZCCarePlanStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90BACB221697DE8003677E6 /* ZCCarePlanStoreManager.swift */; };
+		E90BACB521697F51003677E6 /* CarePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90BACB421697F50003677E6 /* CarePlan.swift */; };
 		E90C969921641DCD005D20DC /* TouchIDAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90C969821641DCD005D20DC /* TouchIDAuthentication.swift */; };
 		E90C969B216450EF005D20DC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90C969A216450EF005D20DC /* User.swift */; };
 		E90C96A421645DBD005D20DC /* babymoving.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E90C96A321645DBC005D20DC /* babymoving.mp4 */; };
@@ -18,6 +22,7 @@
 		E90C96B02165E434005D20DC /* aafamily.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E90C96AF2165E433005D20DC /* aafamily.mp4 */; };
 		E90D6CDC216696BB00FFD85B /* CognitoUserPoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90D6CDB216696BB00FFD85B /* CognitoUserPoolController.swift */; };
 		E937502A215C4104006FE577 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9375025215C4104006FE577 /* LoginViewController.swift */; };
+		E96A613821698B5600132BA1 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A613321698B5600132BA1 /* Activity.swift */; };
 		E96C52612168DCF50054E33B /* UILogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C52602168DCF50054E33B /* UILogger.swift */; };
 		E96C52692168F02F0054E33B /* ApplePayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C52642168F02F0054E33B /* ApplePayViewController.swift */; };
 		E96C526B2168F0920054E33B /* AuthorizeNetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C526A2168F0910054E33B /* AuthorizeNetController.swift */; };
@@ -35,8 +40,6 @@
 		E9EEAEAE214B439B00CCE95B /* ZCServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEAEAD214B439B00CCE95B /* ZCServiceProvider.swift */; };
 		E9EEAEB2214B452300CCE95B /* MockResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEAEB0214B452300CCE95B /* MockResource.swift */; };
 		E9EEAEB3214B452300CCE95B /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEAEB1214B452300CCE95B /* MockService.swift */; };
-		E9EEAEB7214B464300CCE95B /* CarePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEAEB5214B464300CCE95B /* CarePlan.swift */; };
-		E9EEAEB8214B464300CCE95B /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEAEB6214B464300CCE95B /* Activity.swift */; };
 		E9EEAEBD214B4EE200CCE95B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EEAEBC214B4EE200CCE95B /* SwiftyJSON.framework */; };
 		E9EEAEC3214B50F000CCE95B /* careplan.json in Resources */ = {isa = PBXBuildFile; fileRef = E9EEAEC2214B50F000CCE95B /* careplan.json */; };
 		E9EEAEC6214B552000CCE95B /* EmoryHealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEAEC5214B552000CCE95B /* EmoryHealthViewController.swift */; };
@@ -107,8 +110,12 @@
 		57618376E9BD1762A507E06B /* Pods_HelloWorldCK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorldCK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1588BDD2D5E9C4B5F373031 /* Pods-Bracelet One.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bracelet One.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bracelet One/Pods-Bracelet One.debug.xcconfig"; sourceTree = "<group>"; };
 		BEC021C46A615B81F60036A6 /* Pods_Bracelet_One.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bracelet_One.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9068BF22169D9F2009FEE8B /* BLEPairingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEPairingViewController.swift; sourceTree = "<group>"; };
+		E90692DA21699F11007444E2 /* CarePlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarePlanViewController.swift; sourceTree = "<group>"; };
 		E90A9998215D442C00682DAE /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		E90A999E215D456E00682DAE /* KeychainConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainConfiguration.swift; sourceTree = "<group>"; };
+		E90BACB221697DE8003677E6 /* ZCCarePlanStoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZCCarePlanStoreManager.swift; sourceTree = "<group>"; };
+		E90BACB421697F50003677E6 /* CarePlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarePlan.swift; sourceTree = "<group>"; };
 		E90C969821641DCD005D20DC /* TouchIDAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDAuthentication.swift; sourceTree = "<group>"; };
 		E90C969A216450EF005D20DC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E90C96A321645DBC005D20DC /* babymoving.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = babymoving.mp4; sourceTree = "<group>"; };
@@ -118,6 +125,7 @@
 		E90D6CDB216696BB00FFD85B /* CognitoUserPoolController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoUserPoolController.swift; sourceTree = "<group>"; };
 		E90D6D012168D0C500FFD85B /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
 		E9375025215C4104006FE577 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E96A613321698B5600132BA1 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		E96C52602168DCF50054E33B /* UILogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILogger.swift; sourceTree = "<group>"; };
 		E96C52642168F02F0054E33B /* ApplePayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplePayViewController.swift; sourceTree = "<group>"; };
 		E96C526A2168F0910054E33B /* AuthorizeNetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeNetController.swift; sourceTree = "<group>"; };
@@ -136,8 +144,6 @@
 		E9EEAEAD214B439B00CCE95B /* ZCServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZCServiceProvider.swift; sourceTree = "<group>"; };
 		E9EEAEB0214B452300CCE95B /* MockResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockResource.swift; sourceTree = "<group>"; };
 		E9EEAEB1214B452300CCE95B /* MockService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
-		E9EEAEB5214B464300CCE95B /* CarePlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarePlan.swift; sourceTree = "<group>"; };
-		E9EEAEB6214B464300CCE95B /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		E9EEAEBC214B4EE200CCE95B /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EEAEC2214B50F000CCE95B /* careplan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = careplan.json; sourceTree = "<group>"; };
 		E9EEAEC5214B552000CCE95B /* EmoryHealthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoryHealthViewController.swift; sourceTree = "<group>"; };
@@ -206,8 +212,9 @@
 				E9EEAEAF214B43A100CCE95B /* Service */,
 				E9EEAE61214A9C9400CCE95B /* HelloWorldCK.entitlements */,
 				E9EEAE28214A950600CCE95B /* AppDelegate.swift */,
-				E9EEAE2A214A950600CCE95B /* ViewController.swift */,
+				E90BACB221697DE8003677E6 /* ZCCarePlanStoreManager.swift */,
 				E9EEAE62214ACD4400CCE95B /* CareKitViewController.swift */,
+				E90692DA21699F11007444E2 /* CarePlanViewController.swift */,
 				E9EEAEC5214B552000CCE95B /* EmoryHealthViewController.swift */,
 				E9375025215C4104006FE577 /* LoginViewController.swift */,
 				E90D6CDB216696BB00FFD85B /* CognitoUserPoolController.swift */,
@@ -218,9 +225,11 @@
 				E96C52602168DCF50054E33B /* UILogger.swift */,
 				E90D6D012168D0C500FFD85B /* bridge.h */,
 				E90C969A216450EF005D20DC /* User.swift */,
+				E9EEAE2A214A950600CCE95B /* ViewController.swift */,
 				E96C52642168F02F0054E33B /* ApplePayViewController.swift */,
 				E96C526A2168F0910054E33B /* AuthorizeNetController.swift */,
 				E9EEAE2C214A950600CCE95B /* Main.storyboard */,
+				E9068BF22169D9F2009FEE8B /* BLEPairingViewController.swift */,
 				E9EEAE2F214A950900CCE95B /* Assets.xcassets */,
 				E90C96A321645DBC005D20DC /* babymoving.mp4 */,
 				E90C96A92165E303005D20DC /* familyplaying.mp4 */,
@@ -270,8 +279,8 @@
 		E9EEAEB9214B464C00CCE95B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E9EEAEB6214B464300CCE95B /* Activity.swift */,
-				E9EEAEB5214B464300CCE95B /* CarePlan.swift */,
+				E96A613321698B5600132BA1 /* Activity.swift */,
+				E90BACB421697F50003677E6 /* CarePlan.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -323,6 +332,9 @@
 						CreatedOnToolsVersion = 9.4.1;
 						SystemCapabilities = {
 							com.apple.ApplePay = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
 							com.apple.DataProtection = {
@@ -459,6 +471,8 @@
 				"${BUILT_PRODUCTS_DIR}/AWSSimpleDB/AWSSimpleDB.framework",
 				"${BUILT_PRODUCTS_DIR}/AuthorizeNetAccept/AuthorizeNetAccept.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${PODS_ROOT}/EstimoteBluetoothScanning/EstimoteBluetoothScanning/EstimoteBluetoothScanning.framework",
+				"${PODS_ROOT}/EstimoteProximitySDK/EstimoteProximitySDK/EstimoteProximitySDK.framework",
 				"${BUILT_PRODUCTS_DIR}/JVFloatLabeledTextField/JVFloatLabeledTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/Shimmer/Shimmer.framework",
@@ -493,6 +507,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSSimpleDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AuthorizeNetAccept.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EstimoteBluetoothScanning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EstimoteProximitySDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVFloatLabeledTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Shimmer.framework",
@@ -512,24 +528,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90692DB21699F11007444E2 /* CarePlanViewController.swift in Sources */,
 				E9EEAEAC214B438E00CCE95B /* ZCService.swift in Sources */,
+				E90BACB321697DE8003677E6 /* ZCCarePlanStoreManager.swift in Sources */,
 				E9EEAE63214ACD4400CCE95B /* CareKitViewController.swift in Sources */,
 				E9EEAEB3214B452300CCE95B /* MockService.swift in Sources */,
 				E96C52692168F02F0054E33B /* ApplePayViewController.swift in Sources */,
 				E9EEAE2B214A950600CCE95B /* ViewController.swift in Sources */,
 				E96C526B2168F0920054E33B /* AuthorizeNetController.swift in Sources */,
+				E9068BF32169D9F2009FEE8B /* BLEPairingViewController.swift in Sources */,
 				E90A999F215D456E00682DAE /* KeychainConfiguration.swift in Sources */,
 				E9EEAEAE214B439B00CCE95B /* ZCServiceProvider.swift in Sources */,
 				E90C969921641DCD005D20DC /* TouchIDAuthentication.swift in Sources */,
 				E9EEAE29214A950600CCE95B /* AppDelegate.swift in Sources */,
 				E90C96A621656A37005D20DC /* Dropshadow+Extension.swift in Sources */,
+				E96A613821698B5600132BA1 /* Activity.swift in Sources */,
 				E96C52612168DCF50054E33B /* UILogger.swift in Sources */,
 				E90C969B216450EF005D20DC /* User.swift in Sources */,
-				E9EEAEB8214B464300CCE95B /* Activity.swift in Sources */,
 				E9EEAEC6214B552000CCE95B /* EmoryHealthViewController.swift in Sources */,
 				E90D6CDC216696BB00FFD85B /* CognitoUserPoolController.swift in Sources */,
 				E9EEAEB2214B452300CCE95B /* MockResource.swift in Sources */,
-				E9EEAEB7214B464300CCE95B /* CarePlan.swift in Sources */,
+				E90BACB521697F51003677E6 /* CarePlan.swift in Sources */,
 				E937502A215C4104006FE577 /* LoginViewController.swift in Sources */,
 				E90A999D215D442D00682DAE /* KeychainPasswordItem.swift in Sources */,
 			);

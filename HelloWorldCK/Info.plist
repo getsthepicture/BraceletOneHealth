@@ -24,6 +24,16 @@
 	<true/>
 	<key>NSFaceIDUsageDescription</key>
 	<string>We use Face ID for authentication access into the Bracelet One app.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We'll show you when fast lane access is available for checking into an Emory hospital location.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We'll show you when fast lane access is available for checking into an Emory hospital location.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We'll show you when fast lane access is available for checking into an Emory hospital location.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

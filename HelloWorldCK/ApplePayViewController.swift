@@ -8,17 +8,54 @@
 
 import Foundation
 import PassKit
+import AWSCognitoIdentityProvider
 
 class ApplePayViewController:UIViewController, PKPaymentAuthorizationViewControllerDelegate {
     
     @IBOutlet weak var applePayButton:UIButton!
+    var isAuthenticated = false
+    var didReturnFromBackground = false
 
     @objc let SupportedPaymentNetworks = [PKPaymentNetwork.visa, PKPaymentNetwork.masterCard, PKPaymentNetwork.amex]
+    
+    @IBAction func logoutTapped(_ sender: UIBarButtonItem) {
+        isAuthenticated = false
+        performSegue(withIdentifier: "loginView", sender: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showLoginView()
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.headerView.backgroundColor = UIColor.init(red: 48.0/255.0, green: 85.0/255.0, blue: 112.0/255.0, alpha: 1.0)
 //        self.applePayButton.hidden = !PKPaymentAuthorizationViewController.canMakePaymentsUsingNetworks(SupportedPaymentNetworks)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.appWillResignActive(_:)),
+                                               name: .UIApplicationWillResignActive,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.appDidBecomeActive(_:)),
+                                               name: .UIApplicationDidBecomeActive,
+                                               object: nil)
+        
+        //write user's email address to console log
+        let userpoolController = CognitoUserPoolController.sharedInstance
+        
+        userpoolController.getUserDetails(user: userpoolController.currentUser!) { (error: Error?, details: AWSCognitoIdentityUserGetDetailsResponse?) in
+            if let userAttributes = details?.userAttributes {
+                for attribute in userAttributes {
+                    if attribute.name?.compare("email") == .orderedSame {
+                        print("Email address of logged-in user is \(attribute.value!)")
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func payWithApplePay(_ sender: AnyObject) {
@@ -46,7 +83,7 @@ class ApplePayViewController:UIViewController, PKPaymentAuthorizationViewControl
         request.merchantCapabilities = PKMerchantCapability.capability3DS
         
         request.paymentSummaryItems = [
-            PKPaymentSummaryItem(label: "Total", amount: 254.00)
+            PKPaymentSummaryItem(label: "Total", amount: 40.00)
         ]
 
         let applePayController = PKPaymentAuthorizationViewController(paymentRequest: request)
@@ -89,5 +126,47 @@ class ApplePayViewController:UIViewController, PKPaymentAuthorizationViewControl
         
         return paymentString!
     }
+    
+    @objc func appWillResignActive(_ notification : Notification) {
+        view.alpha = 0
+        isAuthenticated = false
+        didReturnFromBackground = true
+    }
+    
+    @objc func appDidBecomeActive(_ notification : Notification) {
+        if didReturnFromBackground {
+            showLoginView()
+            view.alpha = 1
+        }
+    }
+    
+    @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
+        
+        isAuthenticated = true
+        view.alpha = 1.0
+    }
+    
+    
+    
+    func showLoginView() {
+        if !isAuthenticated {
+            performSegue(withIdentifier: "loginView", sender: self)
+        }
+    }
+    
+    func writeUsersEmailToConsole() {
+        let userpoolController = CognitoUserPoolController.sharedInstance
+        userpoolController.getUserDetails(user: userpoolController.currentUser!) {
+            (error: Error?,
+            details) in
+            if let userAttributes = details?.userAttributes {
+                for attribute in userAttributes {
+                    if attribute.name?.compare("email") == .orderedSame {
+                        print ("Email address of logged-in user is \(attribute.value!)")
+                    }
+                }
+            }}
+    }
+    
     
 }

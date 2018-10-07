@@ -49,9 +49,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             loginButton.setTitle("Login", for: .normal)
             loginButton.tag = loginButtonTag
             createInfoLabel.isHidden = true
+            emailTextField.isHidden = true
         }else{
             loginButton.setTitle("Get Started", for: .normal)
-            //emailTextField.isHidden = false
             loginButton.tag = createLoginButtonTag
             createInfoLabel.isHidden = true
         }
@@ -230,7 +230,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 extension LoginViewController {
     
     @IBAction func loginAction(sender: UIButton) {
-        if usernameTextField.isHidden && passwordTextField.isHidden && emailTextField.isHidden {
+        
+        let hasLogin = UserDefaults.standard.bool(forKey: "hasLoginKey")
+        if hasLogin && usernameTextField.isHidden && passwordTextField.isHidden {
+            usernameTextField.isHidden = false
+            passwordTextField.isHidden = false
+            createInfoLabel.isHidden = false
+            createInfoLabel.text = "Enter your login credentials"
+            loginButton.setTitle("Login", for: .normal)
+            return
+        } else if !hasLogin && usernameTextField.isHidden && passwordTextField.isHidden && emailTextField.isHidden{
             emailTextField.isHidden = false
             usernameTextField.isHidden = false
             passwordTextField.isHidden = false
@@ -238,10 +247,11 @@ extension LoginViewController {
             loginButton.setTitle("Create Account", for: .normal)
             return
         }
+        
+
         guard let newAccountName = usernameTextField.text,
         let newPassword = passwordTextField.text,
             let newEmail = emailTextField.text,
-            !newEmail.isEmpty,
         !newAccountName.isEmpty,
             !newPassword.isEmpty else {
                 showLoginFailAlert()

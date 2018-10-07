@@ -25,7 +25,52 @@ public struct CarePlan {
         self.title = title
     }
     
-  }
+    //Returns all CareKit activities
+    func allActivities(completion:(_ activities: [OCKCarePlanActivity])-> Void) {
+        
+        
+        let ckallActivities = activities.map( {
+            
+            $0.carePlanActivity()
+            
+        })
+        
+        
+        completion(ckallActivities)
+    }
+    
+    // Filters and returns an array of CareKit Intervention OCKCarePlanActivity objects
+    
+    func interventionActivities(completion:(_ activities: [OCKCarePlanActivity])-> Void) {
+    
+        let interventionActivities = activities.filter(){$0.activityType == .Intervention}
+        
+        let ckinterventionActivities = interventionActivities.map( {
+            
+            $0.carePlanActivity()
+        
+        })
+        
+        
+        completion(ckinterventionActivities)
+    }
+    
+    // Filters and returns an array of CareKit assessment OCKCarePlanActivity objects
+    
+    func assessmentActivities(completion:([OCKCarePlanActivity])-> Void) {
+        
+        let assessmentActivities = activities.filter(){$0.activityType == .Assessment}
+        
+        let ckassessmentActivities = assessmentActivities.map( {
+            
+            $0.carePlanActivity()
+            
+        })
+        
+        
+        completion(ckassessmentActivities)
+    }
+}
 
 extension CarePlan : Equatable {}
 
@@ -44,8 +89,8 @@ extension CarePlan : ZCAPIResponse {
     init?(data:Data?) {
         
         do {
-            
-            let json = try JSONSerialization.jsonObject(with: data!, options: []) as! Dictionary<String, Any>
+        
+            let json = try JSONSerialization.jsonObject(with: data!, options: []) as! NSDictionary
             
             guard
                 let planID = json["planID"] as? Int,
@@ -76,14 +121,4 @@ extension CarePlan : ZCAPIResponse {
         
     }
     
-}
-
-
-
-extension CarePlan {
-    func interventionActivities(completion:(_ activities: [OCKCarePlanActivity]) -> Void) {
-        let interventionActivities = activities.filter(){$0.activityType == .Intervention}
-        let ckinterventionActivities = interventionActivities.map({$0.carePlanActivity()})
-        completion(ckinterventionActivities)
-    }
 }

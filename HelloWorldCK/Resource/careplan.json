@@ -1,29 +1,29 @@
 {
     "planID": 1,
-    "title": "ZombiCare Plan",
+    "title": "Trinity Steele's Type 2 Diabetic Care Plan",
     "lastUpdated": "20160709T073000+0000",
     "intervention_activities": [
                                 {
                                 "identifier": "001",
                                 "group_identifier": "Regular",
-                                "title": "Golden Apple",
-                                "text": "An Apple a day keeps the doctor away",
+                                "title": "Test Glucose Level",
+                                "text": "Pair your device with your glucose meter",
                                 "startdate": "20161031T120000+0000",
                                 "scheduletype": "Daily",
                                 "schedule": "1",
                                 "imageURL": "",
-                                "instructions": "Eat one golden apple a day."
+                                "instructions": "Pair with your glucose meter for easier tracking."
                                 },
                                 {
                                 "identifier": "002",
                                 "group_identifier": "Regular",
-                                "title": "Potion of Weakness",
-                                "text": "25ml",
+                                "title": "Eat a Snack",
+                                "text": "Use dieting chart for tips",
                                 "startdate": "20161031T120000+0000",
                                 "scheduletype": "Weekly",
                                 "schedule": "2,1,1,1,1,1,2",
                                 "imageURL": "",
-                                "instructions": "Take with food."
+                                "instructions": "Reduce daily sugar consumption."
                                 },
                                 {
                                 "identifier": "003",

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Zx-I2-wBA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QLY-FT-nQS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,90 +12,74 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Payment-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="careKitResearchKitHome" id="BYZ-38-t0r" customClass="ViewController" customModule="Bracelet_One" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="careKitResearchKitHome" id="BYZ-38-t0r" customClass="ApplePayViewController" customModule="Bracelet_One" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="M1d-HY-Zk6">
-                                <rect key="frame" x="16" y="452" width="343" height="208"/>
+                                <rect key="frame" x="16" y="84" width="343" height="436"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAQ-Sd-vWE">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="braceletOneLogo-1" translatesAutoresizingMaskIntoConstraints="NO" id="uBg-5W-Inw">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="56"/>
-                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="H6g-RT-bLB"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
-                                        <state key="normal" title="ResearchKit Assessment Example">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="assesmentOneButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ah-1y-01e"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CM3-Gf-pzg">
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Bracelet One" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWK-FU-XxJ">
                                         <rect key="frame" x="0.0" y="76" width="343" height="56"/>
-                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="8eC-9I-eF1"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
-                                        <state key="normal" title="CareKit Example">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="31"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your amount due:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6W-Hj-8e5">
+                                        <rect key="frame" x="0.0" y="152" width="343" height="56"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$40.00" borderStyle="roundedRect" placeholder="$" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O9W-JC-WsU">
+                                        <rect key="frame" x="0.0" y="228" width="343" height="56"/>
+                                        <color key="backgroundColor" red="0.84933067809999996" green="0.98132258650000004" blue="0.85503946009999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnc-6Q-Lca">
+                                        <rect key="frame" x="0.0" y="304" width="343" height="56"/>
+                                        <color key="backgroundColor" red="0.78676237309999997" green="0.057445696179999998" blue="0.0058445363580000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="ApplePayBTN_64pt__black_textLogo_">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="showCareCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jji-GQ-6g9"/>
-                                            <segue destination="ddI-vJ-Tgi" kind="show" id="FxJ-eV-pRf"/>
+                                            <action selector="payWithApplePay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7uQ-3t-bDv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYK-QC-jeJ">
-                                        <rect key="frame" x="0.0" y="152" width="343" height="56"/>
-                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMG-ZS-qDn">
+                                        <rect key="frame" x="0.0" y="380" width="343" height="56"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="aa6-XY-ICh"/>
+                                            <constraint firstAttribute="height" constant="56" id="H9k-PD-rdd"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
-                                        <state key="normal" title="Embry Health Care">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                        <state key="normal" title="Proceed to Authorize.net" backgroundImage="Button-1">
+                                            <color key="titleColor" red="0.78676237309999997" green="0.057445696179999998" blue="0.0058445363580000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="aNa-aM-V0n" kind="show" id="FsI-jq-gI5"/>
+                                            <segue destination="bt2-4z-b37" kind="show" id="rTc-UI-2R9"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="braceletOneLogo-1" translatesAutoresizingMaskIntoConstraints="NO" id="uBg-5W-Inw">
-                                <rect key="frame" x="67" y="149" width="240" height="194"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="194" id="iCC-cG-8aX"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bracelet One" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWK-FU-XxJ">
-                                <rect key="frame" x="16" y="375" width="343" height="52"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="44"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.78676237309999997" green="0.057445696179999998" blue="0.0058445363580000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M1d-HY-Zk6" secondAttribute="trailing" constant="16" id="3eJ-2l-UnH"/>
                             <constraint firstItem="M1d-HY-Zk6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4e2-01-LPf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uBg-5W-Inw" secondAttribute="trailing" constant="68" id="8Qj-gV-pSd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JWK-FU-XxJ" secondAttribute="trailing" constant="16" id="9SX-zB-ogC"/>
-                            <constraint firstItem="uBg-5W-Inw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="Au7-hR-lXK"/>
-                            <constraint firstItem="M1d-HY-Zk6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="336" id="KwT-XP-UOr"/>
-                            <constraint firstItem="JWK-FU-XxJ" firstAttribute="top" secondItem="uBg-5W-Inw" secondAttribute="bottom" constant="32" id="LP5-kJ-3EQ"/>
-                            <constraint firstItem="uBg-5W-Inw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="Sbd-Xt-exL"/>
-                            <constraint firstItem="JWK-FU-XxJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Tqx-Z0-luK"/>
+                            <constraint firstItem="M1d-HY-Zk6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="KwT-XP-UOr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xmG-yf-q2P">
+                    <navigationItem key="navigationItem" title="Payment" id="xmG-yf-q2P">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="fqQ-72-Nve">
                             <connections>
                                 <action selector="logoutTapped:" destination="BYZ-38-t0r" id="2Py-Qn-FMh"/>
@@ -103,15 +87,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="careKitExampleButton" destination="CM3-Gf-pzg" id="COe-cO-aLb"/>
-                        <outlet property="reserachKitExampleButton" destination="QAQ-Sd-vWE" id="Chg-NS-mYf"/>
-                        <outlet property="zombieHealthCareButton" destination="QYK-QC-jeJ" id="B1Q-An-k9e"/>
                         <segue destination="35t-5L-XCX" kind="presentation" identifier="loginView" id="l30-Zw-lLG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1391" y="116"/>
+            <point key="canvasLocation" x="722" y="225"/>
         </scene>
         <!--Care Kit View Controller-->
         <scene sceneID="kN2-6V-whP">
@@ -122,7 +103,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQm-Oj-ilK">
-                                <rect key="frame" x="16" y="370" width="343" height="56"/>
+                                <rect key="frame" x="16" y="274" width="343" height="56"/>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="oFn-w6-LoW"/>
@@ -146,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vpd-oy-add" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2692" y="116"/>
+            <point key="canvasLocation" x="3156" y="224"/>
         </scene>
         <!--Emory Health View Controller-->
         <scene sceneID="60P-YD-Sfw">
@@ -161,15 +142,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Il8-Co-qDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1876" y="889"/>
+            <point key="canvasLocation" x="2492" y="1018"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NGb-8n-Wvj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O5F-ZN-vg5" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="keG-P3-BaP">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="keG-P3-BaP">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -179,7 +160,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dDJ-Y1-gxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="157.59999999999999" y="-582.45877061469275"/>
+            <point key="canvasLocation" x="721" y="-542"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="5Tc-lb-JJa">
@@ -226,7 +207,7 @@
                                         <rect key="frame" x="10" y="413.5" width="355" height="0.0"/>
                                         <color key="backgroundColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5f-oU-wmd">
                                         <rect key="frame" x="68.5" y="418" width="238" height="53"/>
@@ -317,7 +298,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUd-Hc-iLe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="wsd-P3-BZa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2337" y="-656"/>
+            <point key="canvasLocation" x="-46" y="996"/>
         </scene>
         <!--Payment Choice-->
         <scene sceneID="hr5-SC-TCf">
@@ -336,7 +317,7 @@
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the amount due:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYe-gg-aPZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your amount due:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYe-gg-aPZ">
                                         <rect key="frame" x="0.0" y="91.5" width="375" height="54"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="25"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -349,25 +330,19 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRd-ZE-Sub">
-                                        <rect key="frame" x="0.0" y="234.5" width="375" height="97.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="21"/>
-                                        <state key="normal" title="Checkout on Authorize.net" backgroundImage="Button-1">
-                                            <color key="titleColor" red="0.78676237309999997" green="0.057445696179999998" blue="0.0058445363580000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="bt2-4z-b37" kind="show" id="X2D-je-azF"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMh-ja-rh8">
-                                        <rect key="frame" x="0.0" y="349" width="375" height="174"/>
+                                        <rect key="frame" x="0.0" y="234.5" width="375" height="117.5"/>
                                         <color key="backgroundColor" red="0.78676237309999997" green="0.057445696179999998" blue="0.0058445363580000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="ApplePayBTN_64pt__black_textLogo_">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <action selector="payWithApplePay:" destination="HCw-Hi-YNA" eventType="touchUpInside" id="yvt-eg-Fik"/>
-                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRd-ZE-Sub">
+                                        <rect key="frame" x="0.0" y="369" width="375" height="154"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="21"/>
+                                        <state key="normal" title="Proceed to Authorize.net" backgroundImage="Button-1">
+                                            <color key="titleColor" red="0.78676237309999997" green="0.057445696179999998" blue="0.0058445363580000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -405,10 +380,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJ4-je-ek1" userLabel="Header">
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bracelet One Demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVG-Yl-dn1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bracelet One Recurring Payment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVG-Yl-dn1">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <color key="backgroundColor" red="0.78676237309999997" green="0.057445696179999998" blue="0.0058445363580000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="23"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -465,13 +440,13 @@
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="cPw-Is-qYZ"/>
-                                        <exclude reference="CYv-Ze-h13"/>
-                                        <exclude reference="h3b-af-k3P"/>
                                         <exclude reference="5Lz-Gz-cUs"/>
+                                        <exclude reference="CYv-Ze-h13"/>
                                         <exclude reference="fGg-Uq-TPc"/>
+                                        <exclude reference="h3b-af-k3P"/>
+                                        <exclude reference="G2K-GZ-z8B"/>
                                         <exclude reference="SFH-zd-sLl"/>
                                         <exclude reference="fPy-Tw-9Qz"/>
-                                        <exclude reference="G2K-GZ-z8B"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -481,19 +456,19 @@
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="cPw-Is-qYZ"/>
-                                        <include reference="CYv-Ze-h13"/>
-                                        <include reference="h3b-af-k3P"/>
                                         <include reference="5Lz-Gz-cUs"/>
+                                        <include reference="CYv-Ze-h13"/>
                                         <include reference="fGg-Uq-TPc"/>
+                                        <include reference="h3b-af-k3P"/>
+                                        <include reference="G2K-GZ-z8B"/>
                                         <include reference="SFH-zd-sLl"/>
                                         <include reference="fPy-Tw-9Qz"/>
-                                        <include reference="G2K-GZ-z8B"/>
                                     </mask>
                                 </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s48-io-NfP">
                                 <rect key="frame" x="16" y="118" width="343" height="27.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -520,8 +495,8 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiration Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qd4-F2-H5x">
-                                <rect key="frame" x="16" y="215.5" width="142.5" height="27.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="23"/>
+                                <rect key="frame" x="16" y="215.5" width="150.5" height="27.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -538,14 +513,14 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="vdr-vV-Y4C"/>
                                         <exclude reference="bax-i7-xqT"/>
+                                        <exclude reference="vdr-vV-Y4C"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="vdr-vV-Y4C"/>
                                         <include reference="bax-i7-xqT"/>
+                                        <include reference="vdr-vV-Y4C"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -553,8 +528,8 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Security Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXd-5m-FU7">
-                                <rect key="frame" x="222.5" y="216" width="136.5" height="27.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="23"/>
+                                <rect key="frame" x="218.5" y="216" width="140.5" height="27.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -571,14 +546,14 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="fqe-Kf-kpl"/>
                                         <exclude reference="UyA-rh-tPw"/>
+                                        <exclude reference="fqe-Kf-kpl"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="fqe-Kf-kpl"/>
                                         <include reference="UyA-rh-tPw"/>
+                                        <include reference="fqe-Kf-kpl"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -621,7 +596,7 @@
                                     </constraint>
                                     <constraint firstAttribute="width" constant="200" id="NWO-0y-azd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -712,33 +687,33 @@
                                 <exclude reference="bMQ-9u-NhV"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="zcQ-fV-jwb"/>
-                                <exclude reference="giB-ZM-WlN"/>
                                 <exclude reference="b3K-q7-nZH"/>
-                                <exclude reference="bOq-Fu-39i"/>
-                                <exclude reference="OgR-KD-jNx"/>
+                                <exclude reference="giB-ZM-WlN"/>
+                                <exclude reference="zcQ-fV-jwb"/>
                                 <exclude reference="LEt-pZ-915"/>
-                                <exclude reference="Ok2-Ew-Eoj"/>
+                                <exclude reference="OgR-KD-jNx"/>
+                                <exclude reference="bOq-Fu-39i"/>
                                 <exclude reference="2iU-t8-qEu"/>
+                                <exclude reference="Ok2-Ew-Eoj"/>
                                 <exclude reference="4lh-wt-Crg"/>
                                 <exclude reference="PaF-1z-QBB"/>
-                                <exclude reference="zLX-8C-jJL"/>
-                                <exclude reference="tlw-XT-eSv"/>
                                 <exclude reference="12V-cC-Qgv"/>
+                                <exclude reference="tlw-XT-eSv"/>
+                                <exclude reference="zLX-8C-jJL"/>
                                 <exclude reference="RqF-ae-ffU"/>
                                 <exclude reference="If9-tQ-8yQ"/>
                                 <exclude reference="hQT-t1-ejr"/>
-                                <exclude reference="kqW-De-7LV"/>
                                 <exclude reference="05G-04-isz"/>
-                                <exclude reference="Uvn-Aa-wOx"/>
-                                <exclude reference="e6b-am-CEp"/>
-                                <exclude reference="n5K-qD-2hD"/>
-                                <exclude reference="aTK-A1-Uyl"/>
+                                <exclude reference="kqW-De-7LV"/>
                                 <exclude reference="eo0-i9-iD3"/>
                                 <exclude reference="jGE-fh-aOa"/>
+                                <exclude reference="Uvn-Aa-wOx"/>
+                                <exclude reference="e6b-am-CEp"/>
+                                <exclude reference="aTK-A1-Uyl"/>
+                                <exclude reference="n5K-qD-2hD"/>
+                                <exclude reference="Z9Y-lI-WQX"/>
                                 <exclude reference="d2h-IW-eUY"/>
                                 <exclude reference="dIr-il-c69"/>
-                                <exclude reference="Z9Y-lI-WQX"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -754,33 +729,33 @@
                                 <include reference="bMQ-9u-NhV"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="zcQ-fV-jwb"/>
-                                <include reference="giB-ZM-WlN"/>
                                 <include reference="b3K-q7-nZH"/>
-                                <include reference="bOq-Fu-39i"/>
-                                <include reference="OgR-KD-jNx"/>
+                                <include reference="giB-ZM-WlN"/>
+                                <include reference="zcQ-fV-jwb"/>
                                 <include reference="LEt-pZ-915"/>
-                                <include reference="Ok2-Ew-Eoj"/>
+                                <include reference="OgR-KD-jNx"/>
+                                <include reference="bOq-Fu-39i"/>
                                 <include reference="2iU-t8-qEu"/>
+                                <include reference="Ok2-Ew-Eoj"/>
                                 <include reference="4lh-wt-Crg"/>
                                 <include reference="PaF-1z-QBB"/>
-                                <include reference="zLX-8C-jJL"/>
-                                <include reference="tlw-XT-eSv"/>
                                 <include reference="12V-cC-Qgv"/>
+                                <include reference="tlw-XT-eSv"/>
+                                <include reference="zLX-8C-jJL"/>
                                 <include reference="RqF-ae-ffU"/>
                                 <include reference="If9-tQ-8yQ"/>
                                 <include reference="hQT-t1-ejr"/>
-                                <include reference="kqW-De-7LV"/>
                                 <include reference="05G-04-isz"/>
-                                <include reference="Uvn-Aa-wOx"/>
-                                <include reference="e6b-am-CEp"/>
-                                <include reference="n5K-qD-2hD"/>
-                                <include reference="aTK-A1-Uyl"/>
+                                <include reference="kqW-De-7LV"/>
                                 <include reference="eo0-i9-iD3"/>
                                 <include reference="jGE-fh-aOa"/>
+                                <include reference="Uvn-Aa-wOx"/>
+                                <include reference="e6b-am-CEp"/>
+                                <include reference="aTK-A1-Uyl"/>
+                                <include reference="n5K-qD-2hD"/>
+                                <include reference="Z9Y-lI-WQX"/>
                                 <include reference="d2h-IW-eUY"/>
                                 <include reference="dIr-il-c69"/>
-                                <include reference="Z9Y-lI-WQX"/>
                             </mask>
                         </variation>
                         <connections>
@@ -808,7 +783,80 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4666" y="-656"/>
+            <point key="canvasLocation" x="1554" y="224"/>
+        </scene>
+        <!--Pairing View Controller-->
+        <scene sceneID="6Ew-tF-tZg">
+            <objects>
+                <viewController id="QLY-FT-nQS" customClass="BLEPairingViewController" customModule="Bracelet_One" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8BB-jv-y9f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1Mx-yo-qQ9">
+                                <rect key="frame" x="20" y="40" width="335" height="527"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bluetooth On" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjI-pl-gi2">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="175.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="31"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UZM-LI-igd">
+                                        <rect key="frame" x="0.0" y="175.5" width="335" height="176"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glucoseair" translatesAutoresizingMaskIntoConstraints="NO" id="TCR-Lg-JDe">
+                                                <rect key="frame" x="0.0" y="0.0" width="162.5" height="176"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqv-Qc-MJz">
+                                                <rect key="frame" x="172.5" y="0.0" width="162.5" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="ohy-n7-SwD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                                <state key="normal" title="Pair Meter" backgroundImage="Button-1">
+                                                    <color key="titleColor" red="0.78676237309999997" green="0.057445696179999998" blue="0.0058445363580000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OGZ-Xs-JSu">
+                                        <rect key="frame" x="0.0" y="351.5" width="335" height="175.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pairwatch" translatesAutoresizingMaskIntoConstraints="NO" id="3g4-DE-tDT">
+                                                <rect key="frame" x="0.0" y="0.0" width="162.5" height="175.5"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZy-Vw-SRZ">
+                                                <rect key="frame" x="172.5" y="119.5" width="162.5" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="yET-aQ-pWf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                                <state key="normal" title="Pair Watch" backgroundImage="Button-1">
+                                                    <color key="titleColor" red="0.78676237309999997" green="0.057445696179999998" blue="0.0058445363580000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78676237309999997" green="0.057445696179999998" blue="0.0058445363580000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZwG-Zm-8oz" firstAttribute="trailing" secondItem="1Mx-yo-qQ9" secondAttribute="trailing" constant="20" id="3sH-WG-6gJ"/>
+                            <constraint firstItem="ZwG-Zm-8oz" firstAttribute="bottom" secondItem="1Mx-yo-qQ9" secondAttribute="bottom" constant="100" id="Lex-k8-OVT"/>
+                            <constraint firstItem="1Mx-yo-qQ9" firstAttribute="leading" secondItem="ZwG-Zm-8oz" secondAttribute="leading" constant="20" id="Zze-2h-nTB"/>
+                            <constraint firstItem="1Mx-yo-qQ9" firstAttribute="top" secondItem="ZwG-Zm-8oz" secondAttribute="top" constant="20" id="iay-9X-GY6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZwG-Zm-8oz"/>
+                    </view>
+                    <connections>
+                        <outlet property="bluetoothStatusLabel" destination="pjI-pl-gi2" id="Fz6-th-POh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SAh-1w-8bF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2289" y="224"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sq1-Ti-9UP">
@@ -828,6 +876,77 @@
             </objects>
             <point key="canvasLocation" x="3025" y="-656"/>
         </scene>
+        <!--Care Plan View Controller-->
+        <scene sceneID="t91-kW-BXm">
+            <objects>
+                <viewController id="zrH-5P-gDP" customClass="CarePlanViewController" customModule="Bracelet_One" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qfY-am-tih"/>
+                        <viewControllerLayoutGuide type="bottom" id="A00-Oh-QlM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y2y-np-hgf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tt2-8P-GYs">
+                                <rect key="frame" x="16" y="123.5" width="343" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Trinity Steele's Care Plan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0A-Nz-D81">
+                                <rect key="frame" x="16" y="28" width="343" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cq1-6u-cFE">
+                                <rect key="frame" x="113" y="318" width="148" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Begin your Treatment">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="BuildCareCardWithSender:" destination="zrH-5P-gDP" eventType="touchUpInside" id="s9K-JC-fME"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78676237309999997" green="0.057445696179999998" blue="0.0058445363580000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cq1-6u-cFE" firstAttribute="centerY" secondItem="y2y-np-hgf" secondAttribute="centerY" id="5At-z7-VfY"/>
+                            <constraint firstItem="tt2-8P-GYs" firstAttribute="top" secondItem="D0A-Nz-D81" secondAttribute="bottom" constant="66" id="BKT-Zh-k13"/>
+                            <constraint firstItem="D0A-Nz-D81" firstAttribute="centerX" secondItem="y2y-np-hgf" secondAttribute="centerX" id="GyZ-Y5-Te1"/>
+                            <constraint firstItem="tt2-8P-GYs" firstAttribute="leading" secondItem="y2y-np-hgf" secondAttribute="leadingMargin" id="HQi-sb-OB9"/>
+                            <constraint firstItem="D0A-Nz-D81" firstAttribute="top" secondItem="qfY-am-tih" secondAttribute="bottom" constant="8" id="OfY-N4-EcV"/>
+                            <constraint firstItem="tt2-8P-GYs" firstAttribute="trailing" secondItem="y2y-np-hgf" secondAttribute="trailingMargin" id="jZ2-g4-8SH"/>
+                            <constraint firstItem="cq1-6u-cFE" firstAttribute="centerX" secondItem="y2y-np-hgf" secondAttribute="centerX" id="nxA-mE-i1Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OF9-oV-14i"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6TM-f0-VAX"/>
+                    <connections>
+                        <outlet property="carePlanDescription" destination="tt2-8P-GYs" id="yIl-KJ-UiV"/>
+                        <outlet property="carePlanTitle" destination="D0A-Nz-D81" id="7F6-7A-ga0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ecb-RJ-Qyf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1714" y="1018"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="0jL-Ez-Hpe">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="SAl-jg-n8E" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="JqV-Hj-Ww0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kaH-uU-vNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1036" y="1018"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ApplePayBTN_64pt__black_textLogo_" width="194" height="64"/>
@@ -837,5 +956,7 @@
         <image name="Touch-icon-lg" width="138" height="137"/>
         <image name="braceletOneLogo-1" width="993" height="936"/>
         <image name="braceletOneLogo-2" width="993" height="936"/>
+        <image name="glucoseair" width="401" height="283"/>
+        <image name="pairwatch" width="401" height="283"/>
     </resources>
 </document>
