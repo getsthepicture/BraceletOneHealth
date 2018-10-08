@@ -12,6 +12,7 @@ import SCLAlertView
 import Foundation
 import CareKit
 
+
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   switch (lhs, rhs) {
   case let (l?, r?):
@@ -87,6 +88,8 @@ class AuthorizeNetController: UIViewController, UITextFieldDelegate {
     fileprivate var cardNumberBuffer:String!
     
     var careplanManager: ZCCarePlanStoreManager?
+    var healthStore: HKHealthStore?
+    
     
     
     
@@ -148,6 +151,45 @@ class AuthorizeNetController: UIViewController, UITextFieldDelegate {
         let careCardViewController = createCareCardViewController()
         tabbarcontroller.viewControllers = [UINavigationController(rootViewController: careCardViewController)]
         self.present(tabbarcontroller, animated: true, completion: nil)
+        
+        if HKHealthStore.isHealthDataAvailable() {
+            //success!
+            healthStore = HKHealthStore.init()
+            let bloodGlucoseType: HKQuantityType? = HKQuantityType.quantityType(forIdentifier: .bloodGlucose)
+            let insulinDeliveryType: HKQuantityType? = HKQuantityType.quantityType(forIdentifier: .insulinDelivery)
+            let walkingHeartRateType: HKQuantityType? = HKQuantityType.quantityType(forIdentifier: .walkingHeartRateAverage)
+            let bloodPressureDiastolicType: HKQuantityType? = HKQuantityType.quantityType(forIdentifier: .bloodPressureDiastolic)
+            let bodyMassIndexType: HKQuantityType? = HKQuantityType.quantityType(forIdentifier: .bodyMassIndex)
+            let bloodPressureSystolicType: HKQuantityType? = HKQuantityType.quantityType(forIdentifier: .bloodPressureSystolic)
+            let stepType: HKQuantityType? = HKQuantityType.quantityType(forIdentifier: .stepCount)
+            let distanceType: HKQuantityType? = HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)
+            let workoutType: HKWorkoutType = HKObjectType.workoutType()
+            
+            let readTypes: Set = [bloodGlucoseType!, insulinDeliveryType!, walkingHeartRateType!, bloodPressureDiastolicType!, bloodPressureSystolicType!, bodyMassIndexType!, stepType!, distanceType!, workoutType]
+            let writeTypes: Set = [bloodGlucoseType!, stepType!, distanceType!, workoutType]
+            
+            healthStore?.requestAuthorization(toShare: writeTypes, read: readTypes, completion: { (success, error) in
+                //set
+                if success{
+                    //success
+                    //get workouts
+                } else {
+                    //Denied
+                    self.presentErrorMessage(errorString: "HealthKit permissions denied.")
+                }
+            })
+            
+        }else {
+            //HealthKit unavailable
+            presentErrorMessage(errorString: "HealthKit not available on this device")
+        }
+    }
+    
+    func presentErrorMessage(errorString: String) {
+        let alert = UIAlertController.init(title: "Error", message: errorString, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction.init(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
     }
     
     private func createCareCardViewController() -> OCKCareCardViewController{

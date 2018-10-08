@@ -25,11 +25,15 @@
 	<key>NSFaceIDUsageDescription</key>
 	<string>We use Face ID for authentication access into the Bracelet One app.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>We'll show you when fast lane access is available for checking into an Emory hospital location.</string>
+	<string>We&apos;ll show you when fast lane access is available for checking into an Emory hospital location.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We'll show you when fast lane access is available for checking into an Emory hospital location.</string>
+	<string>We&apos;ll show you when fast lane access is available for checking into an Emory hospital location.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We'll show you when fast lane access is available for checking into an Emory hospital location.</string>
+	<string>We&apos;ll show you when fast lane access is available for checking into an Emory hospital location.</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>We&apos;ll analyze your current health data to see if it accounts for checking off tasks within your treatment plan.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>We will use your health information to better track your treatment and assessment information.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>
