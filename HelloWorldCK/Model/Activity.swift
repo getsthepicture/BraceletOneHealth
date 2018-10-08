@@ -41,11 +41,16 @@ struct ZCActivity : Activity {
     let instructions : String?
     let imageURL : NSURL?
     var activityType: ActivityType
+    let colorcolorcolor: UIColor?
     
     init(fromJSON json: JSON, activityType: ActivityType) {
         self.identifier = json["identifier"].string!
         self.title = json["title"].string!
         self.text = json["text"].string!
+        let colorcolorcolorString = json["color"].string!
+        let eventColor = UIColor.colorWithString(colorcolorcolorString)
+        self.colorcolorcolor = eventColor
+        //self.colorcolorcolor = json["color"].string!
         
         if let instructionString = json["instructions"].string {
             self.instructions = instructionString
@@ -94,7 +99,7 @@ struct ZCActivity : Activity {
         //creates and returns the approprate CareKit OCKCarePlanActivity
         switch activityType {
         case .Intervention:
-            let activity = OCKCarePlanActivity.intervention(withIdentifier: identifier, groupIdentifier: nil, title: title, text: text, tintColor: UIColor.purple, instructions: instructions, imageURL: nil, schedule: activitySchedule, userInfo: nil, optional: false)
+            let activity = OCKCarePlanActivity.intervention(withIdentifier: identifier, groupIdentifier: nil, title: title, text: text, tintColor: colorcolorcolor, instructions: instructions, imageURL: nil, schedule: activitySchedule, userInfo: nil, optional: false)
            
             
             return activity

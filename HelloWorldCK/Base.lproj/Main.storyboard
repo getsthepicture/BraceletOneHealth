@@ -943,10 +943,10 @@
             </objects>
             <point key="canvasLocation" x="1712.8" y="1017.84107946027"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Care Plan Tab View Controller-->
         <scene sceneID="0jL-Ez-Hpe">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarController" id="SAl-jg-n8E" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="SAl-jg-n8E" customClass="ZCCarePlanTabViewController" customModule="Bracelet_One" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JqV-Hj-Ww0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

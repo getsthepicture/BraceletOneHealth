@@ -147,8 +147,12 @@ class AuthorizeNetController: UIViewController, UITextFieldDelegate {
     
     func buildCareCard() {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let tabbarcontroller = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+        let tabbarcontroller = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! ZCCarePlanTabViewController
+        tabbarcontroller.careplanManager = self.careplanManager
+        
+        
         let careCardViewController = createCareCardViewController()
+        careCardViewController.delegate = tabbarcontroller
         tabbarcontroller.viewControllers = [UINavigationController(rootViewController: careCardViewController)]
         self.present(tabbarcontroller, animated: true, completion: nil)
         
@@ -194,9 +198,13 @@ class AuthorizeNetController: UIViewController, UITextFieldDelegate {
     
     private func createCareCardViewController() -> OCKCareCardViewController{
         let viewController = OCKCareCardViewController.init(carePlanStore: careplanManager!.store)
-        //Setup the controller's title and tab bar item
+        //viewController.glyphType = OCKGlyphType(rawValue: 6)!
+        viewController.glyphType = OCKGlyphType(rawValue: 29)!
+        viewController.customGlyphImageName = "heart"
+        viewController.glyphTintColor = UIColor.red
         viewController.title = NSLocalizedString("Treatment Plan", comment: "")
         viewController.tabBarItem = UITabBarItem.init(title: viewController.title, image: UIImage.init(named: "CareCard-OFF"), selectedImage: UIImage.init(named: "CareCard-ON"))
+        
         return viewController
     }
     

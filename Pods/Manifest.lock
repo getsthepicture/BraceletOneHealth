@@ -54,6 +54,7 @@ PODS:
   - SCLAlertView (0.8)
   - Shimmer (1.0.2)
   - Stripe (13.2.0)
+  - SwiftSpinner (1.5.0)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
@@ -87,6 +88,7 @@ DEPENDENCIES:
   - SCLAlertView
   - Shimmer (~> 1.0)
   - Stripe
+  - SwiftSpinner
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
@@ -122,6 +124,7 @@ SPEC REPOS:
     - SCLAlertView
     - Shimmer
     - Stripe
+    - SwiftSpinner
     - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -167,8 +170,9 @@ SPEC CHECKSUMS:
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   Stripe: 2c69e216061d54d9c538204bb4f58bd597ddfc5b
+  SwiftSpinner: 4c058c7a1d6b444dd2e1d70988ead40783097133
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: ebd311221b68a269cd824eccc480026a3a6ffdc8
+PODFILE CHECKSUM: 6660a0437307b85787f2eb7022e969dd0ade4567
 
 COCOAPODS: 1.5.3

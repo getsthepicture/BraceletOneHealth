@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B7FBC740FB3270E7615451B3 /* Pods_Bracelet_One.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC021C46A615B81F60036A6 /* Pods_Bracelet_One.framework */; };
+		E903A445216BB4FB007A53D6 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E903A444216BB4FB007A53D6 /* UIColor+Hex.swift */; };
 		E9068BF32169D9F2009FEE8B /* BLEPairingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9068BF22169D9F2009FEE8B /* BLEPairingViewController.swift */; };
 		E9068BFF216A704D009FEE8B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9068BFA216A704D009FEE8B /* CoreBluetooth.framework */; };
 		E9068C01216A7059009FEE8B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9068C00216A7058009FEE8B /* CoreLocation.framework */; };
 		E9068C09216AEC9E009FEE8B /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9068C08216AEC9E009FEE8B /* HealthKit.framework */; };
+		E9068C0D216AFF46009FEE8B /* ZCCarePlanTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9068C0C216AFF46009FEE8B /* ZCCarePlanTabViewController.swift */; };
 		E90692DB21699F11007444E2 /* CarePlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90692DA21699F11007444E2 /* CarePlanViewController.swift */; };
 		E90A999D215D442D00682DAE /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A9998215D442C00682DAE /* KeychainPasswordItem.swift */; };
 		E90A999F215D456E00682DAE /* KeychainConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A999E215D456E00682DAE /* KeychainConfiguration.swift */; };
@@ -113,10 +115,12 @@
 		57618376E9BD1762A507E06B /* Pods_HelloWorldCK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorldCK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1588BDD2D5E9C4B5F373031 /* Pods-Bracelet One.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bracelet One.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bracelet One/Pods-Bracelet One.debug.xcconfig"; sourceTree = "<group>"; };
 		BEC021C46A615B81F60036A6 /* Pods_Bracelet_One.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bracelet_One.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E903A444216BB4FB007A53D6 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		E9068BF22169D9F2009FEE8B /* BLEPairingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEPairingViewController.swift; sourceTree = "<group>"; };
 		E9068BFA216A704D009FEE8B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		E9068C00216A7058009FEE8B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E9068C08216AEC9E009FEE8B /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		E9068C0C216AFF46009FEE8B /* ZCCarePlanTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCarePlanTabViewController.swift; sourceTree = "<group>"; };
 		E90692DA21699F11007444E2 /* CarePlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarePlanViewController.swift; sourceTree = "<group>"; };
 		E90A9998215D442C00682DAE /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
 		E90A999E215D456E00682DAE /* KeychainConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainConfiguration.swift; sourceTree = "<group>"; };
@@ -224,7 +228,9 @@
 				E9EEAEAF214B43A100CCE95B /* Service */,
 				E9EEAE61214A9C9400CCE95B /* HelloWorldCK.entitlements */,
 				E9EEAE28214A950600CCE95B /* AppDelegate.swift */,
+				E903A444216BB4FB007A53D6 /* UIColor+Hex.swift */,
 				E90BACB221697DE8003677E6 /* ZCCarePlanStoreManager.swift */,
+				E9068C0C216AFF46009FEE8B /* ZCCarePlanTabViewController.swift */,
 				E9EEAE62214ACD4400CCE95B /* CareKitViewController.swift */,
 				E90692DA21699F11007444E2 /* CarePlanViewController.swift */,
 				E9EEAEC5214B552000CCE95B /* EmoryHealthViewController.swift */,
@@ -492,6 +498,7 @@
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/Shimmer/Shimmer.framework",
 				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSpinner/SwiftSpinner.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/authorizenet-sdk/authorizenet_sdk.framework",
 			);
@@ -528,6 +535,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Shimmer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSpinner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/authorizenet_sdk.framework",
 			);
@@ -558,9 +566,11 @@
 				E9EEAE29214A950600CCE95B /* AppDelegate.swift in Sources */,
 				E90C96A621656A37005D20DC /* Dropshadow+Extension.swift in Sources */,
 				E96A613821698B5600132BA1 /* Activity.swift in Sources */,
+				E9068C0D216AFF46009FEE8B /* ZCCarePlanTabViewController.swift in Sources */,
 				E96C52612168DCF50054E33B /* UILogger.swift in Sources */,
 				E90C969B216450EF005D20DC /* User.swift in Sources */,
 				E9EEAEC6214B552000CCE95B /* EmoryHealthViewController.swift in Sources */,
+				E903A445216BB4FB007A53D6 /* UIColor+Hex.swift in Sources */,
 				E90D6CDC216696BB00FFD85B /* CognitoUserPoolController.swift in Sources */,
 				E9EEAEB2214B452300CCE95B /* MockResource.swift in Sources */,
 				E90BACB521697F51003677E6 /* CarePlan.swift in Sources */,
