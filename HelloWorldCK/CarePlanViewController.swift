@@ -35,20 +35,6 @@ class CarePlanViewController: UIViewController {
             }
             return
         }
-//        service.request(resource: mockResource) { (response : CarePlan?, error) in
-//
-//            if error == nil {
-//
-//                print("\(response!.title) loaded.")
-//
-//                self.careplanManager = ZCCarePlanStoreManager(carePlan: response!)
-//
-//            }
-//
-//
-//
-//            return
-//        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,14 +48,12 @@ class CarePlanViewController: UIViewController {
         let careCardViewController = createCareCardViewController()
         tabbarcontroller.viewControllers = [UINavigationController(rootViewController: careCardViewController)]
         self.present(tabbarcontroller, animated: true, completion: nil)
-        
-        
     }
     
     private func createCareCardViewController() -> OCKCareCardViewController{
         let viewController = OCKCareCardViewController.init(carePlanStore: careplanManager!.store)
         //Setup the controller's title and tab bar item
-        viewController.title = NSLocalizedString("Trinity Steele's Care Card", comment: "")
+        viewController.title = NSLocalizedString("Care Plan", comment: "")
         viewController.tabBarItem = UITabBarItem.init(title: viewController.title, image: UIImage.init(named: "carecard"), selectedImage: UIImage.init(named: "carecard-filled"))
         return viewController
     }

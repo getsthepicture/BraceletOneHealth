@@ -9,6 +9,8 @@
 import UIKit
 import AuthorizeNetAccept
 import SCLAlertView
+import Foundation
+import CareKit
 
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   switch (lhs, rhs) {
@@ -84,6 +86,7 @@ class AuthorizeNetController: UIViewController, UITextFieldDelegate {
     fileprivate var cardVerificationCode:String!
     fileprivate var cardNumberBuffer:String!
     
+    var careplanManager: ZCCarePlanStoreManager?
     
     
     
@@ -94,14 +97,20 @@ class AuthorizeNetController: UIViewController, UITextFieldDelegate {
         )
         let alertView = SCLAlertView(appearance: appearance)
         alertView.addButton("Pair with Devices", target:self, selector:#selector(self.dismissAuthDotNet))
+        alertView.addButton("Access Clinic", target:self, selector:#selector(self.showCarePlan))
         alertView.showSuccess("Success!", subTitle: "Thank you for your payment.")
     }
     
     @objc func dismissAuthDotNet() {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "careKitResearchKitHome")
+        let controller = storyboard.instantiateViewController(withIdentifier: "blePairingController")
         self.present(controller, animated: true, completion: nil)
+    }
+    
+    @objc func showCarePlan() {
+        print("Show tab bar care plan view controller")
+        buildCareCard()
     }
     
     @IBAction func unwindSegueFromAutorizeDotNet(_ segue: UIStoryboardSegue) {
@@ -117,6 +126,36 @@ class AuthorizeNetController: UIViewController, UITextFieldDelegate {
         
         self.updateTokenButton(false)
         
+        let service = newZCService(type: .Mock)
+        
+        let mockResource = MockResource(path: "careplan", method: "GET", headers: nil, parameters: nil)
+        
+        service.request(resource: mockResource) { (response:CarePlan?, error) in
+            if error == nil {
+                print("\(response!.title) loaded")
+                self.careplanManager = ZCCarePlanStoreManager.init(carePlan: response!)
+                //self.carePlanTitle.text = self.careplanManager?.carePlan.title
+                //self.carePlanDescription.text = self.careplanManager?.carePlan.carePlanDescription
+            }
+            return
+        }
+    }
+    
+    
+    func buildCareCard() {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let tabbarcontroller = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+        let careCardViewController = createCareCardViewController()
+        tabbarcontroller.viewControllers = [UINavigationController(rootViewController: careCardViewController)]
+        self.present(tabbarcontroller, animated: true, completion: nil)
+    }
+    
+    private func createCareCardViewController() -> OCKCareCardViewController{
+        let viewController = OCKCareCardViewController.init(carePlanStore: careplanManager!.store)
+        //Setup the controller's title and tab bar item
+        viewController.title = NSLocalizedString("Treatment Plan", comment: "")
+        viewController.tabBarItem = UITabBarItem.init(title: viewController.title, image: UIImage.init(named: "CareCard-OFF"), selectedImage: UIImage.init(named: "CareCard-ON"))
+        return viewController
     }
     
     override func didReceiveMemoryWarning() {
@@ -160,6 +199,10 @@ class AuthorizeNetController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func getTokenButtonTapped(_ sender: AnyObject) {
+        cardNumberTextField.resignFirstResponder()
+        expirationMonthTextField.resignFirstResponder()
+        expirationYearTextField.resignFirstResponder()
+        cardVerificationCodeTextField.resignFirstResponder()
         self.activityIndicatorAcceptSDKDemo.startAnimating()
         self.updateTokenButton(false)
         
@@ -569,5 +612,11 @@ class AuthorizeNetController: UIViewController, UITextFieldDelegate {
                 }
             })
     }
+}
+
+//build care card
+extension AuthorizeNetController {
+    
+    
 }
 
