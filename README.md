@@ -4,7 +4,7 @@
 
 Bracelet One provides African-Americans with assistance to affordable healthcare for handling the diagnosis of Type 2 diabetes.  The app accepts payments to assess, record, and deliver real-time health announcements as well as 1-on-1 communication. The 1-on-1 chat feature is only available during the scheduled appointment time designated by the clinician.
 
-The overall arching goal of the application is to empower the community, scale down workplace depression, and to expand the application with computer vision to assist with inspirational social issues.
+The overall arching goal of the application is community literacy, donating research to the National Institute of Mental Health, scaling down workplace depression in healthcare, and expanding the application with computer vision to assist with multiple diagnosis.
 
 ### Technology Stack Used:
 * Cocoa Pods
@@ -22,6 +22,7 @@ The overall arching goal of the application is to empower the community, scale d
 * Sage Bridge
 * Authorize.Net
 * Apple Watch Extension
+* Core ML
 
 ### Requirements
 * Xcode
