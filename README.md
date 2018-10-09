@@ -6,22 +6,22 @@ Bracelet One provides African-Americans with assistance to affordable healthcare
 
 The overall arching goal of the application is to empower the community, scale down workplace depression, and to expand the application with computer vision to assist with inspirational social issues.
 
-## Technology Stack Used:
-Cocoa Pods
-Core data
-Core Bluetooth for Glucose Meter
-Estimates for Hospital Fast Lane Check-In
-Local Push Notifications
-Amazon Cognito
-Amazon Federations
-Amazon Dynamo DB for chat
-Amazon S3 Buckets for images in chat
-CareKit
-HealthKit
-ResearchKit and Core Motion
-Sage Bridge
-Authorize.Net
-Apple Watch Extension
+### Technology Stack Used:
+* Cocoa Pods
+* Core data
+* Core Bluetooth for Glucose Meter
+* Estimates for Hospital Fast Lane Check-In
+* Local Push Notifications
+* Amazon Cognito
+* Amazon Federations
+* Amazon Dynamo DB for chat
+* Amazon S3 Buckets for images in chat
+* CareKit
+* HealthKit
+* ResearchKit and Core Motion
+* Sage Bridge
+* Authorize.Net
+* Apple Watch Extension
 
 ### Requirements
 * Xcode
