@@ -9,6 +9,9 @@ The overall arching goal of the application is community literacy, donating rese
 ### Technology Stack Used:
 * Cocoa Pods
 * Core data
+* User Defaults
+* Keychain Access
+* Biometric Local Authentication
 * Core Bluetooth for Glucose Meter
 * Estimates for Hospital Fast Lane Check-In
 * Local Push Notifications
