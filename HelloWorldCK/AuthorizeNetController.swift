@@ -154,6 +154,7 @@ class AuthorizeNetController: UIViewController, UITextFieldDelegate {
         let careCardViewController = createCareCardViewController()
         careCardViewController.delegate = tabbarcontroller
         let symptomTrackerController = createSymptomtrackerViewController()
+        symptomTrackerController.delegate = tabbarcontroller
         tabbarcontroller.viewControllers = [UINavigationController(rootViewController: careCardViewController), UINavigationController.init(rootViewController: symptomTrackerController)]
         
        

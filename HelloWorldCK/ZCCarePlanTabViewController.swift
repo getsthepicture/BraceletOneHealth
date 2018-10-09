@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import CareKit
 import SwiftSpinner
+import ResearchKit
 
 class ZCCarePlanTabViewController: UITabBarController, OCKCareCardViewControllerDelegate {
     var careplanManager: ZCCarePlanStoreManager?
@@ -59,6 +60,14 @@ extension ZCCarePlanTabViewController: OCKSymptomTrackerViewControllerDelegate{
     
     func symptomTrackerViewController(_ viewController: OCKSymptomTrackerViewController, didSelectRowWithAssessmentEvent assessmentEvent: OCKCarePlanEvent) {
         //lookup the assessment the row represents.
+        guard let sampleAssessment = self.careplanManager?.carePlan.findAssessmentActivity(assessmentActivity: assessmentEvent.activity) else {
+            return
+        }
+        //check if we should show a task for the selected assessment event based on its state.
+        guard assessmentEvent.state == .initial || assessmentEvent.state == .notCompleted || assessmentEvent.state == .completed && assessmentEvent.activity.resultResettable else { return }
+        //create an assessment task and 'ORKTaskViewController' for the assessment's task.
+        let taskViewController = ORKTaskViewController.init(task: sampleAssessment.createTask(), taskRun: nil)
+        viewController.navigationController!.present(taskViewController, animated: true, completion: nil)
         
     }
     

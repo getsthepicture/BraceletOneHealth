@@ -116,6 +116,35 @@ extension Assessment {
         
     }
     
+    func createTask() -> ORKTask {
+        var steps: [ORKQuestionStep] = []
+        
+        for step in self.steps{
+            let stepidentifier = NSLocalizedString(step.stepIdentifier, comment: "")
+            let stepquestion = NSLocalizedString(step.question, comment: "")
+            var answerFormat: ORKAnswerFormat?
+            
+            switch step.format {
+            case .Quantity:
+                let quantityType = HKQuantityType.quantityType(forIdentifier: .bloodGlucose)!
+                let unit = HKUnit.init(from: step.unit)
+                answerFormat = ORKHealthKitQuantityTypeAnswerFormat.init(quantityType: quantityType, unit: unit, style: .decimal)
+            case .Scale:
+                //Get the localized strings to use for the task.
+                let maximumValueDescription = NSLocalizedString(step.maxValueDescription, comment: "")
+                let minimumValueDescription = NSLocalizedString(step.minValueDescription, comment: "")
+                //create a question and answer format.
+                answerFormat = ORKScaleAnswerFormat.init(maximumValue: step.maxValue, minimumValue: step.minValue, defaultValue: step.defaultValue, step: step.step, vertical: step.vertical, maximumValueDescription: maximumValueDescription, minimumValueDescription: minimumValueDescription)
+            }
+            let questionStep = ORKQuestionStep.init(identifier: stepidentifier, title: stepquestion, answer: answerFormat)
+            questionStep.isOptional = false
+            steps.append(questionStep)
+        }
+        //Create an ordered task with a single question.
+        let task = ORKOrderedTask.init(identifier: activityType.rawValue, steps: steps)
+        return task
+    }
+    
     func createCareKitActivity() -> OCKCarePlanActivity{
         
         //creates a schedule based on the internal values for start and end dates
