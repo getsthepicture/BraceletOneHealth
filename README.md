@@ -19,6 +19,7 @@ The overall arching goal of the application is community literacy, donating rese
 * Amazon Federations
 * Amazon Dynamo DB for chat
 * Amazon S3 Buckets for images in chat
+* Google Cloud Messaging
 * CareKit
 * HealthKit
 * ResearchKit and Core Motion
