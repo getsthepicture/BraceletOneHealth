@@ -25,13 +25,24 @@ public struct CarePlan {
         self.title = title
     }
     
+    func findAssessmentActivity(assessmentActivity: OCKCarePlanActivity) -> Assessment? {
+        
+        let activity = self.activities.filter(){ $0.identifier == assessmentActivity.identifier}
+        
+        guard activity.count == 1 else {return nil}
+        
+        let act = activity[0] as? Assessment
+        
+        return act
+    }
+    
     //Returns all CareKit activities
     func allActivities(completion:(_ activities: [OCKCarePlanActivity])-> Void) {
         
         
         let ckallActivities = activities.map( {
             
-            $0.carePlanActivity()
+            $0.createCareKitActivity()
             
         })
         
@@ -47,7 +58,7 @@ public struct CarePlan {
         
         let ckinterventionActivities = interventionActivities.map( {
             
-            $0.carePlanActivity()
+            $0.createCareKitActivity()
         
         })
         
@@ -63,7 +74,7 @@ public struct CarePlan {
         
         let ckassessmentActivities = assessmentActivities.map( {
             
-            $0.carePlanActivity()
+            $0.createCareKitActivity()
             
         })
         
@@ -104,12 +115,16 @@ extension CarePlan : ZCAPIResponse {
             self.title = title
             
             for intervention in intervention_activities {
-                let activity = ZCActivity(fromJSON: JSON(intervention), activityType: .Intervention)
+                //let activity = ZCActivity.init()
+                let activity = ZCActivity(json: JSON(intervention))
+                //let activity = ZCActivity(fromJSON: JSON(intervention), activityType: .Intervention)
                 activities.append(activity)
             }
             
             for assessment in assessment_activities {
-                let activity = ZCActivity(fromJSON: JSON(assessment), activityType: .Assessment)
+                //let activity = ZCAssessment.init()
+                let activity = ZCAssessment(json: JSON(assessment))
+                //let activity = ZCActivity(fromJSON: JSON(assessment), activityType: .Assessment)
                 activities.append(activity)
             }
             

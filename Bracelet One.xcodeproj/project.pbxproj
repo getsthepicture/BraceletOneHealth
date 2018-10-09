@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		B7FBC740FB3270E7615451B3 /* Pods_Bracelet_One.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC021C46A615B81F60036A6 /* Pods_Bracelet_One.framework */; };
 		E903A445216BB4FB007A53D6 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E903A444216BB4FB007A53D6 /* UIColor+Hex.swift */; };
+		E903A44D216BEFF5007A53D6 /* Assessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E903A44C216BEFF5007A53D6 /* Assessment.swift */; };
+		E903A44F216BF561007A53D6 /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E903A44E216BF561007A53D6 /* Medication.swift */; };
+		E903A451216C0AD9007A53D6 /* ZCCareMonthlySchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E903A450216C0AD8007A53D6 /* ZCCareMonthlySchedule.swift */; };
 		E9068BF32169D9F2009FEE8B /* BLEPairingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9068BF22169D9F2009FEE8B /* BLEPairingViewController.swift */; };
 		E9068BFF216A704D009FEE8B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9068BFA216A704D009FEE8B /* CoreBluetooth.framework */; };
 		E9068C01216A7059009FEE8B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9068C00216A7058009FEE8B /* CoreLocation.framework */; };
@@ -116,6 +119,9 @@
 		B1588BDD2D5E9C4B5F373031 /* Pods-Bracelet One.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bracelet One.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bracelet One/Pods-Bracelet One.debug.xcconfig"; sourceTree = "<group>"; };
 		BEC021C46A615B81F60036A6 /* Pods_Bracelet_One.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bracelet_One.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E903A444216BB4FB007A53D6 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		E903A44C216BEFF5007A53D6 /* Assessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assessment.swift; sourceTree = "<group>"; };
+		E903A44E216BF561007A53D6 /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
+		E903A450216C0AD8007A53D6 /* ZCCareMonthlySchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZCCareMonthlySchedule.swift; sourceTree = "<group>"; };
 		E9068BF22169D9F2009FEE8B /* BLEPairingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEPairingViewController.swift; sourceTree = "<group>"; };
 		E9068BFA216A704D009FEE8B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		E9068C00216A7058009FEE8B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -229,6 +235,7 @@
 				E9EEAE61214A9C9400CCE95B /* HelloWorldCK.entitlements */,
 				E9EEAE28214A950600CCE95B /* AppDelegate.swift */,
 				E903A444216BB4FB007A53D6 /* UIColor+Hex.swift */,
+				E903A450216C0AD8007A53D6 /* ZCCareMonthlySchedule.swift */,
 				E90BACB221697DE8003677E6 /* ZCCarePlanStoreManager.swift */,
 				E9068C0C216AFF46009FEE8B /* ZCCarePlanTabViewController.swift */,
 				E9EEAE62214ACD4400CCE95B /* CareKitViewController.swift */,
@@ -299,6 +306,8 @@
 			children = (
 				E96A613321698B5600132BA1 /* Activity.swift */,
 				E90BACB421697F50003677E6 /* CarePlan.swift */,
+				E903A44C216BEFF5007A53D6 /* Assessment.swift */,
+				E903A44E216BF561007A53D6 /* Medication.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -553,13 +562,16 @@
 			files = (
 				E90692DB21699F11007444E2 /* CarePlanViewController.swift in Sources */,
 				E9EEAEAC214B438E00CCE95B /* ZCService.swift in Sources */,
+				E903A451216C0AD9007A53D6 /* ZCCareMonthlySchedule.swift in Sources */,
 				E90BACB321697DE8003677E6 /* ZCCarePlanStoreManager.swift in Sources */,
 				E9EEAE63214ACD4400CCE95B /* CareKitViewController.swift in Sources */,
 				E9EEAEB3214B452300CCE95B /* MockService.swift in Sources */,
 				E96C52692168F02F0054E33B /* ApplePayViewController.swift in Sources */,
 				E9EEAE2B214A950600CCE95B /* ViewController.swift in Sources */,
+				E903A44F216BF561007A53D6 /* Medication.swift in Sources */,
 				E96C526B2168F0920054E33B /* AuthorizeNetController.swift in Sources */,
 				E9068BF32169D9F2009FEE8B /* BLEPairingViewController.swift in Sources */,
+				E903A44D216BEFF5007A53D6 /* Assessment.swift in Sources */,
 				E90A999F215D456E00682DAE /* KeychainConfiguration.swift in Sources */,
 				E9EEAEAE214B439B00CCE95B /* ZCServiceProvider.swift in Sources */,
 				E90C969921641DCD005D20DC /* TouchIDAuthentication.swift in Sources */,

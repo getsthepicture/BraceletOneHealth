@@ -6,25 +6,25 @@
                                 {
                                 "identifier": "001",
                                 "group_identifier": "Regular",
-                                "title": "Test Glucose Level",
+                                "title": "Check Glucose Level",
                                 "color": "Denim",
-                                "text": "Pair your device with your glucose meter",
+                                "text": "Goal of 80–130 mg/dl",
                                 "startdate": "20161031T120000+0000",
                                 "scheduletype": "Daily",
                                 "schedule": "1",
-                                "imageURL": "",
+                                "imageURL": null,
                                 "instructions": "Pair with your glucose meter for easier tracking."
                                 },
                                 {
                                 "identifier": "002",
                                 "group_identifier": "Regular",
-                                "title": "Eat a Snack",
+                                "title": "Consume a Snack",
                                 "color": "DarkGreen",
-                                "text": "Use dieting chart for tips",
+                                "text": "Almonds or pumpkin seeds",
                                 "startdate": "20161031T120000+0000",
                                 "scheduletype": "Weekly",
                                 "schedule": "2,1,1,1,1,1,2",
-                                "imageURL": "",
+                                "imageURL": null,
                                 "instructions": "Reduce daily sugar consumption."
                                 },
                                 {
@@ -36,7 +36,7 @@
                                 "startdate": "20161031T120000+0000",
                                 "scheduletype": "Weekly",
                                 "schedule": "3,3,3,3,3,3,3",
-                                "imageURL": "",
+                                "imageURL": null,
                                 "instructions": "Take a fast paced walk."
                                 }
                                 ],
@@ -45,38 +45,62 @@
                               "identifier": "004",
                               "group_identifier": "",
                               "title": "Weight",
-                              "color": "DarkGreen",
-                              "text": "Early morning",
-                              "startdate": "20161031T120000+0000",
+                              "color": "Gold",
+                              "text": "Early morning or Late Evening",
+                              "startdate": "20160531T120000+0000",
                               "scheduletype": "Daily",
                               "schedule": "1",
-                              "imageURL": "",
                               "task": {
-                              "identifer": "Task1",
+                              "identifier": "Task1",
                               "steps": [
                                         {
-                                        "question": "Input your weight",
+                                        "identifier": "001",
+                                        "title": "Input your weight",
+                                        "format": "Quantity",
+                                        "unit": "lb"
                                         }
                                         ]
                               }
                               },
                               {
                               "identifier": "005",
-                              "group_identifier": "",
-                              "title": "Pain",
-                              "color": "DarkGreen",
-                              "text": "In the Head",
-                              "startdate": "20161031T120000+0000",
-                              "scheduletype": "Weekly",
-                              "schedule": "3,3,3,3,3,3,3",
-                              "imageURL": "",
+                              "group_identifier": "brain",
+                              "title": "Brain",
+                              "color": "Gold",
+                              "text": "Cognitive recognition",
+                              "startdate": "20160531T120000+0000",
+                              "scheduletype": "Daily",
+                              "schedule": "1",
                               "task": {
-                              "identifer": "Task1",
+                              "identifier": "Task1",
                               "steps": [
                                         {
-                                        "question": "How was your pain today?",
-                                        "maxvaledescription": "Very high",
-                                        "minvaledescription": "Very low",
+                                        "identifier": "001",
+                                        "title": "Choose Food",
+                                        "format": "Quantity",
+                                        "unit": "lb"
+                                        }
+                                        ]
+                              }
+                              },
+                              {
+                              "identifier": "006",
+                              "group_identifier": "",
+                              "title": "Pain",
+                              "color": "Purple",
+                              "text": "Record Pain level around mid day",
+                              "startdate": "20160531T120000+0000",
+                              "scheduletype": "Weekly",
+                              "schedule": "1,1,1,1,1,1,1",
+                              "task": {
+                              "identifier": "Task1",
+                              "steps": [
+                                        {
+                                        "identifier": "001",
+                                        "title": "How was your pain today?",
+                                        "format": "Scale",
+                                        "maxvaluedescription": "Very high",
+                                        "minvaluedescription": "Very low",
                                         "maxvalue": 10,
                                         "minvalue": 1,
                                         "defaultvalue": -1,
@@ -87,22 +111,89 @@
                               }
                               },
                               {
-                              "identifier": "006",
+                              "identifier": "007",
                               "group_identifier": "",
-                              "title": "Rage",
-                              "color": "DarkGreen",
-                              "text": "",
-                              "startdate": "20161031T120000+0000",
+                              "title": "Morning Rage",
+                              "color": "Orange",
+                              "text": "Record your mood in the moring",
+                              "startdate": "20160531T120000+0000",
                               "scheduletype": "Weekly",
-                              "schedule": "3,3,3,3,3,3,3",
-                              "imageURL": "",
+                              "schedule": "1,1,1,1,1,1,1",
                               "task": {
-                              "identifer": "Task1",
+                              "identifier": "Task1",
                               "steps": [
                                         {
-                                        "question": "On a sale of 1 to 10, how do you rate your temper?",
-                                        "maxvaledescription": "Calm",
-                                        "minvaledescription": "Very Angry",
+                                        "identifier": "001",
+                                        "title": "On a sale of 1 to 10, how do you rate your temper?",
+                                        "format": "Scale",
+                                        "maxvaluedescription": "Very Angry",
+                                        "minvaluedescription": "Calm",
+                                        "maxvalue": 10,
+                                        "minvalue": 1,
+                                        "defaultvalue": -1,
+                                        "stepvalue": 1,
+                                        "vertical": false
+                                        }
+                                        ]
+                              }
+                              },
+                              {
+                              "identifier": "008",
+                              "group_identifier": "",
+                              "title": "Midday Rage",
+                              "color": "Orange",
+                              "text": "Record your mood at midday",
+                              "startdate": "20160531T120000+0000",
+                              "scheduletype": "Weekly",
+                              "schedule": "1,1,1,1,1,1,1",
+                              "task": {
+                              "identifier": "Task1",
+                              "steps": [
+                                        {
+                                        "identifier": "001",
+                                        "title": "On a scale of 1 to 10, how do you rate your temper?",
+                                        "format": "Scale",
+                                        "maxvaluedescription": "Very Angry",
+                                        "minvaluedescription": "Calm",
+                                        "maxvalue": 10,
+                                        "minvalue": 1,
+                                        "defaultvalue": -1,
+                                        "stepvalue": 1,
+                                        "vertical": false
+                                        },
+                                        {
+                                        "identifier": "002",
+                                        "title": "On a scale of 1 to 10, how irrated are you?",
+                                        "format": "Scale",
+                                        "maxvaluedescription": "Very Irritated",
+                                        "minvaluedescription": "Not Much",
+                                        "maxvalue": 5,
+                                        "minvalue": 1,
+                                        "defaultvalue": -1,
+                                        "stepvalue": 1,
+                                        "vertical": false
+                                        }
+                                        ]
+                              }
+                              },
+                              {
+                              "identifier": "009",
+                              "group_identifier": "",
+                              "title": "Evening Rage",
+                              "color": "Denim",
+                              "text": "Record your mood in the evening",
+                              "startdate": "20160531T120000+0000",
+                              "scheduletype": "Weekly",
+                              "schedule": "1,1,1,1,1,1,1",
+                              "task": {
+                              "identifier": "Task1",
+                              "steps": [
+                                        {
+                                        "identifier": "001",
+                                        "title": "On a sale of 1 to 10, how do you rate your temper?",
+                                        "format": "Scale",
+                                        "maxvaluedescription": "Very Angry",
+                                        "minvaluedescription": "Calm",
                                         "maxvalue": 10,
                                         "minvalue": 1,
                                         "defaultvalue": -1,

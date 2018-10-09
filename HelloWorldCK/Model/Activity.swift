@@ -20,69 +20,89 @@ enum ScheduleType: String {
     
 }
 
+enum StepFormat : String {
+    case Scale
+    case Quantity
+}
+
 protocol Activity {
     
-    var activityType: ActivityType { get set}
-    func carePlanActivity() -> OCKCarePlanActivity
+    var identifier : String  { get set}
+    var groupIdentifier : String  { get set}
+    var title : String  { get set}
+    var colour : UIColor?  { get set}
+    var text : String  { get set}
+    var startDate : Date  { get set}
+    var schedule : [NSNumber]  { get  set}
+    var scheduleType : ScheduleType  { get set}
+    var instructions : String?   { get set}
+    var imageURL : NSURL?   { get set}
+    var activityType: ActivityType  { get set}
+    var medication : Medication?  { get set}
+    
+    init()
+    init(json: JSON)
+    func createCareKitActivity() -> OCKCarePlanActivity
     
 }
 
-/**
- Struct that conforms to the Activity protocol to define either an intervention or assessment activity.
- */
-struct ZCActivity : Activity {
+extension Activity {
     
-    let identifier : String
-    let title : String
-    let text : String
-    let startDate : Date
-    let schedule : [NSNumber]
-    let scheduleType : ScheduleType
-    let instructions : String?
-    let imageURL : NSURL?
-    var activityType: ActivityType
-    let colorcolorcolor: UIColor?
-    
-    init(fromJSON json: JSON, activityType: ActivityType) {
+    //  A mutating function to allow Acticities or Assessments to intialiser base properties
+    mutating func parseActivityFields(json: JSON) {
+        
+        
         self.identifier = json["identifier"].string!
+        self.groupIdentifier = json["group_identifier"].string!
         self.title = json["title"].string!
         self.text = json["text"].string!
-        let colorcolorcolorString = json["color"].string!
-        let eventColor = UIColor.colorWithString(colorcolorcolorString)
-        self.colorcolorcolor = eventColor
-        //self.colorcolorcolor = json["color"].string!
+        
+        let colourString = json["color"].string!
+        self.colour = UIColor.colorWithString(colourString)
         
         if let instructionString = json["instructions"].string {
             self.instructions = instructionString
         }
-        else {
-            self.instructions = nil
-        }
-        
         
         if let imageString = json["imageURL"].string {
-            self.imageURL = NSURL(string: imageString)
+            let componentsOfString = imageString.components(separatedBy: ".")
+            
+            if let pathForResource = Bundle.main.path(forResource: componentsOfString[0], ofType: componentsOfString[1]){
+                self.imageURL = NSURL(fileURLWithPath: pathForResource)
+            }
         }
-        else {
-            self.imageURL = nil
-        }
+        
         self.startDate = dateFromString(string: json["startdate"].string!)!
         self.scheduleType = ScheduleType(rawValue: json["scheduletype"].string!)!
         
-        self.schedule = (json["schedule"].string?.components(separatedBy: ",").map( {
+        self.schedule = json["schedule"].string!.components(separatedBy: ",").map ( {
             NSNumber(value: Int32($0)!)
-        }))!
-       
+        })
         
-        self.activityType = activityType
+        if let medication = json["medication"].string,
+            let medicationImageString = json["medicationimage"].string {
+            
+            let componentsOfString = medicationImageString.components(separatedBy: ".")
+            let pathForResource = Bundle.main.path(forResource: componentsOfString[0], ofType: componentsOfString[1])
+            
+            self.medication = Medication.init(medication: medication, imageURL: NSURL.init(fileURLWithPath: pathForResource!))
+        }
+        
     }
     
-    func carePlanActivity() -> OCKCarePlanActivity {
+    init(json: JSON) {
+        
+        self.init()
+        
+        self.parseActivityFields(json: json)
+        
+    }
+    
+    
+    func createCareKitActivity() -> OCKCarePlanActivity{
         
         //creates a schedule based on the internal values for start and end dates
-  
         let startDateComponents = NSDateComponents(date: self.startDate, calendar: NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)! as Calendar)
-        
         
         let activitySchedule: OCKCareSchedule!
         
@@ -95,24 +115,54 @@ struct ZCActivity : Activity {
             
         }
         
+        let activity = OCKCarePlanActivity.intervention(
+            withIdentifier: identifier,
+            groupIdentifier: nil,
+            title: title,
+            text: text,
+            tintColor: colour,
+            instructions: instructions,
+            imageURL: imageURL as? URL,
+            schedule: activitySchedule,
+            userInfo: ["medication": medication], optional: false)
         
-        //creates and returns the approprate CareKit OCKCarePlanActivity
-        switch activityType {
-        case .Intervention:
-            let activity = OCKCarePlanActivity.intervention(withIdentifier: identifier, groupIdentifier: nil, title: title, text: text, tintColor: colorcolorcolor, instructions: instructions, imageURL: nil, schedule: activitySchedule, userInfo: nil, optional: false)
-           
-            
-            return activity
-        case .Assessment:
-            let activity = OCKCarePlanActivity.assessment(withIdentifier: identifier, groupIdentifier: nil, title: title, text: text, tintColor: UIColor.red, resultResettable: true, schedule: activitySchedule, userInfo: nil, optional: false)
-            
-            
-            return activity
-        }
+        return activity
         
     }
-    
- 
 }
 
 
+/**
+ Struct that conforms to the Activity protocol to define either an intervention or assessment activity.
+ */
+struct ZCActivity : Activity {
+    
+    var identifier : String
+    var groupIdentifier : String
+    var title : String
+    var colour : UIColor? = nil
+    var text : String
+    var startDate = Date()
+    var schedule : [NSNumber]
+    var scheduleType : ScheduleType
+    var instructions : String? = nil
+    var imageURL : NSURL? = nil
+    var activityType: ActivityType = .Intervention
+    var medication : Medication? = nil
+    
+    
+    init() {
+        
+        identifier = ""
+        groupIdentifier = ""
+        title = ""
+        colour = nil
+        text = ""
+        schedule = [NSNumber(value: 0)]
+        scheduleType = .Daily
+        
+    }
+    
+    
+    
+}

@@ -40,11 +40,11 @@ extension UIColor {
             static let Denim = UIColor(netHex: 0x2F6CAD)
             static let Chambray = UIColor(netHex: 0x485675)
             static let BlueWhale = UIColor(netHex: 0x29334D)
-            
         }
         
         struct Violet {
-            
+            static let Wisteria = UIColor(netHex: 0x9069B5)
+            static let BlueGem = UIColor(netHex: 0x533D7F)
         }
         
         struct Yellow {
@@ -58,15 +58,20 @@ extension UIColor {
         }
         
         struct Red {
-            
+            static let TerraCotta = UIColor(netHex: 0xE66B5B)
+            static let Valencia = UIColor(netHex: 0xCC4846)
+            static let Cinnabar = UIColor(netHex: 0xDC5047)
+            static let WellRead = UIColor(netHex: 0xB33234)
         }
         
         struct Gray {
-            
+            static let AlmondFrost = UIColor(netHex: 0xA28F85)
+            static let WhiteSmoke = UIColor(netHex: 0xEFEFEF)
+            static let Iron = UIColor(netHex: 0xD1D5D8)
+            static let IronGray = UIColor(netHex: 0x75706B)
         }
     }
 }
-
 extension UIColor {
     class func colorWithString(_ colorcolorcolorString: String) -> UIColor {
         switch colorcolorcolorString {

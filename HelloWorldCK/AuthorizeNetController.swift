@@ -153,7 +153,10 @@ class AuthorizeNetController: UIViewController, UITextFieldDelegate {
         
         let careCardViewController = createCareCardViewController()
         careCardViewController.delegate = tabbarcontroller
-        tabbarcontroller.viewControllers = [UINavigationController(rootViewController: careCardViewController)]
+        let symptomTrackerController = createSymptomtrackerViewController()
+        tabbarcontroller.viewControllers = [UINavigationController(rootViewController: careCardViewController), UINavigationController.init(rootViewController: symptomTrackerController)]
+        
+       
         self.present(tabbarcontroller, animated: true, completion: nil)
         
         if HKHealthStore.isHealthDataAvailable() {
@@ -205,6 +208,15 @@ class AuthorizeNetController: UIViewController, UITextFieldDelegate {
         viewController.title = NSLocalizedString("Treatment Plan", comment: "")
         viewController.tabBarItem = UITabBarItem.init(title: viewController.title, image: UIImage.init(named: "CareCard-OFF"), selectedImage: UIImage.init(named: "CareCard-ON"))
         
+        return viewController
+    }
+    
+    private func createSymptomtrackerViewController() -> OCKSymptomTrackerViewController{
+        let viewController = OCKSymptomTrackerViewController.init(carePlanStore: careplanManager!.store)
+        viewController.title = NSLocalizedString("Assessments", comment: "")
+        viewController.tabBarItem = UITabBarItem.init(title: viewController.title, image: UIImage.init(named: "Symptom-OFF"), selectedImage: UIImage.init(named: "Symptom-ON"))
+        viewController.glyphType = OCKGlyphType.init(rawValue: 6)!
+        viewController.glyphTintColor = UIColor.FlatColor.Violet.Wisteria
         return viewController
     }
     
