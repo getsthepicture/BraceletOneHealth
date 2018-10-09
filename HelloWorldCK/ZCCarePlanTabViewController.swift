@@ -54,3 +54,13 @@ extension ZCCarePlanTabViewController {
         
     }
 }
+
+extension ZCCarePlanTabViewController: OCKSymptomTrackerViewControllerDelegate{
+    
+    func symptomTrackerViewController(_ viewController: OCKSymptomTrackerViewController, didSelectRowWithAssessmentEvent assessmentEvent: OCKCarePlanEvent) {
+        //lookup the assessment the row represents.
+        
+    }
+    
+    
+}
