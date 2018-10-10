@@ -2,9 +2,10 @@
 
 ![alt text](https://github.com/cosmicarrows/BraceletOneHealth/blob/master/gif1.gif)
 
-Bracelet One provides African-Americans with assistance to affordable healthcare for handling the diagnosis of Type 2 diabetes.  The app accepts payments to assess, record, and deliver real-time health announcements as well as 1-on-1 communication. The 1-on-1 chat feature is only available during the scheduled appointment time designated by the clinician.
+Bracelet One provides African-Americans with assistance to digital healthcare for handling Type 2 diabetes diagnosis.  The app accepts payments to assess, record, present analysis, and deliver health documents in real-time.  The app also includes 1-on-1 communication with a certified clinician.  1-on-1 communication is only available during the scheduled appointment times designated by the clinician similar to a healthcare appointment.
 
-The overall arching goal of the application is community literacy, donating research to the National Institute of Mental Health, scaling down workplace depression in healthcare, and expanding the application with computer vision to assist with multiple diagnosis.
+
+The overall arching goal of the application is community literacy, donating research to the National Institute of Mental Health, and expanding the application with computer vision to assist with multiple diagnosis.
 
 ### Technology Stack Used:
 * Cocoa Pods
