@@ -30,6 +30,10 @@
 		E90C96B02165E434005D20DC /* aafamily.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E90C96AF2165E433005D20DC /* aafamily.mp4 */; };
 		E90D6CDC216696BB00FFD85B /* CognitoUserPoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90D6CDB216696BB00FFD85B /* CognitoUserPoolController.swift */; };
 		E937502A215C4104006FE577 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9375025215C4104006FE577 /* LoginViewController.swift */; };
+		E95EE45E2193A22500A8ED9C /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E95EE4512193A1F100A8ED9C /* CareKit.framework */; };
+		E95EE45F2193A22E00A8ED9C /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E95EE45B2193A20100A8ED9C /* ResearchKit.framework */; };
+		E95EE4602193A32400A8ED9C /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E95EE45B2193A20100A8ED9C /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E95EE4612193A32400A8ED9C /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E95EE4512193A1F100A8ED9C /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E96A613821698B5600132BA1 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A613321698B5600132BA1 /* Activity.swift */; };
 		E96C52612168DCF50054E33B /* UILogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C52602168DCF50054E33B /* UILogger.swift */; };
 		E96C52692168F02F0054E33B /* ApplePayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C52642168F02F0054E33B /* ApplePayViewController.swift */; };
@@ -39,10 +43,6 @@
 		E9EEAE2E214A950600CCE95B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EEAE2C214A950600CCE95B /* Main.storyboard */; };
 		E9EEAE30214A950900CCE95B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9EEAE2F214A950900CCE95B /* Assets.xcassets */; };
 		E9EEAE33214A950900CCE95B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EEAE31214A950900CCE95B /* LaunchScreen.storyboard */; };
-		E9EEAE58214A98DF00CCE95B /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EEAE55214A98C700CCE95B /* ResearchKit.framework */; };
-		E9EEAE59214A98DF00CCE95B /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9EEAE55214A98C700CCE95B /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E9EEAE5D214A98E500CCE95B /* CareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EEAE4B214A989A00CCE95B /* CareKit.framework */; };
-		E9EEAE5E214A98E500CCE95B /* CareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9EEAE4B214A989A00CCE95B /* CareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E9EEAE63214ACD4400CCE95B /* CareKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEAE62214ACD4400CCE95B /* CareKitViewController.swift */; };
 		E9EEAEAC214B438E00CCE95B /* ZCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEAEAB214B438E00CCE95B /* ZCService.swift */; };
 		E9EEAEAE214B439B00CCE95B /* ZCServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEAEAD214B439B00CCE95B /* ZCServiceProvider.swift */; };
@@ -54,47 +54,33 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E9EEAE4A214A989A00CCE95B /* PBXContainerItemProxy */ = {
+		E95EE4502193A1F100A8ED9C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E9EEAE44214A989A00CCE95B /* CareKit.xcodeproj */;
+			containerPortal = E95EE44A2193A1E700A8ED9C /* CareKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8605A5BA1C4F04EC00DD65FF;
 			remoteInfo = CareKit;
 		};
-		E9EEAE4C214A989A00CCE95B /* PBXContainerItemProxy */ = {
+		E95EE4522193A1F100A8ED9C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E9EEAE44214A989A00CCE95B /* CareKit.xcodeproj */;
+			containerPortal = E95EE44A2193A1E700A8ED9C /* CareKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8605A5C41C4F04EC00DD65FF;
 			remoteInfo = CareKitTests;
 		};
-		E9EEAE54214A98C700CCE95B /* PBXContainerItemProxy */ = {
+		E95EE45A2193A20100A8ED9C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E9EEAE4E214A98C700CCE95B /* ResearchKit.xcodeproj */;
+			containerPortal = E95EE4542193A20000A8ED9C /* ResearchKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B183A5951A8535D100C76870;
 			remoteInfo = ResearchKit;
 		};
-		E9EEAE56214A98C700CCE95B /* PBXContainerItemProxy */ = {
+		E95EE45C2193A20100A8ED9C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E9EEAE4E214A98C700CCE95B /* ResearchKit.xcodeproj */;
+			containerPortal = E95EE4542193A20000A8ED9C /* ResearchKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
 			remoteInfo = ResearchKitTests;
-		};
-		E9EEAE5A214A98DF00CCE95B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E9EEAE4E214A98C700CCE95B /* ResearchKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = B183A4731A8535D100C76870;
-			remoteInfo = ResearchKit;
-		};
-		E9EEAE5F214A98E500CCE95B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E9EEAE44214A989A00CCE95B /* CareKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8605A5B91C4F04EC00DD65FF;
-			remoteInfo = CareKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -105,8 +91,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E9EEAE5E214A98E500CCE95B /* CareKit.framework in Embed Frameworks */,
-				E9EEAE59214A98DF00CCE95B /* ResearchKit.framework in Embed Frameworks */,
+				E95EE4602193A32400A8ED9C /* ResearchKit.framework in Embed Frameworks */,
+				E95EE4612193A32400A8ED9C /* CareKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +127,8 @@
 		E90D6CDB216696BB00FFD85B /* CognitoUserPoolController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoUserPoolController.swift; sourceTree = "<group>"; };
 		E90D6D012168D0C500FFD85B /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
 		E9375025215C4104006FE577 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E95EE44A2193A1E700A8ED9C /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = ../holder/carekit/CareKit.xcodeproj; sourceTree = "<group>"; };
+		E95EE4542193A20000A8ED9C /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../holder/ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		E96A613321698B5600132BA1 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		E96C52602168DCF50054E33B /* UILogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILogger.swift; sourceTree = "<group>"; };
 		E96C52642168F02F0054E33B /* ApplePayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplePayViewController.swift; sourceTree = "<group>"; };
@@ -152,8 +140,6 @@
 		E9EEAE2F214A950900CCE95B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9EEAE32214A950900CCE95B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9EEAE34214A950900CCE95B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9EEAE44214A989A00CCE95B /* CareKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CareKit.xcodeproj; path = ../Carebook/carekit/CareKit.xcodeproj; sourceTree = "<group>"; };
-		E9EEAE4E214A98C700CCE95B /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../Carebook/carekit/dependency/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		E9EEAE61214A9C9400CCE95B /* HelloWorldCK.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelloWorldCK.entitlements; sourceTree = "<group>"; };
 		E9EEAE62214ACD4400CCE95B /* CareKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareKitViewController.swift; sourceTree = "<group>"; };
 		E9EEAEAB214B438E00CCE95B /* ZCService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZCService.swift; sourceTree = "<group>"; };
@@ -170,12 +156,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E95EE45F2193A22E00A8ED9C /* ResearchKit.framework in Frameworks */,
+				E95EE45E2193A22500A8ED9C /* CareKit.framework in Frameworks */,
 				E9068C01216A7059009FEE8B /* CoreLocation.framework in Frameworks */,
 				E9068BFF216A704D009FEE8B /* CoreBluetooth.framework in Frameworks */,
 				E9EEAEBD214B4EE200CCE95B /* SwiftyJSON.framework in Frameworks */,
-				E9EEAE5D214A98E500CCE95B /* CareKit.framework in Frameworks */,
 				E9068C09216AEC9E009FEE8B /* HealthKit.framework in Frameworks */,
-				E9EEAE58214A98DF00CCE95B /* ResearchKit.framework in Frameworks */,
 				B7FBC740FB3270E7615451B3 /* Pods_Bracelet_One.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,11 +191,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E95EE44B2193A1E700A8ED9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E95EE4512193A1F100A8ED9C /* CareKit.framework */,
+				E95EE4532193A1F100A8ED9C /* CareKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E95EE4552193A20000A8ED9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E95EE45B2193A20100A8ED9C /* ResearchKit.framework */,
+				E95EE45D2193A20100A8ED9C /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E9EEAE1C214A950600CCE95B = {
 			isa = PBXGroup;
 			children = (
-				E9EEAE4E214A98C700CCE95B /* ResearchKit.xcodeproj */,
-				E9EEAE44214A989A00CCE95B /* CareKit.xcodeproj */,
+				E95EE4542193A20000A8ED9C /* ResearchKit.xcodeproj */,
+				E95EE44A2193A1E700A8ED9C /* CareKit.xcodeproj */,
 				E9EEAE27214A950600CCE95B /* HelloWorldCK */,
 				E9EEAE26214A950600CCE95B /* Products */,
 				435EA4B8F96D167B45D37F67 /* Pods */,
@@ -263,24 +267,6 @@
 				E9EEAE34214A950900CCE95B /* Info.plist */,
 			);
 			path = HelloWorldCK;
-			sourceTree = "<group>";
-		};
-		E9EEAE45214A989A00CCE95B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E9EEAE4B214A989A00CCE95B /* CareKit.framework */,
-				E9EEAE4D214A989A00CCE95B /* CareKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E9EEAE4F214A98C700CCE95B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E9EEAE55214A98C700CCE95B /* ResearchKit.framework */,
-				E9EEAE57214A98C700CCE95B /* ResearchKitTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		E9EEAEAF214B43A100CCE95B /* Service */ = {
@@ -337,8 +323,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				E9EEAE5B214A98DF00CCE95B /* PBXTargetDependency */,
-				E9EEAE60214A98E500CCE95B /* PBXTargetDependency */,
 			);
 			name = "Bracelet One";
 			productName = HelloWorldCK;
@@ -387,12 +371,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = E9EEAE45214A989A00CCE95B /* Products */;
-					ProjectRef = E9EEAE44214A989A00CCE95B /* CareKit.xcodeproj */;
+					ProductGroup = E95EE44B2193A1E700A8ED9C /* Products */;
+					ProjectRef = E95EE44A2193A1E700A8ED9C /* CareKit.xcodeproj */;
 				},
 				{
-					ProductGroup = E9EEAE4F214A98C700CCE95B /* Products */;
-					ProjectRef = E9EEAE4E214A98C700CCE95B /* ResearchKit.xcodeproj */;
+					ProductGroup = E95EE4552193A20000A8ED9C /* Products */;
+					ProjectRef = E95EE4542193A20000A8ED9C /* ResearchKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -403,32 +387,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		E9EEAE4B214A989A00CCE95B /* CareKit.framework */ = {
+		E95EE4512193A1F100A8ED9C /* CareKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = CareKit.framework;
-			remoteRef = E9EEAE4A214A989A00CCE95B /* PBXContainerItemProxy */;
+			remoteRef = E95EE4502193A1F100A8ED9C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		E9EEAE4D214A989A00CCE95B /* CareKitTests.xctest */ = {
+		E95EE4532193A1F100A8ED9C /* CareKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = CareKitTests.xctest;
-			remoteRef = E9EEAE4C214A989A00CCE95B /* PBXContainerItemProxy */;
+			remoteRef = E95EE4522193A1F100A8ED9C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		E9EEAE55214A98C700CCE95B /* ResearchKit.framework */ = {
+		E95EE45B2193A20100A8ED9C /* ResearchKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ResearchKit.framework;
-			remoteRef = E9EEAE54214A98C700CCE95B /* PBXContainerItemProxy */;
+			remoteRef = E95EE45A2193A20100A8ED9C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		E9EEAE57214A98C700CCE95B /* ResearchKitTests.xctest */ = {
+		E95EE45D2193A20100A8ED9C /* ResearchKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ResearchKitTests.xctest;
-			remoteRef = E9EEAE56214A98C700CCE95B /* PBXContainerItemProxy */;
+			remoteRef = E95EE45C2193A20100A8ED9C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -507,7 +491,6 @@
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/Shimmer/Shimmer.framework",
 				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftSpinner/SwiftSpinner.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/authorizenet-sdk/authorizenet_sdk.framework",
 			);
@@ -544,7 +527,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Shimmer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSpinner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/authorizenet_sdk.framework",
 			);
@@ -592,19 +574,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E9EEAE5B214A98DF00CCE95B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ResearchKit;
-			targetProxy = E9EEAE5A214A98DF00CCE95B /* PBXContainerItemProxy */;
-		};
-		E9EEAE60214A98E500CCE95B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CareKit;
-			targetProxy = E9EEAE5F214A98E500CCE95B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E9EEAE2C214A950600CCE95B /* Main.storyboard */ = {
@@ -663,6 +632,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -723,6 +693,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -749,6 +720,44 @@
 				CODE_SIGN_ENTITLEMENTS = HelloWorldCK/HelloWorldCK.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P7XKP3B2C9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSAutoScaling\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCloudWatch\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCognito\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCognitoIdentityProvider\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCognitoIdentityProviderASF\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCore\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSDynamoDB\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSEC2\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSElasticLoadBalancing\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSIoT\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSKinesis\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSLambda\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSLex\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSMachineLearning\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSMobileAnalytics\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSPinpoint\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSPolly\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSRekognition\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSS3\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSSES\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSSNS\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSSQS\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSSimpleDB\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AuthorizeNetAccept\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/JVFloatLabeledTextField\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SCLAlertView\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Shimmer\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Stripe\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftSpinner\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/authorizenet-sdk\"",
+					"\"${PODS_ROOT}/EstimoteBluetoothScanning/EstimoteBluetoothScanning\"",
+					"\"${PODS_ROOT}/EstimoteProximitySDK/EstimoteProximitySDK\"",
+					"$(SRCROOT)/**",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
@@ -763,6 +772,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = bridge.h;
 				SWIFT_VERSION = 4.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -776,6 +786,44 @@
 				CODE_SIGN_ENTITLEMENTS = HelloWorldCK/HelloWorldCK.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P7XKP3B2C9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSAutoScaling\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCloudWatch\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCognito\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCognitoIdentityProvider\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCognitoIdentityProviderASF\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSCore\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSDynamoDB\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSEC2\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSElasticLoadBalancing\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSIoT\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSKinesis\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSLambda\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSLex\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSMachineLearning\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSMobileAnalytics\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSPinpoint\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSPolly\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSRekognition\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSS3\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSSES\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSSNS\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSSQS\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AWSSimpleDB\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AuthorizeNetAccept\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/JVFloatLabeledTextField\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SCLAlertView\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Shimmer\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Stripe\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftSpinner\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/authorizenet-sdk\"",
+					"\"${PODS_ROOT}/EstimoteBluetoothScanning/EstimoteBluetoothScanning\"",
+					"\"${PODS_ROOT}/EstimoteProximitySDK/EstimoteProximitySDK\"",
+					"$(SRCROOT)/**",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
@@ -790,6 +838,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = bridge.h;
 				SWIFT_VERSION = 4.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

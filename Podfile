@@ -38,7 +38,6 @@ target 'Bracelet One' do
   pod ’authorizenet-sdk’
   pod 'Stripe'
   pod 'AuthorizeNetAccept'
-  pod 'EstimoteProximitySDK', '~> 1.0'
-  pod "SwiftSpinner"
+  pod 'EstimoteProximitySDK'
 
 end

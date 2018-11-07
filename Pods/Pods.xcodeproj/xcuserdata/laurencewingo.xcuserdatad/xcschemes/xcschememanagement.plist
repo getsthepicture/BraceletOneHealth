@@ -228,19 +228,12 @@
 			<key>orderHint</key>
 			<integer>33</integer>
 		</dict>
-		<key>SwiftSpinner.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>35</integer>
-		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>36</integer>
+			<integer>35</integer>
 		</dict>
 		<key>authorizenet-sdk.xcscheme</key>
 		<dict>

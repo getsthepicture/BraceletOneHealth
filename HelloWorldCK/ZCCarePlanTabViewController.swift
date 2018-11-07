@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import CareKit
-import SwiftSpinner
+
 import ResearchKit
 
 class ZCCarePlanTabViewController: UITabBarController, OCKCareCardViewControllerDelegate {
@@ -30,9 +30,9 @@ extension ZCCarePlanTabViewController {
             let alert = UIAlertController.init(title: "Bluetooth Connectivity", message: "Are you ready to pair with your glucose meter?", preferredStyle: .alert)
             alert.addAction(UIAlertAction.init(title: "No", style: .default, handler: nil))
             alert.addAction(UIAlertAction.init(title: "Yes", style: .default, handler: { (alert) in
-                SwiftSpinner.show("Scanning for Bluetooth Device", animated: true)
+                //SwiftSpinner.show("Scanning for Bluetooth Device", animated: true)
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(30), execute: {
-                    SwiftSpinner.hide()
+                    //SwiftSpinner.hide()
                     self.careplanManager?.store.update(interventionEvent, with: nil, state: .completed, completion: { (success, event, error) in
                         
                     })
